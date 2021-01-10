@@ -15,7 +15,7 @@ export default {
       { name: "description", "content": "Alex Guthrie: Computer Science student and software developer." }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'shortcut icon', type: 'image/webp', href: '/robot.webp' }
     ]
   },
 
