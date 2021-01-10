@@ -1,0 +1,14 @@
+name: Screenshot Website
+
+on: push
+
+jobs:
+  screenshot:
+    name: Screenshot
+    runs-on: macos-latest
+    steps:
+    - name: Screenshot Website
+      uses: swinton/screenshot-website@v1.x
+      with:
+        source: https://gu3.me/
+        destination: screenshot.png
