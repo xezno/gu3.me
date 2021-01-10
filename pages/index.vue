@@ -1,73 +1,68 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        gu3.me
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <article id="main-article">
+    <div id="left">
+      <img src="/heavy drip.png" height="500">
     </div>
-  </div>
+    <div id="right">
+      <span>
+        <h1>Alex Guthrie</h1>
+        <p>Hey! I'm Alex.</p>
+        <p>I'm a 19 year old software engineer interested in reverse engineering, computer graphics, and machine learning.</p>
+        <p>I love programming, playing video games, tennis, piña coladas, and getting caught in the rain.</p>
+        <social-links></social-links>
+      </span>
+    </div>
+  </article>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+<style lang="scss">
+#main-article {
   display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  & img {
+    border-radius: 15px;
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  & #left {
+    width: 25vw;
+    text-align: right;
+  }
 
-.links {
-  padding-top: 15px;
+  & #right {
+    width: 25vw;
+    text-align: left;
+  }
+
+  & #left, #right {
+    padding: 15px;
+  }
+
+  @media (max-width: 1024px) {
+    & #left, #right {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+    }
+
+    & #left {
+      display: none;
+    }
+  }
 }
 </style>
