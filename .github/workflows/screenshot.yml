@@ -5,7 +5,7 @@ on: push
 jobs:
   screenshot:
     name: Screenshot
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Screenshot Website
       uses: swinton/screenshot-website@v1.x
