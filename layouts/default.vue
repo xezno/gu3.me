@@ -1,8 +1,19 @@
 <template>
   <div>
     <Nuxt />
+    <page-footer></page-footer>
   </div>
 </template>
+
+<script>
+import PageFooter from "~/components/Footer";
+
+export default {
+  components: {
+    PageFooter
+  }
+}
+</script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
@@ -35,6 +46,11 @@ h1 {
 
 p {
   margin-bottom: 0.75em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 </style>
