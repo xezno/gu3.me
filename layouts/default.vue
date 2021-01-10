@@ -1,6 +1,5 @@
 <template>
   <div>
-    <spotify></spotify>
     <Nuxt />
     <page-footer></page-footer>
   </div>
@@ -54,6 +53,12 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+
+  transition: color ease 150ms;
+
+  &:hover {
+      color: #888888;
+  }
 }
 
 </style>

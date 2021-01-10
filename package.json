@@ -17,5 +17,9 @@
     "sass": "^1.32.2",
     "sass-loader": "^10.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@nuxtjs/fontawesome": "^1.1.2"
+  }
 }

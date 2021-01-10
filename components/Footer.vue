@@ -1,17 +1,22 @@
 <template>
     <div id="footer">
         <div id="left">
-            <p>Copyright (C) Alex Guthrie {{ new Date().getFullYear() }}</p>
+            <p>Copyright <fa :icon="faCopyright"></fa> Alex Guthrie {{ new Date().getFullYear() }}</p>
         </div>
         <div id="right">
-            <a href="https://github.com/xezno/gu3.me">Explore Source on GitHub</a>
+            <a href="https://github.com/xezno/gu3.me"><fa :icon="faGithub"></fa> Explore Source on GitHub</a>
         </div>
     </div>
 </template>
 
 <script>
+    import { faGithub } from "@fortawesome/free-brands-svg-icons";
+    import { faCopyright } from "@fortawesome/free-solid-svg-icons";
     export default {
-        
+        computed: {
+            faGithub() { return faGithub; },
+            faCopyright() { return faCopyright; }
+        }
     }
 </script>
 

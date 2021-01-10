@@ -1,6 +1,6 @@
 <template>
-    <Toast>
-
+    <Toast title="Spotify - Now Playing">
+        Let It Happen by Tame Impala
     </Toast>
 </template>
 

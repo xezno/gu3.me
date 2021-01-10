@@ -4,15 +4,17 @@
             <img src="/heavy drip.png" />
         </div>
         <div id="text-container">
-            <h3>Toast Title</h3>
-            <p>Toast Text: Lorem Ipsum Dolor Sit Amet.</p>
+            <h3>{{ title }}</h3>
+            <p><slot></slot></p>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        
+        props: {
+            title: String
+        }
     }
 </script>
 
@@ -39,6 +41,10 @@
             float: left;
             align-self: left;
             margin: 15px;
+        }
+
+        & #text-container {
+            width: calc(100% - 96px - 15px);
         }
     }
 </style>
