@@ -16,7 +16,10 @@
 </template>
 
 <script>
-export default {}
+import Spotify from '~/components/Spotify.vue'
+export default {
+  components: { Spotify },
+}
 </script>
 
 <style lang="scss">

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <spotify></spotify>
     <Nuxt />
     <page-footer></page-footer>
   </div>
@@ -7,10 +8,12 @@
 
 <script>
 import PageFooter from "~/components/Footer";
+import Spotify from "~/components/Spotify";
 
 export default {
   components: {
-    PageFooter
+    PageFooter,
+    Spotify
   }
 }
 </script>
