@@ -38,4 +38,5 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
+        directory: "repo"
         github_token: ${{ secrets.GITHUB_TOKEN }}
