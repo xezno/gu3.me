@@ -33,6 +33,7 @@ jobs:
         cd repo
         git config --local user.email "12881812+xezno@users.noreply.github.com"
         git config --local user.name "Alex"
+        git add .
         git commit -m "Add website screenshot" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
