@@ -1,7 +1,4 @@
 export default {
-  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false,
-
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
@@ -50,6 +47,8 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
+
+  ssr: true,
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
