@@ -1,8 +1,8 @@
 <template>
   <article id="main-article">
-    <div id="left">
+    <!-- <div id="left">
       <img src="/heavy-drip.webp" height="500">
-    </div>
+    </div> -->
     <div id="right">
       <span>
         <h1>Alex Guthrie</h1>
