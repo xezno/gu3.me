@@ -21,7 +21,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 
   line-height: 1.5;
   padding: 0;
