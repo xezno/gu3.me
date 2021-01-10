@@ -47,5 +47,14 @@
                 padding: 0;
             }
         }
+
+        
+        @media (max-width: 1024px) { 
+            flex-wrap: wrap;
+            
+            & #left, #right {
+                width: 100%;
+            }
+        }
     }
 </style>

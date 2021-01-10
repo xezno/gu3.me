@@ -55,6 +55,8 @@ export default {
   }
 
   @media (max-width: 1024px) {
+    padding: 10px;
+
     & #left, #right {
       width: 100vw;
       display: flex;
