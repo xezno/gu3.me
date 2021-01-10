@@ -2,7 +2,7 @@
     <div id="social">
         <ul>
             <li v-for="socialItem in socialList" v-bind:key="socialItem.link">
-                <a :href="socialItem.link"><fa :icon="socialItem.icon"></fa></a>
+                <a :aria-label="socialItem.alt" :href="socialItem.link"><fa :icon="socialItem.icon"></fa></a>
             </li>
         </ul>
     </div>
@@ -15,12 +15,12 @@
         data: function() {
             return {
                 socialList: [
-                    { "link": "https://github.com/xezno", icon: faGithub },
-                    { "link": "https://keybase.com/keybase", icon: faKeybase },
-                    { "link": "mailto:alex@gu3.me", icon: faEnvelope },
-                    { "link": "https://open.spotify.com/user/alexguthrie", icon: faSpotify },
-                    { "link": "https://twitter.com/ym2612", icon: faTwitter },
-                    { "link": "https://www.snapchat.com/add/alexguthrie01", icon: faSnapchat },
+                    { "link": "https://github.com/xezno", alt: "GitHub", icon: faGithub },
+                    { "link": "https://keybase.com/keybase", alt: "Keybase", icon: faKeybase },
+                    { "link": "mailto:alex@gu3.me", alt: "Email", icon: faEnvelope },
+                    { "link": "https://open.spotify.com/user/alexguthrie", alt: "Spotify", icon: faSpotify },
+                    { "link": "https://twitter.com/ym2612", alt: "Twitter", icon: faTwitter },
+                    { "link": "https://www.snapchat.com/add/alexguthrie01", alt: "Snapchat", icon: faSnapchat },
                 ]
             }
         }
@@ -34,7 +34,8 @@ ul {
     display: flex;
 
     & li {
-        padding: 0 5px;
+        padding: 0 10px;
+        font-size: 16pt;
         
         &:first-child {
             padding-left: 0;

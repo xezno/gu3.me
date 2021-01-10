@@ -1,7 +1,7 @@
 <template>
     <div class="toast">
         <div id="image-container">
-            <img src="/heavy drip.png" />
+            <img src="/heavy-drip.webp" />
         </div>
         <div id="text-container">
             <h3>{{ title }}</h3>
