@@ -16,7 +16,7 @@
             return {
                 socialList: [
                     { "link": "https://github.com/xezno", alt: "GitHub", icon: faGithub },
-                    { "link": "https://keybase.com/keybase", alt: "Keybase", icon: faKeybase },
+                    { "link": "https://keybase.io/xezno", alt: "Keybase", icon: faKeybase },
                     { "link": "mailto:alex@gu3.me", alt: "Email", icon: faEnvelope },
                     { "link": "https://open.spotify.com/user/alexguthrie", alt: "Spotify", icon: faSpotify },
                     { "link": "https://twitter.com/ym2612", alt: "Twitter", icon: faTwitter },
