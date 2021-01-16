@@ -2,7 +2,7 @@
     <div id="social">
         <ul>
             <li v-for="socialItem in socialList" v-bind:key="socialItem.link">
-                <a :aria-label="socialItem.alt" :href="socialItem.link"><fa :icon="socialItem.icon"></fa></a>
+                <a :aria-label="socialItem.alt" :href="socialItem.link" :class="socialItem.class"><fa :icon="socialItem.icon"></fa></a>
             </li>
         </ul>
     </div>
@@ -27,13 +27,13 @@
         data: function() {
             return {
                 socialList: [
-                    { "link": "https://github.com/xezno", alt: "GitHub", icon: faGithub },
-                    { "link": "https://keybase.io/xezno", alt: "Keybase", icon: faKeybase },
-                    { "link": "mailto:alex@gu3.me", alt: "Email", icon: faEnvelope },
-                    { "link": "https://open.spotify.com/user/alexguthrie", alt: "Spotify", icon: faSpotify },
-                    { "link": "https://twitter.com/ym2612", alt: "Twitter", icon: faTwitter },
-                    { "link": "https://www.snapchat.com/add/alexguthrie01", alt: "Snapchat", icon: faSnapchat },
-                    { "link": "https://uwutube.co/", alt: "uwutube", icon: faUwutube }
+                    { "link": "https://github.com/xezno", alt: "GitHub", icon: faGithub, class: "github" },
+                    { "link": "https://keybase.io/xezno", alt: "Keybase", icon: faKeybase, class: "keybase" },
+                    { "link": "mailto:alex@gu3.me", alt: "Email", icon: faEnvelope, class: "email" },
+                    { "link": "https://open.spotify.com/user/alexguthrie", alt: "Spotify", icon: faSpotify, class: "spotify" },
+                    { "link": "https://twitter.com/ym2612", alt: "Twitter", icon: faTwitter, class: "twitter" },
+                    { "link": "https://www.snapchat.com/add/alexguthrie01", alt: "Snapchat", icon: faSnapchat, class: "snapchat" },
+                    { "link": "https://uwutube.co/", alt: "uwutube", icon: faUwutube, class: "uwutube" }
                 ]
             }
         }
@@ -62,6 +62,30 @@ ul {
             padding: 0;
             margin: 0;
         }
+    }
+}
+
+a {
+    &.github:hover {
+        // color: ;
+    }
+    &.keybase:hover {
+        color: #FF6F21 !important;
+    }
+    &.email:hover {
+        color: #d43434 !important;
+    }
+    &.spotify:hover {
+        color: #1DB954 !important;
+    }
+    &.twitter:hover {
+        color: #1DA1F2 !important;
+    }
+    &.snapchat:hover {
+        color: #FFFC00 !important;
+    }
+    &.uwutube:hover {
+        color: #fe71dc !important;
     }
 }
 </style>
