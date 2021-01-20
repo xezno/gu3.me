@@ -47,6 +47,10 @@ export default {
 
   & #right {
     width: 25vw;
+    
+    @media (max-width: 1600px) {
+      width: 30vw;
+    }
     text-align: left;
   }
 
