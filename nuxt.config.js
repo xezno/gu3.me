@@ -46,7 +46,12 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/color-mode'
   ],
+
+  colorMode: {
+    storageKey: "color-mode"
+  },
 
   ssr: true,
 

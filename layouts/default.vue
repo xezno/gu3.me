@@ -35,10 +35,20 @@ body {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
 
-  @media (prefers-color-scheme: dark) {
-    background: #0E0E0E;
-    color: #FFFFFF;
-  }
+  animation: fadeIn 250ms ease;
+}
+
+html {
+  transition: background 150ms ease, color 150ms ease;
+}
+
+html.dark-mode {
+  background: #0E0E0E;
+  color: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h1 {
@@ -59,6 +69,11 @@ a {
   &:hover {
       color: #888888;
   }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 </style>

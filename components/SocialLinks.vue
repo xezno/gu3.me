@@ -66,6 +66,15 @@ ul {
 }
 
 a {
+    &.snapchat {
+        // Stops the snapchat icon from blinding people in light mode
+        stroke: black;
+        stroke-width: 20px;
+        stroke-opacity: 0;
+
+        transition: all 150ms ease;
+    }
+
     &.github:hover {
         // color: ;
     }
@@ -82,7 +91,9 @@ a {
         color: #1DA1F2 !important;
     }
     &.snapchat:hover {
+        stroke: black;
         color: #FFFC00 !important;
+        stroke-opacity: 1;
     }
     &.uwutube:hover {
         color: #fe71dc !important;

@@ -1,7 +1,7 @@
 <template>
     <div id="footer">
         <div id="left">
-            <p>Copyright <fa :icon="faCopyright"></fa> Alex Guthrie {{ new Date().getFullYear() }}</p>
+            <toggle-switch></toggle-switch>
         </div>
         <div id="right">
             <a href="https://github.com/xezno/gu3.me"><fa :icon="faGithub"></fa> Explore Source on GitHub</a>
@@ -12,7 +12,9 @@
 <script>
     import { faGithub } from "@fortawesome/free-brands-svg-icons";
     import { faCopyright } from "@fortawesome/free-solid-svg-icons";
+    import ToggleSwitch from './ToggleSwitch.vue';
     export default {
+        components: { ToggleSwitch },
         computed: {
             faGithub() { return faGithub; },
             faCopyright() { return faCopyright; }
@@ -32,7 +34,15 @@
         flex-wrap: nowrap;
         justify-content: space-between;
 
+        user-select: none;
+
         font-size: 12pt;
+
+        & .fa-github {
+            font-size: 24px;
+            vertical-align: bottom;
+            margin-right: 6px !important;
+        }
 
         & #left, #right {
             display: flex;
@@ -45,15 +55,6 @@
             & * {
                 margin: 0;
                 padding: 0;
-            }
-        }
-
-        
-        @media (max-width: 1024px) { 
-            flex-wrap: wrap;
-
-            & #left, #right {
-                width: 100%;
             }
         }
     }
