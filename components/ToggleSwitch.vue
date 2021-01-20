@@ -24,15 +24,20 @@
                 }
             }
         },
+        mounted: function() {
+            this.setLocalStorage();
+        },
         methods: {
-            toggle: function(event) {
-                event.preventDefault();
-                this.$colorMode.value = (this.toggled) ? "dark" : "light";
-
+            setLocalStorage: function() {
                 // library's local storage isn't working so this is a workaround
                 if (process.browser) {
                     localStorage.setItem("color-mode", this.$colorMode.value);
                 }
+            },
+            toggle: function(event) {
+                event.preventDefault();
+                this.$colorMode.value = (this.toggled) ? "dark" : "light";
+                this.setLocalStorage();
             }
         }
         

@@ -40,11 +40,13 @@ body {
 
 html {
   transition: background 150ms ease, color 150ms ease;
-}
-
-html.dark-mode {
   background: #0E0E0E;
   color: #FFFFFF;
+}
+
+html.light-mode {
+  background: #FFFFFF;
+  color: #0E0E0E;
 }
 
 * {
