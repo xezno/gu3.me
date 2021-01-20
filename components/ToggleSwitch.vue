@@ -19,7 +19,6 @@
         computed: {
             toggled: {
                 get: function() {
-                    console.log(this.$colorMode.value);
                     return this.$colorMode.value == "light";
                 }
             }
