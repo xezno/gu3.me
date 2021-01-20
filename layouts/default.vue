@@ -18,7 +18,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
@@ -35,7 +34,7 @@ body {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
 
-  animation: fadeIn 250ms ease;
+  animation: fadeIn 500ms ease;
 }
 
 html {
