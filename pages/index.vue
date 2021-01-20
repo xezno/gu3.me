@@ -16,62 +16,62 @@
 </template>
 
 <script>
-import Spotify from '~/components/Spotify.vue'
-export default {
-  components: { Spotify },
-}
+  import Spotify from '~/components/Spotify.vue'
+  export default {
+    components: { Spotify },
+  }
 </script>
 
 <style lang="scss">
-#main-article {
-  display: flex;
-  flex-wrap: nowrap;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
+  #main-article {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
 
-  & img {
-    border-radius: 15px;
-  }
-
-  & #left {
-    width: 25vw;
-    text-align: right;
-  }
-
-  & #right {
-    width: 25vw;
-    
-    @media (max-width: 1600px) {
-      width: 30vw;
-    }
-    text-align: left;
-  }
-
-  & #left, #right {
-    padding: 15px;
-  }
-
-  @media (max-width: 1024px) {
-    padding: 10px;
-
-    & #left, #right {
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: nowrap;
+    & img {
+      border-radius: 15px;
     }
 
     & #left {
-      display: none;
+      width: 25vw;
+      text-align: right;
+    }
+
+    & #right {
+      width: 25vw;
+      
+      @media (max-width: 1600px) {
+        width: 30vw;
+      }
+      text-align: left;
+    }
+
+    & #left, #right {
+      padding: 15px;
+    }
+
+    @media (max-width: 1024px) {
+      padding: 10px;
+
+      & #left, #right {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+      }
+
+      & #left {
+        display: none;
+      }
     }
   }
-}
 </style>
