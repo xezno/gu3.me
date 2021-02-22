@@ -14,7 +14,7 @@
     "@nuxtjs/color-mode": "^2.0.3",
     "@nuxtjs/pwa": "^3.0.2",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.15.1",
     "sass": "^1.32.5",
     "sass-loader": "^10.1.1"
   },
