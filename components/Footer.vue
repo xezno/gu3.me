@@ -13,7 +13,6 @@
 
 <script>
   import { faGithub } from "@fortawesome/free-brands-svg-icons";
-  import { faCopyright } from "@fortawesome/free-solid-svg-icons";
   import ToggleSwitch from './ToggleSwitch.vue';
   export default {
     components: {
@@ -22,9 +21,6 @@
     computed: {
       faGithub() {
         return faGithub;
-      },
-      faCopyright() {
-        return faCopyright;
       }
     }
   }
