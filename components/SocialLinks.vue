@@ -12,7 +12,7 @@
 
 <script>
   import { faGithub, faSnapchat, faDiscord, faSpotify, faKeybase, faYoutube } from "@fortawesome/free-brands-svg-icons";
-  import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+  import { faEnvelope, faBlog } from "@fortawesome/free-solid-svg-icons";
   const faUwutube = {
     prefix: "fac",
     iconName: "uwutube",
@@ -68,6 +68,12 @@
             alt: "Snapchat",
             icon: faSnapchat,
             class: "snapchat"
+          },
+          {
+            link: "https://blog.gu3.me/",
+            alt: "blog",
+            icon: faBlog,
+            class: "blog"
           },
           // {
           //   link: "https://forum.facepunch.com/u/xezno/",
@@ -170,6 +176,10 @@
 
     &.facepunch:hover {
       color: #ec1b24 !important;
+    }
+
+    &.blog:hover {
+      color: #2181ff !important;
     }
   }
 </style>
