@@ -64,23 +64,11 @@
             class: "spotify"
           },
           {
-            link: "https://www.snapchat.com/add/alexguthrie01",
-            alt: "Snapchat",
-            icon: faSnapchat,
-            class: "snapchat"
-          },
-          {
             link: "https://blog.gu3.me/",
             alt: "blog",
             icon: faBlog,
             class: "blog"
           },
-          // {
-          //   link: "https://forum.facepunch.com/u/xezno/",
-          //   alt: "Facepunch Forums",
-          //   icon: faFacepunch,
-          //   class: "facepunch"
-          // },
           {
             link: "https://www.youtube.com/channel/UC1-J63RN0B71WiLyElpfCiQ",
             alt: "YouTube",
@@ -88,8 +76,8 @@
             class: "youtube"
           },
           {
-            link: "https://dsc.bio/gu3",
-            alt: "Discord Bio",
+            link: "https://discord.com/users/345978018587607052",
+            alt: "Discord",
             icon: faDiscord,
             class: "discord"
           },
