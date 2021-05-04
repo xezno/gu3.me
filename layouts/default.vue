@@ -1,32 +1,22 @@
 <template>
   <div>
     <Nuxt />
-    <page-footer></page-footer>
   </div>
 </template>
 
 <script>
-  import PageFooter from "~/components/Footer";
-  import Spotify from "~/components/Spotify";
-
   export default {
-    components: {
-      PageFooter,
-      Spotify
-    }
   }
 </script>
 
 <style lang="scss">
+@import url("~/assets/normalize.css");
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 
     line-height: 1.5;
     padding: 0;
     margin: 0;
-
-    font-size: 14pt;
-    font-weight: 400;
 
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
@@ -38,22 +28,34 @@
 
   html {
     transition: background 150ms ease, color 150ms ease;
-    background: #0E0E0E;
-    color: #FFFFFF;
-  }
 
-  html.light-mode {
+    font-size: 16px;
+    word-spacing: 1px;
+    font-weight: 400;
+      
     background: #FFFFFF;
-    color: #0E0E0E;
+    color: #202020;
+
+    @media screen and (prefers-color-scheme: dark) {
+      /* Dark mode */
+      background: #202020;
+      color: #ffffff;
+      font-weight: 350; // Thinner font; easier to read on dark background
+    }
+
+    line-height: 1.5;
   }
 
   * {
     box-sizing: border-box;
   }
 
-  h1 {
-    font-weight: 900;
-    margin-bottom: 1em;
+  h1, h2, h3, h4, h5, h6 {
+    margin: 1.5em 0;
+
+    @media screen and (prefers-color-scheme: dark) {
+      font-weight: 650;
+    }
   }
 
   p {

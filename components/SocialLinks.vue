@@ -94,6 +94,10 @@
 </script>
 
 <style lang="scss" scoped>
+  #social {
+     margin-top: 3em;
+  }
+
   ul {
     list-style: none;
     padding: 0;
