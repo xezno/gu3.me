@@ -48,7 +48,10 @@ export default {
         solid: true,
         brands: true
       }
-    }]
+    }],
+    [
+      '@nuxtjs/tailwindcss'
+    ]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -56,10 +59,12 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxtjs/pwa'
   ],
+
+  tailwindcss: {
+    jit: true
+  },
 
   ssr: true,
 
@@ -70,6 +75,5 @@ export default {
   content: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-  }
+  build: {}
 }
