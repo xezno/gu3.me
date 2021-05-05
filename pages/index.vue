@@ -1,6 +1,6 @@
 <template>
   <article class="flex justify-center items-center inset-0 absolute">
-    <div class="w-3/12 min-w-350">
+    <div class="w-fill md:w-3/12 md:min-w-350 p-4">
       <div>
         <h1 class="text-3xl">Alex Guthrie</h1>
         <p>Hey! I'm Alex.</p>

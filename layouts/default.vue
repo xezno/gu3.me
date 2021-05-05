@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <Nuxt />
   </div>
 </template>
@@ -17,31 +17,24 @@
 
 @layer base {
   body {
-    @apply text-base;
-
-    @apply m-0;
+    @apply text-base font-sans;
     @apply animate-fade;
 
-    @apply p-safe;
-    @apply font-sans;
+    @apply p-safe m-0;
 
-    @apply text-black;
-    @apply bg-white;
+    @apply text-black bg-white;
+    @apply leading-normal font-normal;
 
-    @apply leading-normal;
-    @apply font-normal;
+    @apply font-400;
 
-    &.dark {
-      @apply text-white;
-      @apply bg-gray-800;
-      @apply font-350;
-    }
+    @apply dark:text-white dark:bg-dove-gray-800 dark:font-350;
   }
 
   a {
     @apply transition-colors;
     @apply no-underline;
     @apply text-inherit;
+
     &:hover {
       @apply text-gray-700;
     }
@@ -50,6 +43,8 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
     @apply my-12;
+
+    @apply font-700;
     
     &.dark {
       @apply font-650;
