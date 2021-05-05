@@ -46,8 +46,8 @@ export default {
     ['@nuxtjs/fontawesome', {
       component: 'fa',
       icons: {
-        solid: true,
-        brands: true
+        solid: [ 'faEnvelope', 'faBlog' ],
+        brands: [ 'faGithub', 'faDiscord', 'faSpotify', 'faKeybase', 'faYoutube' ]
       }
     }],
     [
@@ -63,9 +63,7 @@ export default {
     '@nuxtjs/pwa'
   ],
 
-  tailwindcss: {
-    // jit: true
-  },
+  tailwindcss: {},
 
   ssr: true,
 
