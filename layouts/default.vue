@@ -4,77 +4,55 @@
   </div>
 </template>
 
-<script>
-  export default {
-  }
-</script>
-
-<style lang="scss">
+<style>
 @import url("~/assets/normalize.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+@layer base {
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+    @apply text-base font-sans;
+    @apply animate-fade;
 
-    line-height: 1.5;
-    padding: 0;
-    margin: 0;
+    @apply p-safe m-0;
 
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
+    @apply text-black bg-white;
+    @apply leading-normal font-normal;
 
-    animation: fadeIn 500ms ease;
+    @apply font-400;
+
+    @apply dark:text-white dark:bg-dove-gray-800 dark:font-350;
   }
 
-  html {
-    transition: background 150ms ease, color 150ms ease;
+  a {
+    @apply transition-colors;
+    @apply no-underline;
+    @apply text-inherit;
 
-    font-size: 16px;
-    word-spacing: 1px;
-    font-weight: 400;
-      
-    background: #FFFFFF;
-    color: #202020;
-
-    @media screen and (prefers-color-scheme: dark) {
-      /* Dark mode */
-      background: #202020;
-      color: #ffffff;
-      font-weight: 350; // Thinner font; easier to read on dark background
+    &:hover {
+      @apply text-gray-700;
     }
-
-    line-height: 1.5;
-  }
-
-  * {
-    box-sizing: border-box;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: 1.5em 0;
+    @apply font-bold;
+    @apply my-12;
 
-    @media screen and (prefers-color-scheme: dark) {
-      font-weight: 650;
+    @apply font-700;
+    
+    &.dark {
+      @apply font-650;
     }
   }
 
   p {
-    margin-bottom: 0.75em;
+    @apply mb-4;
   }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-
-    transition: color ease 150ms;
-
-    &:hover {
-        color: #888888;
-    }
-  }
-
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
-  <div id="social">
-    <ul>
-      <li v-for="socialItem in socialList" v-bind:key="socialItem.link">
+  <div class="mt-12">
+    <ul class="list-none p-0 flex">
+      <li class="p-0 mx-2.5 first:ml-0 text-xl" v-for="socialItem in socialList" v-bind:key="socialItem.link">
         <a :aria-label="socialItem.alt" :href="socialItem.link" :class="socialItem.class">
           <fa :icon="socialItem.icon"></fa>
         </a>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import { faGithub, faSnapchat, faDiscord, faSpotify, faKeybase, faYoutube } from "@fortawesome/free-brands-svg-icons";
+  import { faGithub, faDiscord, faSpotify, faKeybase, faYoutube } from "@fortawesome/free-brands-svg-icons";
   import { faEnvelope, faBlog } from "@fortawesome/free-solid-svg-icons";
   const faUwutube = {
     prefix: "fac",
@@ -43,135 +43,52 @@
             link: "https://github.com/xezno",
             alt: "GitHub",
             icon: faGithub,
-            class: "github"
+            class: "hover:text-gray"
           },
           {
             link: "https://keybase.io/xezno",
             alt: "Keybase",
             icon: faKeybase,
-            class: "keybase"
+            class: "hover:text-keybase"
           },
           {
             link: "mailto:alex@gu3.me",
             alt: "Email",
             icon: faEnvelope,
-            class: "email"
+            class: "hover:text-email"
           },
           {
             link: "https://open.spotify.com/user/alexguthrie",
             alt: "Spotify",
             icon: faSpotify,
-            class: "spotify"
+            class: "hover:text-spotify"
           },
           {
             link: "https://blog.gu3.me/",
             alt: "blog",
             icon: faBlog,
-            class: "blog"
+            class: "hover:text-blog"
           },
           {
             link: "https://www.youtube.com/channel/UC1-J63RN0B71WiLyElpfCiQ",
             alt: "YouTube",
             icon: faYoutube,
-            class: "youtube"
+            class: "hover:text-youtube"
           },
           {
             link: "https://discord.com/users/345978018587607052",
             alt: "Discord",
             icon: faDiscord,
-            class: "discord"
+            class: "hover:text-discord"
           },
           {
             link: "https://uwutube.co/",
             alt: "uwutube",
             icon: faUwutube,
-            class: "uwutube"
+            class: "hover:text-uwutube"
           }
         ]
       }
     }
   }
 </script>
-
-<style lang="scss" scoped>
-  #social {
-     margin-top: 3em;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-
-    & li {
-      padding: 0 10px;
-      font-size: 16pt;
-
-      &:first-child {
-        padding-left: 0;
-      }
-
-      &:last-child {
-        padding-right: 0;
-      }
-
-      & img {
-        padding: 0;
-        margin: 0;
-      }
-    }
-  }
-
-  a {
-    &.snapchat {
-      // Stops the snapchat icon from blinding people in light mode
-      stroke: black;
-      stroke-width: 20px;
-      stroke-opacity: 0;
-
-      transition: all 150ms ease;
-    }
-
-    // &.github:hover {
-    //   // color: ;
-    // }
-
-    &.keybase:hover {
-      color: #FF6F21 !important;
-    }
-
-    &.email:hover {
-      color: #d43434 !important;
-    }
-
-    &.spotify:hover {
-      color: #1DB954 !important;
-    }
-
-    &.snapchat:hover {
-      stroke: black;
-      color: #FFFC00 !important;
-      stroke-opacity: 1;
-    }
-
-    &.uwutube:hover {
-      color: #fe71dc !important;
-    }
-
-    &.youtube:hover {
-      color: #FF0000 !important;
-    }
-
-    &.discord:hover {
-      color: #7289DA !important;
-    }
-
-    &.facepunch:hover {
-      color: #ec1b24 !important;
-    }
-
-    &.blog:hover {
-      color: #2181ff !important;
-    }
-  }
-</style>
