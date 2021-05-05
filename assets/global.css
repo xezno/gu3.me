@@ -1,0 +1,50 @@
+@import url("~/assets/normalize.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+@layer base {
+  body {
+    @apply text-base font-sans;
+    @apply animate-fade;
+
+    @apply p-safe m-0;
+
+    @apply text-black bg-white;
+    @apply leading-normal font-normal;
+
+    @apply font-400;
+
+    @apply dark:text-white dark:bg-dove-gray-800;
+  }
+
+  a {
+    @apply transition-colors;
+    @apply no-underline;
+    @apply text-inherit;
+
+    &:hover {
+      @apply text-gray-700;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    @apply my-12;
+
+    @apply font-700;
+    
+    &.dark {
+      @apply font-650;
+    }
+  }
+
+  p {
+    @apply mb-4;
+  }
+}
