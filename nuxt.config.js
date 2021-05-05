@@ -63,7 +63,9 @@ export default {
     '@nuxtjs/pwa'
   ],
 
-  tailwindcss: {},
+  tailwindcss: {
+    jit: true
+  },
 
   ssr: true,
 
@@ -74,5 +76,11 @@ export default {
   content: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {}
+  build: {
+    babel:{
+      plugins: [
+        ['@babel/plugin-proposal-private-methods', { loose: true }]
+      ]
+    }
+  }
 }

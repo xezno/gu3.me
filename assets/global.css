@@ -20,7 +20,7 @@
 
     @apply font-400;
 
-    @apply dark:text-white dark:bg-dove-gray-800;
+    @apply dark:text-white dark:bg-default-800;
   }
 
   a {
@@ -29,19 +29,27 @@
     @apply text-inherit;
 
     &:hover {
-      @apply text-gray-700;
+      @apply text-default-700;
     }
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
-    @apply my-12;
-
     @apply font-700;
+
+    @apply my-2;
     
     &.dark {
       @apply font-650;
     }
+  }
+
+  h1 {
+    @apply text-xl;
+  }
+
+  h2 {
+    @apply text-lg;
   }
 
   p {

@@ -43,7 +43,7 @@
             link: "https://github.com/xezno",
             alt: "GitHub",
             icon: faGithub,
-            class: "hover:text-gray-500"
+            class: "hover:text-default-500"
           },
           {
             link: "https://keybase.io/xezno",
