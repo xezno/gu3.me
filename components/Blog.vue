@@ -1,10 +1,10 @@
 <template>
   <BaseArea title="Blog Posts">
     <div class="flex flex-wrap justify-between mb-20">
-      <div class="w-card1/3" v-for="item in items.items.slice(0, 3)" v-bind:key="item.title">
+      <div class="w-full my-2.5 md:my-0 md:w-card1/3" v-for="item in items.items.slice(0, 3)" v-bind:key="item.title">
         <a :href="item.link" target="_blank" class="hover:text-white">
           <BaseCard
-            class="mx-2.5 first:ml-0 last:mr-0 h-full"
+            class="md:mx-2.5 first:ml-0 last:mr-0 h-full"
             :title="item.title" 
             :image="item.enclosure.url ? item.enclosure.url : 'https://source.unsplash.com/random/?landscape'"
             link="https://blog.gu3.me/"

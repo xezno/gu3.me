@@ -2,6 +2,9 @@ module.exports = {
   purge: [],
   darkMode: 'media',
   theme: {
+    screens: {
+      'md': '1280px',
+    },
     extend: {
       minWidth: {
         '1/2': '50%',
