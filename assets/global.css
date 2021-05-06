@@ -9,9 +9,16 @@
 }
 
 @layer base {
+  html {
+    @apply h-screen;
+  }
+
   body {
     @apply text-base font-sans;
     @apply animate-fade;
+
+    @apply h-screen;
+    @apply overflow-y-auto;
 
     @apply p-safe m-0;
 
@@ -70,5 +77,36 @@
 
   p {
     @apply mb-4;
+  }
+
+  hr {
+    @apply border-default-600;
+    @apply m-16 my-8;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+    @apply bg-default-700;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-none;
+    @apply w-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-default-500 bg-clip-padding;
+  }
+
+  ::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active {
+    @apply bg-default-400 bg-clip-padding;
+  }
+
+  ::-webkit-scrollbar-button {
+    @apply w-0 h-0 hidden;
+  }
+
+  ::-webkit-scrollbar-corner {
+    @apply bg-transparent;
   }
 }

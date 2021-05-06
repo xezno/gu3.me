@@ -36,6 +36,8 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    "@/plugins/rss.js",
+    "@/plugins/date-filter.js",
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -64,7 +66,7 @@ export default {
   ],
 
   tailwindcss: {
-    // jit: true
+    jit: true
   },
 
   ssr: true,

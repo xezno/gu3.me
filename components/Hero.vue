@@ -10,13 +10,16 @@
           ></div>
         </section>
         
-        <section class="p-4 flex w-1/2 min-w-350 z-10 h-auto ml-1">
+        <section class="p-4 flex w-1/2 min-w-350 z-10 h-auto mx-1">
           <div class="w-auto">
             <h1 class="text-3xl mb-12">Alex Guthrie</h1>
             <p>Hey! I'm Alex.</p>
             <p>I'm a 19 year old Computer Science student and software engineer from the United Kingdom interested in reverse 
               engineering, computer graphics, and game development.</p>
             <p>I love programming, playing video games, tennis, piña coladas, and getting caught in the rain.</p>
+        
+            <hr class="mx-0" />
+
             <social-links></social-links>
           </div>
         </section>

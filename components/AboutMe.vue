@@ -1,6 +1,5 @@
 <template>
-  <div class="w-full">
-    <h1>About Me</h1>
+  <BaseArea title="About Me">
     <div class="flex">
       <BaseCard title="Things I Like" class="mr-5 w-1/2">
         I like a lot of things - but programming-wise, here's what I'm into:
@@ -13,5 +12,5 @@
         Aliqua Lorem dolore eu quis velit ipsum aliquip est ea deserunt.
       </BaseCard>
     </div>
-  </div>
+  </BaseArea>
 </template>
