@@ -67,7 +67,6 @@ export default {
   ],
 
   tailwindcss: {
-    jit: true
   },
 
   ssr: true,
