@@ -5,7 +5,15 @@ module.exports = {
     extend: {
       minWidth: {
         '1/2': '50%',
+        '1/3': '33%',
         '350': '350px'
+      },
+      maxWidth: {
+        '1/2': '50%',
+        '1/3': '33%'
+      },
+      width: {
+        'card1/3': 'calc(33% - 1.5em)'
       },
       fontFamily: {
         'sans': [ '-apple-system', 'BlinkMacSystemFont', '"Inter"', 'sans-serif']
@@ -14,10 +22,23 @@ module.exports = {
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 }
+        },
+        pushDown: {
+          '0%': { opacity: 0, transform: 'translateY(-10px)' },
+          // HACK: delay animation between loops
+          '50%': { opacity: 0, transform: 'translateY(-10px)' },
+          '75%': { opacity: 1, transform: 'translateY(0px)' },
+          '100%': { opacity: 0, transform: 'translateY(10px)' }
+        },
+        in: {
+          '0%': { opacity: 0, transform: 'translateY(10px)' },
+          '100%': { opacity: 1, transform: 'translateY(0px)' }
         }
       },
       animation: {
-        'fade': 'fadeIn 500ms ease'
+        'fade': 'fadeIn 500ms ease',
+        'push-down': 'pushDown 1500ms linear infinite',
+        'in': 'in 250ms ease 500ms running both'
       },
       textColor: {
         'keybase': '#FF6F21',
@@ -40,19 +61,19 @@ module.exports = {
         700: 700
       },
       colors: {
-        'dove-gray': {
-          DEFAULT: '#6E6E6E',
-          '50': '#E0E0E0',
-          '100': '#D4D4D4',
-          '200': '#BABABA',
-          '300': '#A1A1A1',
-          '400': '#878787',
-          '500': '#6E6E6E',
-          '600': '#545454',
-          '700': '#3B3B3B',
-          '800': '#202020',
-          '900': '#080808'
-        }
+        "default": {
+          DEFAULT: '#627484',
+          '50': '#E2E6E9',
+          '100': '#D3D9DE',
+          '200': '#B6C0C9',
+          '300': '#98A7B3',
+          '400': '#7B8E9D',
+          '500': '#627484',
+          '600': '#4C5B67',
+          '700': '#364149',
+          '800': '#21272C',
+          '900': '#0B0D0F'
+        },
       },
       padding: {
         'safe': 'env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)',
@@ -61,6 +82,9 @@ module.exports = {
         'safe-right': 'env(safe-area-inset-right)',
         'safe-left': 'env(safe-area-inset-left)'
       },
+      backgroundImage: theme => ({
+        'main-image': 'url("/robot.png")'
+      })
     }
   },
   variants: {

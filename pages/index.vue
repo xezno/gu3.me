@@ -1,14 +1,32 @@
 <template>
-  <article class="flex justify-center items-center inset-0 absolute">
-    <div class="w-fill md:w-3/12 md:min-w-350 p-4">
-      <div>
-        <h1 class="text-3xl">Alex Guthrie</h1>
-        <p>Hey! I'm Alex.</p>
-        <p>I'm a 19 year old Computer Science student and software engineer interested in reverse engineering, 
-          computer graphics, and machine learning.</p>
-        <p>I love programming, playing video games, tennis, piña coladas, and getting caught in the rain.</p>
-        <social-links></social-links>
-      </div>
+  <main>
+    <div class="px-64">
+      <Hero class="my-5"></Hero>
     </div>
-  </article>
+    <div class="bg-default-800 py-16 px-64">
+      <AboutMe class="my-16"></AboutMe>
+      <hr />
+      <Blog class="my-16" :items="parsed"></Blog>
+    </div>
+  </main>
 </template>
+
+
+<script>
+  export default {
+    async mounted() {
+      const feed = await this.$axios.$get('https://blog.gu3.me/feed/rss.xml')
+      let Parser = require('rss-parser');
+      let parser = new Parser();
+      let parsed = await parser.parseString(feed);
+      this.parsed = parsed;
+    },
+    data: function() {
+      return {
+        parsed: {
+          items: []
+        }
+      }
+    }
+  }
+</script>
