@@ -69,7 +69,7 @@ export default {
   tailwindcss: {
   },
 
-  ssr: false,
+  ssr: true,
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
