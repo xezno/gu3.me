@@ -62,7 +62,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/proxy'
   ],
 
   tailwindcss: {
@@ -72,7 +73,16 @@ export default {
   ssr: true,
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    proxy: true // Can be also an object with default options
+  },
+
+  proxy: {
+    '/blog': { 
+      target: 'https://blog.gu3.me/',
+      pathRewrite: {'^/blog/': ''} 
+    }
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},

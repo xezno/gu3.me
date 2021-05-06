@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <ul class="list-none p-0 flex">
-      <li class="p-0 m-0 mr-5 text-xl" v-for="socialItem in socialList" v-bind:key="socialItem.link">
-        <a :aria-label="socialItem.alt" :href="socialItem.link" :class="socialItem.class">
-          <fa :icon="socialItem.icon"></fa>
-        </a>
-      </li>
-    </ul>
-  </div>
+  <ul class="list-none p-0 flex w-auto">
+    <li class="p-0 m-0 mr-5 text-xl" v-for="socialItem in socialList" v-bind:key="socialItem.link">
+      <a :aria-label="socialItem.alt" :href="socialItem.link" :class="socialItem.class">
+        <fa :icon="socialItem.icon"></fa>
+      </a>
+    </li>
+  </ul>
 </template>
 
 <script>

@@ -5,8 +5,8 @@
         inset-48 md:inset-x-1/4 rounded-lg flex items-center overflow-hidden shadow-xl animate-in">
 
         <section class="w-1/2 h-full mr-1">
-          <div style="background: url('https://source.unsplash.com/random/?landscape')"
-            class="w-full h-full bg-cover bg-center shadow-md overflow-hidden"
+          <div style="background: url('https://cdn.discordapp.com/attachments/839155256964284459/839820840659845120/70016038_473227283268995_7568323747035041244_n.png') center/cover"
+            class="w-full h-full shadow-md overflow-hidden"
           ></div>
         </section>
         

@@ -1,16 +1,15 @@
 <template>
   <BaseArea title="Blog Posts">
-    <div class="flex flex-wrap justify-evenly mb-20">
-      <div class="mr-5 w-card1/3" v-for="(item, index) in items.items" v-bind:key="item.title">
+    <div class="flex flex-wrap justify-between mb-20">
+      <div class="w-card1/3" v-for="item in items.items.slice(0, 3)" v-bind:key="item.title">
         <a :href="item.link" target="_blank" class="hover:text-white">
           <BaseCard
-            class="h-full"
-            v-if="index < 3"
+            class="mx-2.5 first:ml-0 last:mr-0 h-full"
             :title="item.title" 
-            image="https://source.unsplash.com/random/?landscape" 
+            :image="item.enclosure.url ? item.enclosure.url : 'https://source.unsplash.com/random/?landscape'"
             link="https://blog.gu3.me/"
-            :date="item.pubDate"
-            :tags="['test', 'blog', 'entry']">
+            :date="item.pubDate">
+            <!-- :tags="['test', 'blog', 'entry']" Currently unsupported... -->
             {{ item.content }}
           </BaseCard>
         </a>

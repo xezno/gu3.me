@@ -14,13 +14,19 @@
 
 <script>
   export default {
-    async asyncData({ $axios, $parse }) {
-      const ip = await $axios.$get('https://blog.gu3.me/feed/rss.xml')
+    async mounted() {
+      const feed = await this.$axios.$get('/blog/feed/rss.xml')
       let Parser = require('rss-parser');
       let parser = new Parser();
-      let parsed = await parser.parseString(ip);
-      console.log(parsed);
-      return { parsed }
+      let parsed = await parser.parseString(feed);
+      this.parsed = parsed;
+    },
+    data: function() {
+      return {
+        parsed: {
+          items: []
+        }
+      }
     }
   }
 </script>
