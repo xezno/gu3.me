@@ -1,8 +1,8 @@
 <template>
   <div 
-    class="shadow-md bg-default-700 border-default-600 border-solid border rounded-lg
-      p-5 my-10 overflow-hidden min-w-1/3"
-    :class="link ? 'cursor-pointer':''"
+    class="shadow-md bg-default-700 border-default-600 border border-transparent border-solid rounded-lg
+      p-5 my-10 overflow-hidden"
+    :class="link ? 'cursor-pointer transform-gpu transition hover:-translate-y-2 hover:border hover:border-default-500 hover:shadow-lg':''"
   >
     <div 
       v-if="image"
@@ -14,26 +14,28 @@
       v-if="date"
       class="uppercase text-gray-300 font-bold text-sm"
     >
-      {{date}}
+      <fa :icon="faCalendar" class="mr-1"></fa> {{date}}
     </span>
-    <h2
-      v-if="title"
-      >
+    <h3 v-if="title">
       {{title}}
-    </h2>
+    </h3>
     <slot></slot>
 
     <div v-if="tags" class="uppercase font-bold text-xs mt-5 text-gray-300">
-      <fa :icon="faTag"></fa>
+      <fa class="mr-1" :icon="faTag"></fa>
       <span v-for="(tag, i) in tags" v-bind:key="tag">
         <span v-if="i !== 0">, </span>
         {{ tag }}</span>
+    </div>
+
+    <div v-if="link" class="uppercase bg-default-600 font-bold text-xs -m-5 mt-5 text-gray-300 py-5 px-5">
+      Read Article <fa class="ml-1 float-right" :icon="faArrowRight"></fa>
     </div>
   </div>
 </template>
 
 <script>
-import { faTag } from "@fortawesome/free-solid-svg-icons";
+import { faTag, faArrowRight, faCalendar } from "@fortawesome/free-solid-svg-icons";
 export default {
   props: {
     title: {
@@ -59,7 +61,9 @@ export default {
   },
   data: function() {
     return {
-      faTag
+      faTag,
+      faArrowRight,
+      faCalendar
     }
   }
 }

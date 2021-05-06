@@ -12,6 +12,9 @@ module.exports = {
         '1/2': '50%',
         '1/3': '33%'
       },
+      width: {
+        'card1/3': 'calc(33% - 1.5em)'
+      },
       fontFamily: {
         'sans': [ '-apple-system', 'BlinkMacSystemFont', '"Inter"', 'sans-serif']
       },
@@ -26,11 +29,16 @@ module.exports = {
           '50%': { opacity: 0, transform: 'translateY(-10px)' },
           '75%': { opacity: 1, transform: 'translateY(0px)' },
           '100%': { opacity: 0, transform: 'translateY(10px)' }
+        },
+        in: {
+          '0%': { opacity: 0, transform: 'translateY(10px)' },
+          '100%': { opacity: 1, transform: 'translateY(0px)' }
         }
       },
       animation: {
         'fade': 'fadeIn 500ms ease',
-        'push-down': 'pushDown 1500ms linear infinite'
+        'push-down': 'pushDown 1500ms linear infinite',
+        'in': 'in 250ms ease 500ms running both'
       },
       textColor: {
         'keybase': '#FF6F21',
@@ -53,19 +61,19 @@ module.exports = {
         700: 700
       },
       colors: {
-        'default': {
-          DEFAULT: '#564F7D',
-          '50': '#E0DEEA',
-          '100': '#D0CDDF',
-          '200': '#AFABCA',
-          '300': '#8F88B4',
-          '400': '#6E669E',
-          '500': '#564F7D',
-          '600': '#403B5E',
-          '700': '#2B283E',
-          '800': '#15141F',
-          '900': '#000000'
-        }
+        "default": {
+          DEFAULT: '#627484',
+          '50': '#E2E6E9',
+          '100': '#D3D9DE',
+          '200': '#B6C0C9',
+          '300': '#98A7B3',
+          '400': '#7B8E9D',
+          '500': '#627484',
+          '600': '#4C5B67',
+          '700': '#364149',
+          '800': '#21272C',
+          '900': '#0B0D0F'
+        },
       },
       padding: {
         'safe': 'env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)',

@@ -20,7 +20,7 @@
 
     @apply font-400;
 
-    @apply dark:text-white dark:bg-default-800;
+    @apply dark:text-white dark:bg-default-900;
   }
 
   a {
@@ -45,11 +45,27 @@
   }
 
   h1 {
-    @apply text-xl;
+    @apply text-3xl;
   }
 
   h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
     @apply text-lg;
+  }
+
+  h5 {
+    @apply text-base;
+  }
+
+  h6 {
+    @apply text-base;
   }
 
   p {
