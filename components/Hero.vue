@@ -2,7 +2,7 @@
   <div class="overflow-hidden plus-bg">
     <div class="flex justify-center items-center h-screen m-auto">
       <article class="bg-default-800 md:border md:border-solid border-default-700 absolute z-0 
-        inset-0 md:inset-y-48 md:inset-x-1/4 md:rounded-lg flex items-center overflow-hidden shadow-xl md:animate-in">
+        inset-0 md:inset-y-48 md:inset-x-1/4 md:rounded-lg flex items-center overflow-hidden shadow-xl">
 
         <section class="invisible md:visible w-0 md:w-1/2 h-full mr-1">
           <div style="background: url('https://cdn.discordapp.com/attachments/839155256964284459/839820840659845120/70016038_473227283268995_7568323747035041244_n.png') center/cover"
@@ -28,7 +28,7 @@
 
     <div class="absolute left-0 right-0 bottom-8 md:bottom-0 flex justify-center">
       <p class="uppercase font-bold p-2 bg-default-800 rounded-lg border border-solid border-default-700
-        text-sm animate-in">
+        text-sm">
         Scroll for More <fa class="animate-push-down ml-2" :icon="faArrowDown"></fa>
       </p>
     </div>
