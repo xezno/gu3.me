@@ -21,13 +21,12 @@
     @apply overflow-y-auto;
 
     @apply p-safe m-0;
-
-    @apply text-black bg-white;
+    
     @apply leading-normal font-normal;
 
     @apply font-400;
 
-    @apply dark:text-white dark:bg-default-900;
+    @apply text-white bg-default-900;
   }
 
   a {
@@ -45,10 +44,6 @@
     @apply font-700;
 
     @apply my-2;
-    
-    &.dark {
-      @apply font-650;
-    }
   }
 
   h1 {
