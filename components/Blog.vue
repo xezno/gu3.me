@@ -6,7 +6,7 @@
           <BaseCard
             class="md:mx-2.5 first:ml-0 last:mr-0 h-full"
             :title="item.title" 
-            :image="item.enclosure.url ? item.enclosure.url : 'https://source.unsplash.com/random/?landscape'"
+            :image="item.enclosure ? item.enclosure.url : 'https://source.unsplash.com/random/?landscape'"
             link="https://blog.gu3.me/"
             :date="item.pubDate">
             <!-- :tags="['test', 'blog', 'entry']" Currently unsupported... -->
