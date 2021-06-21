@@ -2,12 +2,12 @@
   <div 
     class="shadow-md bg-default-700 border-default-600 border border-solid rounded-lg
       p-5 my-10 overflow-hidden group"
-    :class="link ? 'cursor-pointer transform-gpu transition hover:-translate-y-2 hover:border hover:border-default-500 \
-      hover:shadow-xl':''">
+    :class="link ? 'group cursor-pointer transform-gpu transition hover:-translate-y-2 hover:border hover:bg-accent hover:text-black hover:border-accent \
+      hover:shadow-glow':''">
     <div v-if="image" :style="`background-image: url(${image});`" 
-      class="h-64 bg-cover bg-center -mt-5 bg-default-600 -mx-5 mb-5">
+      class="h-64 transition bg-cover bg-center -mt-5 bg-default-600 group-hover:bg-accent -mx-5 mb-5">
     </div>
-    <span v-if="date" class="uppercase text-gray-300 font-bold text-sm">
+    <span v-if="date" class="uppercase transition text-gray-300 group-hover:text-black font-bold text-sm">
       <fa :icon="faCalendar" class="mr-1"></fa> {{ date | date }}
     </span>
     <h3 v-if="title">
@@ -27,7 +27,7 @@
       </div>
 
       <div v-if="link" class="uppercase bg-default-600 font-bold text-xs -m-5 mt-5 text-gray-300 py-5 px-5
-        transition group-hover:bg-default-500">
+        transition group-hover:bg-accent group-hover:text-black">
         Read Article <fa class="ml-1 float-right" :icon="faArrowRight"></fa>
       </div>
     </div>

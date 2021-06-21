@@ -6,6 +6,9 @@ module.exports = {
       'md': '1280px',
     },
     extend: {
+      boxShadow: {
+        'glow': '0 0 10px #D7FF2E'
+      },
       minWidth: {
         '1/2': '50%',
         '1/3': '33%',
@@ -65,18 +68,21 @@ module.exports = {
       },
       colors: {
         "default": {
-          DEFAULT: '#627484',
-          '50': '#E2E6E9',
-          '100': '#D3D9DE',
-          '200': '#B6C0C9',
-          '300': '#98A7B3',
-          '400': '#7B8E9D',
-          '500': '#627484',
-          '600': '#4C5B67',
-          '700': '#364149',
-          '800': '#21272C',
-          '900': '#0B0D0F'
+          '50': '#8ABDFF',
+          '100': '#7AB4FF',
+          '200': '#5CA3FF',
+          '300': '#3D91FF',
+          '400': '#1F80FF',
+          '500': '#006EFF',
+          '600': '#005BD1',
+          '700': '#0047A3',
+          '800': '#003375',
+          '900': '#001F47'
         },
+        "accent": {
+          'DEFAULT': '#D7FF2E',
+          '500': '#D7FF2E'
+        }
       },
       padding: {
         'safe': 'env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)',

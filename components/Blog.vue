@@ -18,7 +18,7 @@
     <!-- TODO: Eventually replace the blog entirely by combining this site with it, effectively making this website a front
     page to the blog, and making this a link to some sort of directory listing - i.e. https://gu3.me/articles -->
     <div class="w-full flex justify-center">
-      <a target="_blank" class="uppercase font-bold text-default-300 p-1" href="https://blog.gu3.me/">View more...</a>
+      <a target="_blank" class="uppercase font-bold text-default-300 p-1 hover:text-accent" href="https://blog.gu3.me/">View more...</a>
     </div>
   </BaseArea>
 </template>

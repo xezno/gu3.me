@@ -35,7 +35,7 @@
     @apply text-inherit;
 
     &:hover {
-      @apply text-default-700;
+      @apply text-accent;
     }
   }
 
