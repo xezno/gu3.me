@@ -81,7 +81,7 @@
 
   ::-webkit-scrollbar {
     @apply w-2;
-    @apply bg-default-700;
+    @apply bg-default-800;
   }
 
   ::-webkit-scrollbar-track {

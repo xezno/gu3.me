@@ -2,7 +2,7 @@
   <div>
     <Nuxt />
 
-    <footer class="text-center md:text-left font-bold flex md:content-evenly p-5 uppercase">
+    <footer class="text-center md:text-left font-bold flex md:content-evenly p-5 uppercase bg-default-800">
       <div class="w-full md:w-96 m-auto">
         &copy; Alex Guthrie 2021
       </div>
