@@ -1,22 +1,22 @@
 <template>
   <BaseArea title="Blog Posts">
-    <div class="flex flex-wrap justify-between mb-20">
-      <div class="w-full my-2.5 md:my-0 md:w-card1/3" v-for="item in items.items.slice(0, 3)" v-bind:key="item.title">
+    <div class="flex justify-between mb-20 mx-auto flex-row w-full flex-wrap">
+      <div class="w-full md:w-1/2 my-3 md:px-4 md:my-4" v-for="item in items.items.slice(0, 6)" v-bind:key="item.title">
         <a :href="item.link" target="_blank" class="hover:text-white">
-          <BaseCard
-            class="md:mx-2.5 first:ml-0 last:mr-0 h-full"
-            :title="item.title" 
-            :image="item.enclosure ? item.enclosure.url : 'https://source.unsplash.com/random/?landscape'"
-            link="https://blog.gu3.me/"
-            :date="item.pubDate">
-            <!-- :tags="['test', 'blog', 'entry']" Currently unsupported... -->
+          <div
+            class="w-full z-1 h-30 group truncate bg-default-800 rounded-xl p-6 transition-all cursor-pointer relative overflow-hidden border border-default-600 border-opacity-20 background-default-800 hover:bg-accent hover:border-accent hover:text-black hover:shadow-glow">
+              <h3 class="my-0 z-1 uppercase truncate">{{ item.title }}</h3>
+              <h4 class="my-0 z-1 truncate">{{ item.pubDate | date }}</h4>
+              <div class="absolute right-0 top-0 bottom-0 m-0 w-1/4 bg-cover bg-center transition-all opacity-40 transform group-hover:opacity-75 z-0 group-hover:scale-110 article-image"
+                :style="`background-image: url(${item.enclosure ? item.enclosure.url : 'https://source.unsplash.com/random/?landscape'})`"
+              >
+            </div>
             {{ item.content }}
-          </BaseCard>
+          </div>
         </a>
       </div>
     </div>
-    <!-- TODO: Eventually replace the blog entirely by combining this site with it, effectively making this website a front
-    page to the blog, and making this a link to some sort of directory listing - i.e. https://gu3.me/articles -->
+    
     <div class="w-full flex justify-center">
       <a target="_blank" class="uppercase font-bold text-default-300 p-1 hover:text-accent" href="https://blog.gu3.me/">View more...</a>
     </div>
@@ -30,3 +30,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import "@/assets/scrimMask.scss";
+.article-image {
+  @include scrimMask( black, "to left" );
+  min-width: 200px;
+}
+</style>

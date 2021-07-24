@@ -6,13 +6,17 @@ module.exports = {
       'md': '1280px',
     },
     extend: {
+      zIndex: {
+        '-10': '-10'
+      },
       boxShadow: {
-        'glow': '0 0 10px #D7FF2E'
+        'glow': '0 0 25px #D7FF2E'
       },
       minWidth: {
         '1/2': '50%',
         '1/3': '33%',
-        '350': '350px'
+        '350': '350px',
+        '200': '200px'
       },
       maxWidth: {
         '1/2': '50%',
@@ -97,7 +101,9 @@ module.exports = {
     }
   },
   variants: {
-    extend: {},
+    extend: {
+      scale: ['group-hover']
+    },
   },
   plugins: [],
 }

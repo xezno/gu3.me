@@ -12,3 +12,11 @@
     </footer>
   </div>
 </template>
+
+<style lang="scss">
+
+  h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+  }
+
+</style>

@@ -1,0 +1,33 @@
+@mixin scrimMask($startColor: 'black', $direction: 'to bottom', $offsetStart: 0, $offsetEnd: 100) {
+  $scrimCoordinates: (
+    0: 1,
+    9.5: 0.978,
+    17.7: 0.925,
+    24.7: 0.857,
+    31: 0.781,
+    36.8: 0.701,
+    42.3: 0.62,
+    47.6: 0.538,
+    52.9: 0.455,
+    58.2: 0.373,
+    63.7: 0.291,
+    69.5: 0.212,
+    75.8: 0.138,
+    82.9: 0.07,
+    91.2: 0.019,
+    100: 0
+  );
+  
+  $hue: hue($startColor);
+  $saturation: saturation($startColor);
+  $lightness: lightness($startColor);
+  $stops: ();
+  
+  @each $colorStop, $alphaValue in $scrimCoordinates {
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage((($offsetEnd - $offsetStart) * $colorStop/100 + $offsetStart)/100);
+    $stops: append($stops, $stop, comma);
+  }
+  
+  mask-image: linear-gradient(unquote($direction), $stops);
+  -webkit-mask-image: linear-gradient(unquote($direction), $stops); 
+}
