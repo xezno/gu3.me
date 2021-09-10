@@ -16,7 +16,7 @@
             <div class="w-48 h-1 bg-accent mb-12"></div>
 
             <p>Hey! I'm Alex.</p>
-            <p>I'm a 19 year old Computer Science student and software engineer from the United Kingdom interested in reverse 
+            <p>I'm a 20 year old Computer Science student and software engineer from the United Kingdom interested in reverse 
               engineering, computer graphics, and game development.</p>
             <p>I love programming, playing video games, tennis, piña coladas, and getting caught in the rain.</p>
         
