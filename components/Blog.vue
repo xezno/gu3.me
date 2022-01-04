@@ -1,7 +1,8 @@
 <template>
   <BaseArea title="Blog Posts">
     <div class="flex justify-between mb-20 mx-auto flex-row w-full flex-wrap">
-      <div class="w-full md:w-1/2 my-3 md:px-4 md:my-4" v-for="item in items.items.slice(0, 6)" v-bind:key="item.title">
+      <div class="w-full md:w-1/2 my-3 md:my-2" v-for="(item,index) in items.items.slice(0, 6)" v-bind:key="item.title"
+        :class="index % 2 == 0 ? 'md:pr-2' : 'md:pl-2'">
         <a :href="item.link" target="_blank" class="hover:text-white">
           <div
             class="w-full z-1 h-30 group truncate bg-default-800 rounded-xl p-6 transition-all cursor-pointer relative overflow-hidden border border-default-600 border-opacity-20 background-default-800 hover:bg-accent hover:border-accent hover:text-black hover:shadow-glow">

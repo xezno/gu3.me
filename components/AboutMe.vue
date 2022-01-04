@@ -1,7 +1,7 @@
 <template>
   <BaseArea title="About Me">
     <div class="flex flex-wrap md:flex-nowrap">
-      <BaseCard title="Things I Like" class="md:mr-5 w-full md:w-1/2">
+      <BaseCard title="Things I Like" class="md:mr-2 w-full md:w-1/2">
         <ul>
           <li>
             <b>Reverse Engineering</b>
@@ -22,7 +22,7 @@
           </li>
         </ul>
       </BaseCard>
-      <BaseCard title="My Programming Experience" class="md:ml-5 w-full md:w-1/2 leading-relaxed">
+      <BaseCard title="My Programming Experience" class="md:ml-2 w-full md:w-1/2 leading-relaxed">
         <ul>
           <li>
             <b>C#</b> 

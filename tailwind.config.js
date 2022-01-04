@@ -18,6 +18,9 @@ module.exports = {
         '350': '350px',
         '200': '200px'
       },
+      minHeight :{
+        'hero': '500px'
+      },
       maxWidth: {
         '1/2': '50%',
         '1/3': '33%'

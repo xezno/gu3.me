@@ -1,12 +1,11 @@
 <template>
   <div class="overflow-hidden plus-bg">
-    <div class="flex justify-center items-center h-screen m-auto">
-      <article class="bg-default-800 md:border md:border-solid border-default-700 absolute z-0 
-        inset-0 md:inset-y-48 md:inset-x-1/4 md:rounded-lg flex items-center overflow-hidden shadow-xl">
-
-        <section class="invisible md:visible w-0 md:w-1/2 h-full mr-1">
+    <div class="flex justify-center items-center h-screen m-auto md:px-4 container">
+      <article class="bg-default-800 md:border md:border-solid border-default-700 md:my-16
+        min-h-hero md:rounded-lg flex items-center overflow-hidden shadow-xl relative">
+        <section class="invisible md:visible w-0 md:w-1/2 min-h-hero relative h-full mr-1">
           <div style="background: url('https://cdn.discordapp.com/attachments/839155256964284459/839820840659845120/70016038_473227283268995_7568323747035041244_n.png') center/cover"
-            class="w-full h-full shadow-md overflow-hidden hero-image"
+            class="absolute w-full h-full shadow-md overflow-hidden hero-image"
           ></div>
         </section>
         
