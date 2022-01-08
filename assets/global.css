@@ -78,30 +78,4 @@
     @apply border-default-600;
     @apply m-16 my-8;
   }
-
-  ::-webkit-scrollbar {
-    @apply w-2;
-    @apply bg-default-800;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-none;
-    @apply w-full;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-default-500 bg-clip-padding;
-  }
-
-  ::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active {
-    @apply bg-default-400 bg-clip-padding;
-  }
-
-  ::-webkit-scrollbar-button {
-    @apply w-0 h-0 hidden;
-  }
-
-  ::-webkit-scrollbar-corner {
-    @apply bg-transparent;
-  }
 }

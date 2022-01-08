@@ -19,4 +19,21 @@
     font-family: "Poppins", sans-serif;
   }
 
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #0047A3;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: #003375;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #0047A3;
+  }
 </style>
