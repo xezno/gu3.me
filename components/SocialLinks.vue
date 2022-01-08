@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import { faGithub, faDiscord, faSpotify, faKeybase, faYoutube } from "@fortawesome/free-brands-svg-icons";
+  import { faGithub, faDiscord, faSpotify, faYoutube } from "@fortawesome/free-brands-svg-icons";
   import { faEnvelope, faBlog } from "@fortawesome/free-solid-svg-icons";
 
   export default {
@@ -20,12 +20,6 @@
             alt: "GitHub",
             icon: faGithub,
             class: "hover:text-default-500"
-          },
-          {
-            link: "https://keybase.io/xezno",
-            alt: "Keybase",
-            icon: faKeybase,
-            class: "hover:text-keybase"
           },
           {
             link: "mailto:alex@gu3.me",
