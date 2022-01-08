@@ -4,17 +4,16 @@
       <BaseCard title="Things I Like" class="md:mr-2 w-full md:w-1/2">
         <ul>
           <li>
-            <b>Reverse Engineering</b>
-            <p>Experienced in de-constructing and re-implementing various file formats for 
-            abandonware titles</p>
+            <b>Game Development</b>
+            <p>Skills creating fun video game experiences tailored to video game enthusiasts</p>
+          </li>
+          <li>
+            <b>Virtual Reality</b>
+            <p>Experienced in writing gameplay systems for virtual reality games from the ground up</p>
           </li>
           <li>
             <b>Computer Graphics</b>
             <p>Skills writing OpenGL and Vulkan graphics code for desktop applications and games</p>
-          </li>
-          <li>
-            <b>Game Development</b>
-            <p>Skills creating fun video game experiences tailored to video game enthusiasts</p>
           </li>
           <li>
             <b>Web Development</b>
@@ -26,7 +25,7 @@
         <ul>
           <li>
             <b>C#</b> 
-            <p>Experienced in writing C# code for use within Unity and as desktop applications</p>
+            <p>Experienced in writing C# code for use within game engines ( s&amp;box, Unity ) and as desktop applications</p>
           </li>
           <li>
             <b>JavaScript</b> 
