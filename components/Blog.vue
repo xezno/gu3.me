@@ -1,6 +1,6 @@
 <template>
   <BaseArea title="Blog Posts">
-    <div class="flex justify-between my-10 mb-20 mx-auto flex-row w-full flex-wrap">
+    <div class="flex justify-between my-10 mb-5 mx-auto flex-row w-full flex-wrap">
       <div class="w-full md:w-1/2 my-3 md:my-2" v-for="(item,index) in items.items.slice(0, 6)" v-bind:key="item.title"
         :class="index % 2 == 0 ? 'md:pr-2' : 'md:pl-2'">
         <a :href="item.link" target="_blank" class="hover:text-white">

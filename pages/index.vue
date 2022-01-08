@@ -3,7 +3,6 @@
     <Hero></Hero>
     <div class="container mx-auto py-16 px-4">
       <AboutMe class="my-16"></AboutMe>
-      <hr />
       <Blog class="my-16" :items="parsed"></Blog>
     </div>
   </main>
