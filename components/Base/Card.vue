@@ -1,6 +1,6 @@
 <template>
   <div 
-    class="shadow-md bg-default-800 border-default-600 border border-solid rounded-lg
+    class="shadow-md bg-default-800 border-default-600 border-opacity-20 border border-solid rounded-lg
       p-5 my-10 overflow-hidden group">
     <h3 v-if="title">
       {{ title }}
