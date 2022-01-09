@@ -5,7 +5,7 @@
         :class="index % 2 == 0 ? 'md:pr-2' : 'md:pl-2'">
         <a :href="item.link" target="_blank" class="hover:text-white group">
           <div
-            class="w-full z-1 h-30 truncate bg-dark-800 -z-10 rounded-xl p-6 transition-all cursor-pointer relative overflow-hidden border border-dark-600 border-opacity-20 background-dark-800 group-hover:bg-orange-500 group-hover:border-orange-500 group-hover:text-black group-hover:shadow-xl">
+            class="shadow-lg w-full z-1 h-30 truncate bg-dark-800 -z-10 rounded-xl p-6 transition-all cursor-pointer relative overflow-hidden border border-dark-600 border-opacity-20 background-dark-800 group-hover:bg-orange-500 group-hover:border-orange-500 group-hover:text-black group-hover:shadow-xl">
               <h3 class="my-0 z-1 uppercase truncate">{{ item.title }}</h3>
               <h4 class="my-0 z-1 truncate">{{ item.pubDate | date }}</h4>
               <div class="absolute right-0 top-0 bottom-0 m-0 w-1/4 bg-cover bg-center transition-all opacity-40 transform group-hover:opacity-75 -z-10 group-hover:scale-110 article-image"

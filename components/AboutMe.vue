@@ -25,7 +25,7 @@
         <ul>
           <li>
             <b>C#</b> 
-            <p>Experienced in writing C# code for use within game engines ( s&amp;box, Unity ) and as desktop applications</p>
+            <p>Experienced in writing C# code for use within game engines (s&amp;box, Unity) and as desktop applications</p>
           </li>
           <li>
             <b>JavaScript</b> 
