@@ -2,7 +2,7 @@
   <div>
     <Nuxt />
 
-    <footer class="text-center md:text-left font-bold flex md:content-evenly p-5 uppercase bg-default-800">
+    <footer class="text-center md:text-left font-bold flex md:content-evenly p-5 uppercase bg-dark-800">
       <div class="w-full md:w-96 m-auto">
         &copy; Alex Guthrie 2021
       </div>
@@ -25,15 +25,15 @@
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #0047A3;
+    background-color: #4F4F4F;
   }
 
   ::-webkit-scrollbar-track-piece {
-    background-color: #003375;
+    background-color: #333333;
   }
 
   ::-webkit-scrollbar-thumb {
     height: 50px;
-    background-color: #0047A3;
+    background-color: #4F4F4F;
   }
 </style>

@@ -26,7 +26,7 @@
 
     @apply font-400;
 
-    @apply text-white bg-default-900;
+    @apply text-white bg-dark-900;
   }
 
   a {
@@ -35,7 +35,7 @@
     @apply text-inherit;
 
     &:hover {
-      @apply text-accent;
+      @apply text-orange-500;
     }
   }
 
@@ -75,7 +75,7 @@
   }
 
   hr {
-    @apply border-default-600;
+    @apply border-dark-600;
     @apply m-16 my-8;
   }
 }

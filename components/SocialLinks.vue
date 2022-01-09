@@ -19,7 +19,7 @@
             link: "https://github.com/xezno",
             alt: "GitHub",
             icon: faGithub,
-            class: "hover:text-default-500"
+            class: "hover:text-dark-500"
           },
           {
             link: "mailto:alex@gu3.me",
