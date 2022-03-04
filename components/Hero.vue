@@ -107,11 +107,20 @@ export default {
   height: auto;
   margin: 0 4px;
 
-  .underline {
-    width: 190px;
-    height: 2px;
-    background: $orange-500;
+  h1 {
+    position: relative;
+    width: fit-content;
     margin-bottom: 24px;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 2px;
+      background: $orange-500;
+    }
   }
 
   hr {
