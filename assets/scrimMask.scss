@@ -24,7 +24,7 @@
   $stops: ();
   
   @each $colorStop, $alphaValue in $scrimCoordinates {
-    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage((($offsetEnd - $offsetStart) * $colorStop/100 + $offsetStart)/100);
+    $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage( calc( (($offsetEnd - $offsetStart) * $colorStop/100 + $offsetStart)/100 ) );
     $stops: append($stops, $stop, comma);
   }
   
