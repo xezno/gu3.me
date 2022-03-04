@@ -2,21 +2,129 @@
   <div>
     <Nuxt />
 
-    <footer class="text-center md:text-left font-bold flex md:content-evenly p-5 uppercase bg-dark-800">
-      <div class="w-full md:w-96 m-auto">
+    <footer>
+      <div class="left">
         &copy; Alex Guthrie 2022
       </div>
-      <div class="w-0 invisible md:visible md:w-96 m-auto text-right">
-        <SocialLinks class="justify-end"></SocialLinks>
+      <div class="right">
+        <SocialLinks></SocialLinks>
       </div>
     </footer>
   </div>
 </template>
 
 <style lang="scss">
+  @import "~assets/variables.scss";
+  
+  footer {
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    padding: 0;
+    text-transform: uppercase;
+    background: $dark-800;
+    align-items: center;
+  
+    @media (min-width: $screen-md) {
+      justify-content: space-around;
+    }
+
+    .left {
+      width: 100%;
+      margin: 0 auto;
+
+      @media (min-width: $screen-md) {
+        text-align: left;
+        width: fit-content;
+        margin: 0;
+      }
+    }
+
+    .right {
+      display: none;
+      margin: 0 auto;
+      width: 0;
+
+      @media (min-width: $screen-md) {
+        display: block;
+        width: auto;
+        margin: 0;
+        text-align: right;
+      }
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100vh;
+  }
+
+  body {
+    font-family: $font-sans;
+    height: 100vh;
+
+    overflow-y: auto;
+
+    padding: $padding-safe;
+    margin: 0;
+
+    line-height: 1.5;
+    font-size: 16px;
+
+    font-weight: 400;
+
+    color: white;
+    background-color: $dark-900;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: $orange-500;
+    }
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    margin: 8px 0;
+    font-weight: 700;
+  }
 
   h1, h2, h3 {
     font-family: "Poppins", sans-serif;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  hr {
+    border: 1px solid $dark-600;
+    margin: 32px 64px;
   }
 
   ::-webkit-scrollbar {

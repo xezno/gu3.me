@@ -1,6 +1,6 @@
 <template>
-  <ul class="list-none p-0 flex w-auto">
-    <li class="p-0 m-0 mr-5 text-xl" v-for="socialItem in socialList" v-bind:key="socialItem.link">
+  <ul>
+    <li v-for="socialItem in socialList" v-bind:key="socialItem.link">
       <a :aria-label="socialItem.alt" :href="socialItem.link" :class="socialItem.class">
         <fa :icon="socialItem.icon"></fa>
       </a>
@@ -56,3 +56,22 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+@import "~assets/variables.scss";
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  width: auto;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 16pt;
+}
+</style>

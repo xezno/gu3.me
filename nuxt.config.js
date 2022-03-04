@@ -31,7 +31,6 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    "@/assets/global.css"
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -51,10 +50,7 @@ export default {
         solid: [ 'faEnvelope', 'faBlog' ],
         brands: [ 'faGithub', 'faDiscord', 'faSpotify', 'faKeybase', 'faYoutube' ]
       }
-    }],
-    [
-      '@nuxtjs/tailwindcss'
-    ]
+    }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -62,10 +58,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/proxy'
   ],
-
-  tailwindcss: {
-    // jit: true,
-  },
 
   ssr: true,
 

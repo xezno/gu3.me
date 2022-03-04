@@ -1,13 +1,12 @@
 <template>
   <main>
     <Hero></Hero>
-    <div class="container mx-auto py-16 px-4">
-      <AboutMe class="my-16"></AboutMe>
-      <Blog class="my-16" :items="parsed"></Blog>
+    <div class="main-container">
+      <AboutMe class="item"></AboutMe>
+      <Blog class="item" :items="parsed"></Blog>
     </div>
   </main>
 </template>
-
 
 <script>
   export default {
@@ -27,3 +26,16 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+.main-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 1rem;
+}
+
+.item {
+  margin: 64px 0;
+}
+</style>

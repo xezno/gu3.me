@@ -1,7 +1,7 @@
 <template>
   <BaseArea title="About Me">
-    <div class="flex flex-wrap md:flex-nowrap">
-      <BaseCard title="Things I Like" class="md:mr-2 w-full md:w-1/2">
+    <div class="container">
+      <BaseCard title="Things I Like" class="left">
         <ul>
           <li>
             <b>Game Development</b>
@@ -21,7 +21,7 @@
           </li>
         </ul>
       </BaseCard>
-      <BaseCard title="My Programming Experience" class="md:ml-2 w-full md:w-1/2 leading-relaxed">
+      <BaseCard title="My Programming Experience" class="right">
         <ul>
           <li>
             <b>C#</b> 
@@ -45,16 +45,42 @@
   </BaseArea>
 </template>
 
-<style lang="postcss" scoped>
-@tailwind base;
-@tailwind utilities;
-@tailwind components;
+<style lang="scss" scoped>
+@import "~assets/variables.scss";
 
-@layer base {
-  ul {
-    & li {
-      @apply mt-4;
-    }
+ul {
+  li {
+    margin-top: 16px;
+  }
+
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $screen-md) {
+    flex-wrap: nowrap;
+  }
+}
+
+.left {
+  width: 100%;
+
+  @media screen and (min-width: $screen-md) {
+    width: 50%;
+    margin-right: 8px !important;
+  }
+}
+
+.right {
+  width: 100%;
+
+  @media screen and (min-width: $screen-md) {
+    width: 50%;
+    margin-left: 8px !important;
   }
 }
 </style>

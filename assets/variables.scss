@@ -1,0 +1,96 @@
+$screen-md: 1280px;
+
+$glow: '0 0 25px #D7FF2E';
+$hero-height: 500px;
+
+$width-card: calc( 33% - 1.5em );
+
+$font-sans: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+
+@keyframes fadeIn {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@keyframes pushDown {
+  0% { opacity: 0; transform: translateY(-10px) }
+  50% { opacity: 0; transform: translateY(-10px) }
+  75% { opacity: 1; transform: translateY(0px) }
+  100% { opacity: 0; transform: translateY(10px) }
+}
+
+@keyframes in {
+  0% { opacity: 0; transform: translateY(10px) }
+  100% { opacity: 1; transform: translateY(0px) }
+}
+
+$animation-fade: fadeIn 500ms ease;
+$animation-push-down: pushDown 1500ms linear infinite;
+$animation-in: in 250ms ease 500ms running both;
+
+$text-keybase: #FF6F21;
+$text-email: #d43434;
+$text-spotify: #1DB954;
+$text-blog: #2181ff;
+$text-youtube: #FF0000;
+$text-discord: #7289DA;
+$text-uwutube: #fe71dc;
+$text-black: #202020;
+$text-inherit: inherit;
+
+$black: #202020;
+
+
+$default-50: #8ABDFF;
+$default-100: #7AB4FF;
+$default-200: #5CA3FF;
+$default-300: #3D91FF;
+$default-400: #1F80FF;
+$default-500: #006EFF;
+$default-600: #005BD1;
+$default-700: #0047A3;
+$default-800: #003375;
+$default-900: #001F47;
+
+$grey-100: #f5f5f5;
+$grey-200: #eeeeee;
+$grey-300: #e0e0e0;
+$grey-400: #bdbdbd;
+$grey-500: #9e9e9e;
+$grey-600: #757575;
+$grey-700: #616161;
+$grey-800: #424242;
+$grey-900: #212121;
+
+$dark-50: #E3E3E3;
+$dark-100: #D9D9D9;
+$dark-200: #C4C4C4;
+$dark-300: #B0B0B0;
+$dark-400: #9C9C9C;
+$dark-500: #878787;
+$dark-600: #6B6B6B;
+$dark-700: #4F4F4F;
+$dark-800: #333333;
+$dark-900: #171717;
+
+$orange-DEFAULT: #FF5E1F;
+$orange-50: #FFE2D6;
+$orange-100: #FFD3C2;
+$orange-200: #FFB699;
+$orange-300: #FF9970;
+$orange-400: #FF7B47;
+$orange-500: #FF5E1F;
+$orange-600: #E64100;
+$orange-700: #AD3100;
+$orange-800: #752100;
+$orange-900: #3D1100;
+
+$accent: #d7ff2e;
+
+$padding-safe: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+$padding-safe-top: env(safe-area-inset-top);
+$padding-safe-bottom: env(safe-area-inset-bottom);
+$padding-safe-right: env(safe-area-inset-right);
+$padding-safe-left: env(safe-area-inset-left);
+
+$background-image: url("/robot.png");

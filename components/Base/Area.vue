@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full">
-    <h1 class="text-center">
+  <div>
+    <h1>
       {{ title }}
     </h1>
     <slot></slot>
@@ -17,3 +17,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@import "~assets/variables.scss";
+
+h1 {
+  text-align: center;
+}
+</style>
