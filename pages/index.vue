@@ -2,6 +2,7 @@
   <main>
     <Hero></Hero>
     <div class="main-container">
+      <Projects></Projects>
       <AboutMe class="item"></AboutMe>
       <Blog class="item" :items="parsed"></Blog>
     </div>
