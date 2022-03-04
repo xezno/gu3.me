@@ -91,11 +91,10 @@
 
   h1,h2,h3,h4,h5,h6 {
     margin: 8px 0;
-    font-weight: 700;
-  }
-
-  h1, h2, h3 {
-    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: $font-title;
+    font-style: oblique;
   }
 
   h1 {
@@ -111,15 +110,15 @@
   }
 
   h4 {
-    font-size: 18px;
-  }
-
-  h5 {
     font-size: 16px;
   }
 
-  h6 {
+  h5 {
     font-size: 14px;
+  }
+
+  h6 {
+    font-size: 12px;
   }
 
   hr {

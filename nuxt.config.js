@@ -24,8 +24,8 @@ export default {
     link: [
       { rel: 'shortcut icon', type: 'image/png', href: '/robot.png' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@350;400;650;700&family=Poppins:ital,wght@1,800&display=swap' },
-      { rel: 'preload', as: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@350;400;650;700&family=Poppins:ital,wght@1,800&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&family=Roboto&display=swap' },
+      { rel: 'preload', as: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&family=Roboto&display=swap' }
     ]
   },
 

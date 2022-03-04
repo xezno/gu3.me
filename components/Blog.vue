@@ -45,6 +45,10 @@ export default {
   text-transform: uppercase;
   font-weight: bold;
   color: $dark-300;
+
+  &:hover {
+    color: $orange-500;
+  }
 }
 
 .container {

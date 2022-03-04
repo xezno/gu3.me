@@ -5,7 +5,8 @@ $hero-height: 500px;
 
 $width-card: calc( 33% - 1.5em );
 
-$font-sans: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+$font-sans: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+$font-title: 'Poppins', sans-serif;
 
 @keyframes fadeIn {
   0% { opacity: 0 }

@@ -4,19 +4,19 @@
       <BaseCard title="Things I Like" class="left">
         <ul>
           <li>
-            <b>Game Development</b>
+            <h4>Game Development</h4>
             <p>Skills creating fun video game experiences tailored to video game enthusiasts</p>
           </li>
           <li>
-            <b>Virtual Reality</b>
+            <h4>Virtual Reality</h4>
             <p>Experienced in writing gameplay systems for virtual reality games from the ground up</p>
           </li>
           <li>
-            <b>Computer Graphics</b>
+            <h4>Computer Graphics</h4>
             <p>Skills writing OpenGL and Vulkan graphics code for desktop applications and games</p>
           </li>
           <li>
-            <b>Web Development</b>
+            <h4>Web Development</h4>
             <p>Experienced in creating small- and large-scale websites, for both organisations and individuals</p>
           </li>
         </ul>
@@ -24,19 +24,19 @@
       <BaseCard title="My Programming Experience" class="right">
         <ul>
           <li>
-            <b>C#</b> 
+            <h4>C#</h4> 
             <p>Experienced in writing C# code for use within game engines (s&amp;box, Unity) and as desktop applications</p>
           </li>
           <li>
-            <b>JavaScript</b> 
+            <h4>JavaScript</h4> 
             <p>Skills creating interactive webapps and providing functionality to otherwise static pages</p>
           </li>
           <li>
-            <b>CSS/SCSS</b> 
+            <h4>CSS/SCSS</h4> 
             <p>Skills creating uniquely stylized webapps for mobile and desktop platforms</p>
           </li>
           <li>
-            <b>C++</b> 
+            <h4>C++</h4> 
             <p>Experienced in writing high-performance native desktop code</p>
           </li>
         </ul>
