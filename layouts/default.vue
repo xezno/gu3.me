@@ -91,10 +91,10 @@
 
   h1,h2,h3,h4,h5,h6 {
     margin: 8px 0;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 700;
+    // text-transform: uppercase;
     font-family: $font-title;
-    font-style: oblique;
+    // font-style: oblique;
   }
 
   h1 {
