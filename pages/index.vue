@@ -2,9 +2,9 @@
   <main>
     <SectionHero></SectionHero>
     <div class="main-container">
-      <SectionProjects></SectionProjects>
-      <SectionAboutMe class="item"></SectionAboutMe>
-      <SectionBlog class="item" :items="parsed"></SectionBlog>
+      <SectionProjects id="projects"></SectionProjects>
+      <SectionAboutMe class="item" id="skills"></SectionAboutMe>
+      <SectionBlog class="item" :items="parsed" id="blog"></SectionBlog>
     </div>
   </main>
 </template>

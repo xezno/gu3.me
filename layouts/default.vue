@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Nav></Nav>
+
     <Nuxt />
 
     <footer>
