@@ -14,9 +14,9 @@
             ></div>
 
             <div class="read-post">
-              Read post...
+              <fa :icon="faChevronRight"></fa>
 
-              <fa :icon="faUpRightFromSquare"></fa>
+              Read post...
             </div>
           </div>
         </a>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export default {
   props: {
@@ -38,7 +38,7 @@ export default {
   },
   data: function() {
     return {
-      faUpRightFromSquare
+      faChevronRight
     }
   }
 }
@@ -49,7 +49,7 @@ export default {
 @import "@/assets/scrimMask.scss";
 
 svg {
-  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .view-more-container {
@@ -141,7 +141,7 @@ svg {
     right: 0;
     bottom: 0;
     padding: 20px;
-    background: $dark-800;
+    background: $accent-500;
 
     text-transform: uppercase;
     font-weight: bold;

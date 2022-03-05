@@ -91,16 +91,6 @@ export default {
     position: relative;
     width: fit-content;
     margin-bottom: 20px;
-
-    &::after {
-      content: ' ';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0px;
-      height: 4px;
-      background: $accent-500;
-    }
   }
 
   hr {

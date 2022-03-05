@@ -85,6 +85,8 @@
     align-items: center;
     justify-content: center;
     margin-right: 4px;
+
+    color: $accent-500;
   }
 
   ul {
@@ -98,6 +100,10 @@
 
       h4, p {
         margin: 0;
+      }
+
+      h4 {
+        color: $accent-500;
       }
     }
 

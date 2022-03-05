@@ -99,7 +99,7 @@
     color: white;
 
     &:hover {
-      color: $accent-200;
+      color: $accent-500;
     }
   }
 
@@ -115,6 +115,16 @@
 
   h1 {
     font-size: 38px;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 4px;
+      background: $accent-500;
+    }
   }
 
   h2 {
