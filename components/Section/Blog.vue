@@ -106,7 +106,7 @@ svg {
     white-space: nowrap;
     border: 1px solid rgba( $dark-600, 0.2 );
 
-    aspect-ratio: 1;
+    aspect-ratio: 1.25;
   }
 
   h3 {
@@ -131,11 +131,13 @@ svg {
   .image {
     background-size: 125%;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: $dark-700;
     transition: all 150ms ease;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 20px;
+    bottom: 0;
     top: 130px;
     transform: scale( 1.0 );
   }
@@ -151,6 +153,11 @@ svg {
     text-transform: uppercase;
     font-weight: bold;
     color: white;
+
+    padding: 0 20px;
+    height: 0;
+
+    transition: all 150ms ease;
   }
   
   &:hover { 
@@ -160,6 +167,9 @@ svg {
     }
     .read-post {
       background: $accent-500;
+
+      padding: 20px;
+      height: 60px;
     }
 
     .image {
