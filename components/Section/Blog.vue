@@ -117,7 +117,7 @@ svg {
   }
 
   p {
-    max-width: 300px;
+    max-width: 350px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

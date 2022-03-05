@@ -1,10 +1,10 @@
 <template>
   <main>
-    <Hero></Hero>
+    <SectionHero></SectionHero>
     <div class="main-container">
-      <Projects></Projects>
-      <AboutMe class="item"></AboutMe>
-      <Blog class="item" :items="parsed"></Blog>
+      <SectionProjects></SectionProjects>
+      <SectionAboutMe class="item"></SectionAboutMe>
+      <SectionBlog class="item" :items="parsed"></SectionBlog>
     </div>
   </main>
 </template>
