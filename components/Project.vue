@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="project-wrapper">
     <BaseCard :title="title" class="project">
 
       <div class="background" :style="`background-image: url('${ image }')`">
@@ -59,19 +59,12 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~assets/variables.scss";
 @import "@/assets/scrimMask.scss";
 
-.wrapper {
+.project-wrapper {
   flex: 1 1 40%;
-}
-
-svg {
-  width: 16px;
-  align-items: center;
-  justify-content: center;
-  margin-right: 4px;
 }
 
 .project {
@@ -81,6 +74,18 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  *:not(.background) {
+    position: relative;
+    z-index: 10;
+  }
+
+  svg {
+    width: 16px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+  }
 
   ul {
     li {
