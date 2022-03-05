@@ -2,7 +2,7 @@
   <div class="wrapper">
     <BaseCard :title="title" class="project">
 
-      <div class="background" style="background-image: url('https://source.unsplash.com/random/?landscape')">
+      <div class="background" :style="`background-image: url('${ image }')`">
       </div>
       
       <slot></slot>
