@@ -20,7 +20,7 @@
             <fa :icon="faLink" />
             Link
           </h4>
-          <p>{{ link }}</p>
+          <a :href="link">{{ link }}</a>
         </li>
       </ul>
       
@@ -64,15 +64,7 @@
 @import "@/assets/scrimMask.scss";
 
 .wrapper {
-  width: 100%;
-
-  flex-shrink: 1;
-  flex-grow: 1;
-  
-  @media screen and (min-width: $screen-md) {
-    width: 50%;
-    margin: 8px 0;
-  }
+  flex: 1 1 40%;
 }
 
 .project {

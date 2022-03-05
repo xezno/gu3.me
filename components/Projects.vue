@@ -8,7 +8,7 @@
       <Project title="Frost Fight" role="Programmer" link="https://github.com/apetavern/sbox-frostfight">Aliqua amet
         velit minim consequat ullamco do adipisicing.</Project>
       <Project title="Moyai Engine" role="Everything" link="https://github.com/xezno/moyai-engine">Pariatur in duis est
-        irure est reprehenderit officia exercitation fugiat officia ipsum adipisicing quis.</Project>
+        velit minim consequat ullamco do adipisicing.</Project>
     </div>
   </BaseArea>
 </template>
@@ -17,12 +17,14 @@
   .container {
     display: flex;
     justify-content: space-between;
-    margin: 40px auto;
+    margin-top: 40px;
     margin-bottom: 20px;
 
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
+
+    gap: 10px;
   }
 
 </style>

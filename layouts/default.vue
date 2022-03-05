@@ -95,7 +95,7 @@
     color: white;
 
     &:hover {
-      color: $accent-500;
+      color: $accent-200;
     }
   }
 

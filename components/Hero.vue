@@ -19,9 +19,6 @@
         </div>
       </section>
     </article>
-
-    <div class="separator">
-    </div>
   </div>
 </template>
 
@@ -41,7 +38,6 @@ export default {
 @import "@/assets/scrimMask.scss";
 
 .hero {
-  background: $dark-900;
   min-height: $hero-height;
 
   display: flex;
@@ -52,11 +48,15 @@ export default {
   width: 100%;
   max-width: $screen-md;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   
   @media screen and (max-width: $screen-md) {
     height: 90vh;
   }
+}
+
+.hero-wrapper {
+  background: $dark-1000;
 }
 
 .left {
@@ -105,12 +105,6 @@ export default {
   hr {
     margin: 24px 0;
   }
-}
-
-.separator {
-  height: 20px;
-  width: 100%;
-  background-color: $dark-1000;
 }
 
 .hero-image {
