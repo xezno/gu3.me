@@ -130,7 +130,7 @@ svg {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 24px;
     top: 40%;
     transform: scale( 1.0 );
   }
@@ -140,8 +140,8 @@ svg {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 12px 24px;
-    background: $accent-500;
+    padding: 24px 24px;
+    background: $dark-800;
 
     text-transform: uppercase;
     font-weight: bold;
@@ -152,6 +152,9 @@ svg {
     .inner {
       border: 1px solid $accent-500;
       box-shadow: 0 0 20px rgba( $accent-500, 0.75 );
+    }
+    .read-post {
+      background: $accent-500;
     }
 
     .image {
