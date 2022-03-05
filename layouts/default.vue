@@ -1,13 +1,19 @@
 <template>
   <div>
+    <header>
+      <Nav></Nav>
+    </header>
+
     <Nuxt />
 
     <footer>
-      <div class="left">
-        &copy; Alex Guthrie 2022
-      </div>
-      <div class="right">
-        <SocialLinks></SocialLinks>
+      <div class="inner">
+        <div class="left">
+          &copy; Alex Guthrie 2022
+        </div>
+        <div class="right">
+          <SocialLinks></SocialLinks>
+        </div>
       </div>
     </footer>
   </div>
@@ -19,14 +25,24 @@
   footer {
     text-align: center;
     font-weight: bold;
-    display: flex;
     padding: 0;
     text-transform: uppercase;
-    background: $dark-800;
-    align-items: center;
+    background-color: $dark-1000;
   
     @media (min-width: $screen-md) {
       justify-content: space-around;
+    }
+
+    .inner {
+      display: flex;
+      max-width: $max-width;
+      width: 100%;
+      align-items: center;
+      margin: auto;
+      justify-content: space-between;
+      padding: 0 1rem;
+      align-items: center;
+      min-height: 50px;
     }
 
     .left {
@@ -85,24 +101,36 @@
     color: white;
 
     &:hover {
-      color: $orange-500;
+      color: $accent-500;
     }
   }
 
   h1,h2,h3,h4,h5,h6 {
-    margin: 8px 0;
+    margin: 0;
     font-weight: 700;
-    // text-transform: uppercase;
     font-family: $font-title;
-    // font-style: oblique;
+  }
+
+  p {
+    margin: 8px 0;
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 38px;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 4px;
+      background: $accent-500;
+    }
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   h3 {
@@ -124,6 +152,14 @@
   hr {
     border: 1px solid $dark-600;
     margin: 32px 64px;
+  }
+
+  svg {    
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
   }
 
   ::-webkit-scrollbar {
