@@ -142,6 +142,11 @@
     margin: 32px 64px;
   }
 
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
   ::-webkit-scrollbar {
     width: 8px;
     height: 3px;
