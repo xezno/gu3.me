@@ -12,21 +12,34 @@
             <div class="image"
               :style="`background-image: url(${item.enclosure ? item.enclosure.url : 'https://source.unsplash.com/random/?landscape'})`"
             ></div>
+
+            <div class="read-post">
+              Read post...
+
+              <fa :icon="faUpRightFromSquare"></fa>
+            </div>
           </div>
         </a>
       </div>
     </div>
 
     <div class="view-more-container">
-      <a target="_blank" class="view-more" href="https://blog.gu3.me/">View more...</a>
+      <a target="_blank" class="view-more" href="https://blog.gu3.me/">View more... <fa :icon="faUpRightFromSquare"></fa></a>
     </div>
   </BaseArea>
 </template>
 
 <script>
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
 export default {
   props: {
     items: Object
+  },
+  data: function() {
+    return {
+      faUpRightFromSquare
+    }
   }
 }
 </script>
@@ -34,6 +47,10 @@ export default {
 <style lang="scss" scoped>
 @import "~assets/variables.scss";
 @import "@/assets/scrimMask.scss";
+
+svg {
+  margin-left: 4px;
+}
 
 .view-more-container {
   width: 100%;
@@ -55,7 +72,7 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 
   flex-direction: row;
   width: 100%;
@@ -117,6 +134,19 @@ export default {
     top: 40%;
     transform: scale( 1.0 );
   }
+
+  .read-post {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px 24px;
+    background: $accent-500;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+  }
   
   &:hover { 
     .inner {
@@ -125,7 +155,7 @@ export default {
     }
 
     .image {
-    background-size: 150%;
+    background-size: 135%;
     }
   }
 }
