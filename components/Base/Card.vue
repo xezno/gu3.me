@@ -13,7 +13,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Untitled"
+      default: null
     }
   }
 }
