@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>
+    <h2>
       {{ title }}
-    </h1>
+    </h2>
     <slot></slot>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 @import "~assets/variables.scss";
 
-h1 {
+h2 {
   text-align: center;
 }
 </style>

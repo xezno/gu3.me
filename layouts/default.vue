@@ -22,7 +22,7 @@
     display: flex;
     padding: 0;
     text-transform: uppercase;
-    background: $dark-800;
+    background-color: $dark-1000;
     align-items: center;
   
     @media (min-width: $screen-md) {
@@ -92,17 +92,15 @@
   h1,h2,h3,h4,h5,h6 {
     margin: 8px 0;
     font-weight: 700;
-    // text-transform: uppercase;
     font-family: $font-title;
-    // font-style: oblique;
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 38px;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   h3 {
