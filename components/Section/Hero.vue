@@ -72,6 +72,8 @@ export default {
   height: 100%;
   flex: 1 1 0;
 
+  padding-right: 40px;
+
   @media screen and (max-width: $screen-md) {
     display: none;
   }
