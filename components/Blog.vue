@@ -1,17 +1,17 @@
 <template>
   <BaseArea title="My Blog">
     <div class="container">
-      <div class="post" v-for="(item,index) in items.items.slice(0, 6)" v-bind:key="item.title"
-        :class="index % 2 == 0 ? 'left' : 'right'">
+      <div class="post" v-for="item in items.items.slice(0, 6)" v-bind:key="item.title">
         <a :href="item.link" target="_blank">
           <div class="inner">
-              <h3>{{ item.title }}</h3>
-              <h4>{{ item.pubDate | date }}</h4>
-              <div class="background"
-                :style="`background-image: url(${item.enclosure ? item.enclosure.url : 'https://source.unsplash.com/random/?landscape'})`"
-              >
-            </div>
-            {{ item.content }}
+            <h3>{{ item.title }}</h3>
+            <h4>{{ item.pubDate | date }}</h4>
+            <p>
+              {{ item.content }}
+            </p>
+            <div class="image"
+              :style="`background-image: url(${item.enclosure ? item.enclosure.url : 'https://source.unsplash.com/random/?landscape'})`"
+            ></div>
           </div>
         </a>
       </div>
@@ -54,34 +54,18 @@ export default {
 .container {
   display: flex;
   justify-content: space-between;
-  margin: 40px auto;
+  margin-top: 40px;
   margin-bottom: 20px;
 
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
+
+  gap: 10px;
 }
 
 .post {
-  width: 100%;
-  margin: 12px 0;
-  
-  @media screen and (min-width: $screen-md) {
-    width: 50%;
-    margin: 8px 0;
-  }
-
-  &.left {
-    @media screen and (min-width: $screen-md) {
-      padding-right: 8px;
-    }
-  }
-
-  &.right {
-    @media screen and (min-width: $screen-md) {
-      padding-left: 8px;
-    }
-  }
+  flex: 1 1 30%;
 
   .inner {
     box-shadow: 0 0 20px rgba( black, 0.2 );
@@ -100,43 +84,38 @@ export default {
     white-space: nowrap;
     border: 1px solid rgba( $dark-600, 0.2 );
 
-    height: 130px;
+    aspect-ratio: 0.95;
   }
 
   h3 {
-    margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-height: 25px;
   }
 
   h4 {
-    margin: 4px 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-height: 25px;
   }
 
-  .background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+  p {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
-    margin: 0;
-    width: 25%;
-    background-size: cover;
+  .image {
+    background-size: 125%;
     background-position: center;
     transition: all 150ms ease;
-
-    opacity: 0.4;
-
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 40%;
     transform: scale( 1.0 );
-
-    @include scrimMask( black, "to left" );
-    min-width: 200px;
   }
   
   &:hover { 
@@ -145,9 +124,8 @@ export default {
       box-shadow: 0 0 20px rgba( $accent-500, 0.75 );
     }
 
-    .background {
-      opacity: 0.75;
-      transform: scale( 1.1 );
+    .image {
+    background-size: 150%;
     }
   }
 }
