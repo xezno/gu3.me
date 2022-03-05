@@ -67,6 +67,13 @@
   flex: 1 1 40%;
 }
 
+svg {
+  width: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4px;
+}
+
 .project {
   position: relative;
   margin: 0 !important;
@@ -75,14 +82,13 @@
   flex-direction: column;
   justify-content: space-evenly;
 
-  height: 200px;
-
   ul {
     li {
       display: flex;
       align-items: center;
-      :first-child {
-        margin-right: 4px;
+
+      > :first-child {
+        margin-right: 8px;
       }
 
       h4, p {

@@ -100,9 +100,13 @@
   }
 
   h1,h2,h3,h4,h5,h6 {
-    margin: 8px 0;
+    margin: 0;
     font-weight: 700;
     font-family: $font-title;
+  }
+
+  p {
+    margin: 8px 0;
   }
 
   h1 {

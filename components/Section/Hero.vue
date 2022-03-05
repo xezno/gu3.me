@@ -11,9 +11,10 @@
           <div class="underline"></div>
 
           <p>Hey! I'm Alex.</p>
-          <p>I'm a 20 year old Computer Science student and software engineer from the United Kingdom interested in reverse 
-            engineering, computer graphics, and game development.</p>
-          <p>I'm currently working on projects involving s&amp;box, a game engine/framework designed around Source 2.</p>
+          <p>I'm a 20 year old Computer Science student and software engineer from the United Kingdom,
+            <wbr>
+            interested in reverse engineering, computer graphics, and game development.</p>
+          <p>I currently work on projects involving s&amp;box, a game engine/framework designed around Source 2.</p>
 
           <social-links></social-links>
         </div>
@@ -89,7 +90,7 @@ export default {
   h1 {
     position: relative;
     width: fit-content;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 
     &::after {
       content: ' ';
@@ -103,7 +104,7 @@ export default {
   }
 
   hr {
-    margin: 24px 0;
+    margin: 20px 0;
   }
 }
 

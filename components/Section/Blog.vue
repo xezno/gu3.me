@@ -90,7 +90,7 @@ svg {
     z-index: -10;
     background: $dark-800;
     border-radius: 10px;
-    padding: 24px;
+    padding: 20px;
     color: white;
 
     transition: all 150ms ease;
@@ -101,7 +101,7 @@ svg {
     white-space: nowrap;
     border: 1px solid rgba( $dark-600, 0.2 );
 
-    aspect-ratio: 0.95;
+    aspect-ratio: 1;
   }
 
   h3 {
@@ -130,8 +130,8 @@ svg {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 24px;
-    top: 40%;
+    bottom: 20px;
+    top: 130px;
     transform: scale( 1.0 );
   }
 
@@ -140,7 +140,7 @@ svg {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 24px 24px;
+    padding: 20px;
     background: $dark-800;
 
     text-transform: uppercase;
