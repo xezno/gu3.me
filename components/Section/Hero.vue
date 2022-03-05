@@ -47,7 +47,7 @@ export default {
   position: relative;
   
   width: 100%;
-  max-width: $screen-md;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 1rem 1rem;
   

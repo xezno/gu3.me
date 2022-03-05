@@ -33,7 +33,7 @@
 
 .main-container {
   width: 100%;
-  max-width: $screen-md;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 32px 1rem;
 }

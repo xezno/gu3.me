@@ -20,7 +20,10 @@
             <fa :icon="faLink" />
             Link
           </h4>
-          <a :href="link">{{ link }}</a>
+          <a :href="link">
+            GitHub
+            <fa :icon="faUpRightFromSquare" />
+          </a>
         </li>
       </ul>
       
@@ -29,7 +32,7 @@
 </template>
 
 <script>
-  import { faUser, faLink } from "@fortawesome/free-solid-svg-icons";
+  import { faUser, faLink, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
   export default {
     props: {
@@ -39,7 +42,7 @@
       },
       role: {
         type: String,
-        default: "Lorem ipsum dolor sit amet..."
+        default: "Lorem ipsum dolor sit amet"
       },
       image: {
         type: String,
@@ -53,7 +56,8 @@
     data: function() {
       return {
         faUser,
-        faLink
+        faLink,
+        faUpRightFromSquare
       }
     }
   }
@@ -65,6 +69,10 @@
 
 .project-wrapper {
   flex: 1 1 40%;
+
+  @media screen and (max-width: $screen-md) {
+    flex: 1 1 100%;
+  }
 }
 
 .project {
@@ -78,15 +86,6 @@
   *:not(.background) {
     position: relative;
     z-index: 10;
-  }
-
-  svg {
-    width: 16px;
-    align-items: center;
-    justify-content: center;
-    margin-right: 4px;
-
-    color: $accent-500;
   }
 
   ul {
@@ -104,6 +103,15 @@
 
       h4 {
         color: $accent-500;
+
+        > svg {
+          width: 16px;
+          align-items: center;
+          justify-content: center;
+          margin-right: 2px;
+
+          color: $accent-500;
+        }
       }
     }
 

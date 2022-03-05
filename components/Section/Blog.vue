@@ -16,7 +16,7 @@
             <div class="read-post">
               <fa :icon="faChevronRight"></fa>
 
-              Read post...
+              Read post
             </div>
           </div>
         </a>
@@ -24,13 +24,13 @@
     </div>
 
     <div class="view-more-container">
-      <a target="_blank" class="view-more" href="https://blog.gu3.me/">View more... <fa :icon="faUpRightFromSquare"></fa></a>
+      <a target="_blank" class="view-more" href="https://blog.gu3.me/">View more <fa :icon="faUpRightFromSquare"></fa></a>
     </div>
   </BaseArea>
 </template>
 
 <script>
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 export default {
   props: {
@@ -38,6 +38,7 @@ export default {
   },
   data: function() {
     return {
+      faUpRightFromSquare,
       faChevronRight
     }
   }
@@ -84,6 +85,10 @@ svg {
 .post {
   flex: 1 1 30%;
 
+  @media screen and (max-width: $screen-md) {
+    flex: 1 1 100%;
+  }
+
   .inner {
     box-shadow: 0 0 20px rgba( black, 0.2 );
     width: 100%;
@@ -117,7 +122,7 @@ svg {
   }
 
   p {
-    max-width: 350px;
+    max-width: 300px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

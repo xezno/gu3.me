@@ -26,6 +26,10 @@ ul {
 
   li {
     margin: 0 20px;
+
+    @media screen and (max-width: $screen-md) {
+      margin: 0 10px;
+    }
   }
 }
 
@@ -42,7 +46,7 @@ nav {
 
   .inner {
     display: flex;
-    max-width: $screen-md;
+    max-width: $max-width;
     width: 100%;
     align-items: center;
     margin: auto;

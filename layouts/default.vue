@@ -35,12 +35,14 @@
 
     .inner {
       display: flex;
-      max-width: $screen-md;
+      max-width: $max-width;
       width: 100%;
       align-items: center;
       margin: auto;
       justify-content: space-between;
       padding: 0 1rem;
+      align-items: center;
+      min-height: 50px;
     }
 
     .left {
