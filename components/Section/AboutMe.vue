@@ -4,7 +4,7 @@
       <table>
         <tr>
           <td>
-            C#
+            <h4>C#</h4>
           </td>
           <td>
             I've written tons of C# code for use within games (s&amp;box, Unity) and desktop applications
@@ -12,7 +12,7 @@
         </tr>
         <tr>
           <td>
-            Node (JavaScript / TypeScript)
+            <h4>Node (JavaScript / TypeScript)</h4>
           </td>
           <td>
             I have experience writing node-based backend applications using both JavaScript and TypeScript
@@ -20,7 +20,7 @@
         </tr>
         <tr>
           <td>
-            HTML, CSS/SCSS, JavaScript
+            <h4>HTML, CSS/SCSS, JavaScript</h4>
           </td>
           <td>
             I've made cool webapp experiences, ranging from websites to games using WebGL
@@ -28,7 +28,7 @@
         </tr>
         <tr>
           <td>
-            Rust
+            <h4>Rust</h4>
           </td>
           <td>
             I've written high-performance native desktop code using Rust
@@ -36,7 +36,7 @@
         </tr>
         <tr>
           <td>
-            OpenGL
+            <h4>OpenGL</h4>
           </td>
           <td>
             I've written writing OpenGL graphics code for desktop applications and games
