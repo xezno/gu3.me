@@ -1,9 +1,10 @@
 <template>
   <main>
-    <Hero></Hero>
+    <SectionHero></SectionHero>
     <div class="main-container">
-      <AboutMe class="item"></AboutMe>
-      <Blog class="item" :items="parsed"></Blog>
+      <SectionProjects id="projects"></SectionProjects>
+      <SectionAboutMe class="item" id="skills"></SectionAboutMe>
+      <SectionBlog class="item" :items="parsed" id="blog"></SectionBlog>
     </div>
   </main>
 </template>
@@ -28,9 +29,11 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/variables.scss";
+
 .main-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: $max-width;
   margin: 0 auto;
   padding: 32px 1rem;
 }

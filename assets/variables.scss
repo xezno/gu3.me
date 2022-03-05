@@ -1,4 +1,5 @@
-$screen-md: 1280px;
+$screen-md: 1100px;
+$max-width: 1280px;
 
 $glow: '0 0 25px #D7FF2E';
 $hero-height: 500px;
@@ -29,7 +30,7 @@ $animation-fade: fadeIn 500ms ease;
 $animation-push-down: pushDown 1500ms linear infinite;
 $animation-in: in 250ms ease 500ms running both;
 
-$text-github: #fff;
+$text-github: #a0a0a0;
 $text-keybase: #FF6F21;
 $text-email: #d43434;
 $text-spotify: #1DB954;
@@ -41,7 +42,6 @@ $text-black: #202020;
 $text-inherit: inherit;
 
 $black: #202020;
-
 
 $default-50: #8ABDFF;
 $default-100: #7AB4FF;
@@ -74,20 +74,9 @@ $dark-600: #6B6B6B;
 $dark-700: #4F4F4F;
 $dark-800: #333333;
 $dark-900: #171717;
+$dark-1000: #080808;
 
-$orange-DEFAULT: #FF5E1F;
-$orange-50: #FFE2D6;
-$orange-100: #FFD3C2;
-$orange-200: #FFB699;
-$orange-300: #FF9970;
-$orange-400: #FF7B47;
-$orange-500: #FF5E1F;
-$orange-600: #E64100;
-$orange-700: #AD3100;
-$orange-800: #752100;
-$orange-900: #3D1100;
-
-$accent: #d7ff2e;
+$accent-500: #3B82F6;
 
 $padding-safe: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 $padding-safe-top: env(safe-area-inset-top);
