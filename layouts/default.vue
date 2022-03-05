@@ -142,9 +142,12 @@
     margin: 32px 64px;
   }
 
-  svg {
-    width: 16px;
-    height: 16px;
+  svg {    
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
   }
 
   ::-webkit-scrollbar {
