@@ -15,8 +15,6 @@
             engineering, computer graphics, and game development.</p>
           <p>I'm currently working on projects involving s&amp;box, a game engine/framework designed around Source 2.</p>
 
-          <!-- <hr /> -->
-
           <social-links></social-links>
         </div>
       </section>
@@ -52,7 +50,7 @@ export default {
   position: relative;
   
   width: 100%;
-  max-width: 1280px;
+  max-width: $screen-md;
   margin: 0 auto;
   padding: 0 1rem;
   
@@ -83,7 +81,7 @@ export default {
   padding: 16px;
   display: flex;
 
-  flex: 1 1 25%;
+  flex: 1 1 30%;
 
   z-index: 10;
   height: auto;
@@ -99,8 +97,8 @@ export default {
       left: 0;
       right: 0;
       bottom: 0px;
-      height: 2px;
-      background: $orange-500;
+      height: 4px;
+      background: $accent-500;
     }
   }
 
@@ -120,7 +118,7 @@ export default {
   overflow: hidden;
   border: 1px solid rgba( $dark-600, 0.2 );
   border-radius: 10px;
-  height: 90%;
+  height: 85%;
   aspect-ratio: 1;
   background-image: url( 'https://cdn.discordapp.com/attachments/839155256964284459/839820840659845120/70016038_473227283268995_7568323747035041244_n.png' );
   background-size: cover;

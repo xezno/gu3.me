@@ -1,5 +1,5 @@
 <template>
-  <BaseArea title="Projects">
+  <BaseArea title="My Projects">
     <div class="container">
       <Project title="Alex's Instagib" role="Everything" link="https://github.com/xezno/sbox-instagib">Veniam aliqua
         minim Lorem qui irure ipsum quis commodo nostrud laborum.</Project>

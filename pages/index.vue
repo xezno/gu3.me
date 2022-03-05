@@ -29,9 +29,11 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/variables.scss";
+
 .main-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: $screen-md;
   margin: 0 auto;
   padding: 32px 1rem;
 }

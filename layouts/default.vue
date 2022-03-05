@@ -3,11 +3,13 @@
     <Nuxt />
 
     <footer>
-      <div class="left">
-        &copy; Alex Guthrie 2022
-      </div>
-      <div class="right">
-        <SocialLinks></SocialLinks>
+      <div class="inner">
+        <div class="left">
+          &copy; Alex Guthrie 2022
+        </div>
+        <div class="right">
+          <SocialLinks></SocialLinks>
+        </div>
       </div>
     </footer>
   </div>
@@ -19,14 +21,22 @@
   footer {
     text-align: center;
     font-weight: bold;
-    display: flex;
     padding: 0;
     text-transform: uppercase;
     background-color: $dark-1000;
-    align-items: center;
   
     @media (min-width: $screen-md) {
       justify-content: space-around;
+    }
+
+    .inner {
+      display: flex;
+      max-width: $screen-md;
+      width: 100%;
+      align-items: center;
+      margin: auto;
+      justify-content: space-between;
+      padding: 0 1rem;
     }
 
     .left {
@@ -85,7 +95,7 @@
     color: white;
 
     &:hover {
-      color: $orange-500;
+      color: $accent-500;
     }
   }
 

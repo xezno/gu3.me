@@ -1,4 +1,4 @@
-$screen-md: 720px;
+$screen-md: 1280px;
 
 $glow: '0 0 25px #D7FF2E';
 $hero-height: 500px;
@@ -42,7 +42,6 @@ $text-inherit: inherit;
 
 $black: #202020;
 
-
 $default-50: #8ABDFF;
 $default-100: #7AB4FF;
 $default-200: #5CA3FF;
@@ -76,19 +75,17 @@ $dark-800: #333333;
 $dark-900: #171717;
 $dark-1000: #080808;
 
-$orange-DEFAULT: #FF5E1F;
-$orange-50: #FFE2D6;
-$orange-100: #FFD3C2;
-$orange-200: #FFB699;
-$orange-300: #FF9970;
-$orange-400: #FF7B47;
-$orange-500: #FF5E1F;
-$orange-600: #E64100;
-$orange-700: #AD3100;
-$orange-800: #752100;
-$orange-900: #3D1100;
-
-$accent: #d7ff2e;
+$accent-DEFAULT: #2A52BE;
+$accent-50: #B2C2EE;
+$accent-100: #A1B5EA;
+$accent-200: #809AE3;
+$accent-300: #5E80DB;
+$accent-400: #3D66D4;
+$accent-500: #2A52BE;
+$accent-600: #203E90;
+$accent-700: #162A62;
+$accent-800: #0C1734;
+$accent-900: #010306;
 
 $padding-safe: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 $padding-safe-top: env(safe-area-inset-top);

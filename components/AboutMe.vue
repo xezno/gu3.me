@@ -1,5 +1,5 @@
 <template>
-  <BaseArea title="About Me">
+  <BaseArea title="My Skills">
     <BaseCard>
       <table>
         <tr>
@@ -39,7 +39,7 @@
             OpenGL
           </td>
           <td>
-            I've written writing OpenGL and Vulkan graphics code for desktop applications and games
+            I've written writing OpenGL graphics code for desktop applications and games
           </td>
         </tr>
       </table>

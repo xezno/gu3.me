@@ -1,5 +1,5 @@
 <template>
-  <BaseArea title="Blog Posts">
+  <BaseArea title="My Blog">
     <div class="container">
       <div class="post" v-for="(item,index) in items.items.slice(0, 6)" v-bind:key="item.title"
         :class="index % 2 == 0 ? 'left' : 'right'">
@@ -47,7 +47,7 @@ export default {
   color: $dark-300;
 
   &:hover {
-    color: $orange-500;
+    color: $accent-500;
   }
 }
 
@@ -105,7 +105,6 @@ export default {
 
   h3 {
     margin: 0;
-    text-transform: uppercase;  
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -142,8 +141,8 @@ export default {
   
   &:hover { 
     .inner {
-      border: 1px solid $orange-500;
-      box-shadow: 0 0 20px rgba( $orange-500, 0.2 );
+      border: 1px solid $accent-500;
+      box-shadow: 0 0 20px rgba( $accent-500, 0.75 );
     }
 
     .background {

@@ -9,11 +9,17 @@
       
       <ul>
         <li>
-          <h4>Role</h4>
+          <h4>
+            <fa :icon="faUser" />
+            Role
+          </h4>
           <p>{{ role }}</p>
         </li>
         <li>
-          <h4>Link</h4>
+          <h4>
+            <fa :icon="faLink" />
+            Link
+          </h4>
           <p>{{ link }}</p>
         </li>
       </ul>
@@ -23,6 +29,8 @@
 </template>
 
 <script>
+  import { faUser, faLink } from "@fortawesome/free-solid-svg-icons";
+
   export default {
     props: {
       title: {
@@ -41,6 +49,12 @@
         type: String,
         default: "https://github.com/apetavern/sbox-frostfight"
       }
+    },
+    data: function() {
+      return {
+        faUser,
+        faLink
+      }
     }
   }
 </script>
@@ -51,8 +65,9 @@
 
 .wrapper {
   width: 100%;
-  margin: 12px;
-  padding: 0 10px;
+
+  flex-shrink: 1;
+  flex-grow: 1;
   
   @media screen and (min-width: $screen-md) {
     width: 50%;
