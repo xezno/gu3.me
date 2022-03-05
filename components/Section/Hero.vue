@@ -61,8 +61,7 @@ export default {
 }
 
 .left {
-  flex-grow: 1;
-  flex-shrink: 0;
+  width: fit-content;
 
   display: flex;
   justify-content: flex-start;
@@ -71,7 +70,7 @@ export default {
   min-height: $hero-height;
   position: relative;
   height: 100%;
-  flex: 1 1 0px;
+  flex: 1 1 0;
 
   @media screen and (max-width: $screen-md) {
     display: none;
@@ -82,7 +81,7 @@ export default {
   padding: 16px;
   display: flex;
 
-  flex: 1 1 30%;
+  flex: 1 1 400px;
 
   z-index: 10;
   height: auto;
@@ -103,7 +102,8 @@ export default {
   overflow: hidden;
   border: 1px solid rgba( $dark-600, 0.2 );
   border-radius: 10px;
-  height: 85%;
+  width: 100%;
+  max-height: 85%;
   aspect-ratio: 1;
   background-image: url( 'https://cdn.discordapp.com/attachments/839155256964284459/839820840659845120/70016038_473227283268995_7568323747035041244_n.png' );
   background-size: cover;
