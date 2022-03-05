@@ -1,21 +1,23 @@
 <template>
   <div class="wrapper">
     <BaseCard :title="title" class="project">
-      <ul>
-        <li>
-          <h4>Role</h4>
-          <h4>{{ role }}</h4>
-        </li>
-        <li>
-          <h4>Link</h4>
-          <h4>{{ link }}</h4>
-        </li>
-      </ul>
-      
+
       <div class="background" style="background-image: url('https://source.unsplash.com/random/?landscape')">
       </div>
       
       <slot></slot>
+      
+      <ul>
+        <li>
+          <h4>Role</h4>
+          <p>{{ role }}</p>
+        </li>
+        <li>
+          <h4>Link</h4>
+          <p>{{ link }}</p>
+        </li>
+      </ul>
+      
     </BaseCard>
   </div>
 </template>
@@ -61,6 +63,30 @@
 .project {
   position: relative;
   margin: 0 !important;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  height: 200px;
+
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      :first-child {
+        margin-right: 4px;
+      }
+
+      h4, p {
+        margin: 0;
+      }
+    }
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
   
   .background {
     position: absolute;
@@ -69,7 +95,7 @@
     bottom: 0;
 
     margin: 0;
-    width: 25%;
+    width: 50%;
     background-size: cover;
     background-position: center;
     transition: all 150ms ease;
