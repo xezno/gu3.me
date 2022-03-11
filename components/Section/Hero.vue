@@ -11,7 +11,7 @@
           <div class="underline"></div>
 
           <p>Hey! I'm Alex.</p>
-          <p>I'm a 20 year old Computer Science student and software engineer from the United Kingdom,
+          <p>I'm a Computer Science student and software engineer from the United Kingdom,
             <wbr>
             interested in reverse engineering, computer graphics, and game development.</p>
           <p>I currently work on projects involving s&amp;box, a game engine/framework designed around Source 2.</p>
