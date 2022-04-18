@@ -9027,10 +9027,10 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
-vue-custom-scrollbar@^1.4.0:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/vue-custom-scrollbar/-/vue-custom-scrollbar-1.4.3.tgz#0ffb9616ff6d5b7d7f731a55da496ef814656cd5"
-  integrity sha512-qHjHYXpIfU2oMi+pikGZvDcJT4p2RqON4XoOHR702TIiJabnTRKFFAIwsHPKbXxxFEbArEZWLJ4SgkuN/bTvGg==
+vue-custom-scrollbar@^1.4.4:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/vue-custom-scrollbar/-/vue-custom-scrollbar-1.4.4.tgz#5310328bebfa25b9136b59c1346e39d893c0840f"
+  integrity sha512-GKXEmLgUpH0Z+l4Y1TChgLpcKWXqdOOelfssuQakhPy/vvA4b5tqbWdvitCu1+zJlv+5vHa8BrUhlz1gJuZHgQ==
   dependencies:
     perfect-scrollbar "^1.5.3"
     vue "^2.6.11"
