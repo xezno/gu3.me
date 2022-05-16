@@ -9,7 +9,7 @@
 
       <Project title="FortWars" role="Project Lead" link="https://github.com/apetavern/sbox-fortwars"
         image="https://cdn.discordapp.com/attachments/839155256964284459/949648760366055474/Fortwars_Thumb.png">
-        <p>A spiritual successor to the classic 'SourceForts' Source Engine mod.</p>
+        <p>A spiritual successor to the classic 'SourceForts' Source mod.</p>
       </Project>
 
       <Project title="Frost Fight" role="Programmer" link="https://github.com/apetavern/sbox-frostfight"
