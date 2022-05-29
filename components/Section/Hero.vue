@@ -103,12 +103,11 @@ export default {
 .hero-image {
   position: absolute;
   overflow: hidden;
-  border: 1px solid rgba( $dark-600, 0.2 );
   border-radius: 10px;
   width: 100%;
   max-height: 85%;
   aspect-ratio: 1;
-  background-image: url( 'https://cdn.discordapp.com/attachments/839155256964284459/839820840659845120/70016038_473227283268995_7568323747035041244_n.png' );
+  background-image: url( '/pfp2.png' );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
