@@ -39,7 +39,7 @@
             <h4>OpenGL</h4>
           </td>
           <td>
-            I've written writing OpenGL graphics code for desktop applications and games
+            I've written OpenGL graphics code for desktop applications and games
           </td>
         </tr>
       </table>
