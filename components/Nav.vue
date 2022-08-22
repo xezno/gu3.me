@@ -8,9 +8,6 @@
         <li>
           <a href="#skills">My Skills</a>
         </li>
-        <li>
-          <a href="#blog">My Blog</a>
-        </li>
       </ul>
     </div>
   </nav>
@@ -26,6 +23,7 @@ ul {
 
   li {
     margin: 0 20px;
+    width: 125px;
 
     @media screen and (max-width: $screen-md) {
       margin: 0 10px;

@@ -96,7 +96,6 @@ svg {
     background: $dark-800;
     border-radius: 10px;
     padding: 20px;
-    color: white;
 
     transition: all 150ms ease;
     cursor: pointer;
@@ -152,7 +151,6 @@ svg {
 
     text-transform: uppercase;
     font-weight: bold;
-    color: white;
 
     padding: 0 20px;
     height: 0;

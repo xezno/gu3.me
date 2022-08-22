@@ -20,9 +20,12 @@
             <fa :icon="faLink" />
             Link
           </h4>
-          <a :href="link">
+          <a v-if="!comingSoon" :href="link">
             GitHub
             <fa :icon="faUpRightFromSquare" />
+          </a>
+          <a v-if="comingSoon" :href="link">
+            Coming Soon
           </a>
         </li>
       </ul>
@@ -51,7 +54,8 @@
       link: {
         type: String,
         default: "https://github.com/apetavern/sbox-frostfight"
-      }
+      },
+      comingSoon: Boolean
     },
     data: function() {
       return {
@@ -68,11 +72,7 @@
 @import "@/assets/scrimMask.scss";
 
 .project-wrapper {
-  flex: 1 1 40%;
-
-  @media screen and (max-width: $screen-md) {
-    flex: 1 1 100%;
-  }
+  flex: 1 1 100%;
 }
 
 .project {
@@ -102,6 +102,7 @@
       }
 
       h4 {
+        width: 60px;
         color: $accent-500;
 
         > svg {

@@ -12,10 +12,18 @@
         </tr>
         <tr>
           <td>
-            <h4>Node (JavaScript / TypeScript)</h4>
+            <h4>Rust, C++</h4>
           </td>
           <td>
-            I have experience writing node-based backend applications using both JavaScript and TypeScript
+            I've written high-performance native desktop code using Rust as well as C++
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h4>OpenGL, DirectX</h4>
+          </td>
+          <td>
+            I've written OpenGL and DirectX 11/12 graphics code for desktop applications and games
           </td>
         </tr>
         <tr>
@@ -28,18 +36,10 @@
         </tr>
         <tr>
           <td>
-            <h4>Rust</h4>
+            <h4>Node - JavaScript, TypeScript</h4>
           </td>
           <td>
-            I've written high-performance native desktop code using Rust
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h4>OpenGL</h4>
-          </td>
-          <td>
-            I've written OpenGL graphics code for desktop applications and games
+            I have experience writing node-based backend applications using both JavaScript and TypeScript
           </td>
         </tr>
       </table>
@@ -60,6 +60,10 @@ table {
 
   tr:nth-child(odd) {
     background-color: $dark-800;
+  }
+
+  td:first-of-type {
+    width: 200px;
   }
 
   td, th {

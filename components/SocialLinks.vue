@@ -65,12 +65,13 @@ ul {
   padding: 0;
   display: flex;
   width: auto;
+  gap: 20px;
+  margin: 0;
 }
 
 li {
   padding: 0;
   margin: 0;
-  margin-right: 20px;
   text-align: center;
   font-size: 16pt;
 }

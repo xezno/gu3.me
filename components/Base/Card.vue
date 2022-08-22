@@ -30,5 +30,9 @@ export default {
   padding: 20px;
   margin: 40px 0;
   overflow: hidden;
+
+  &.disable-padding {
+    padding: 0;
+  }
 }
 </style>

@@ -1,12 +1,12 @@
 $screen-md: 1100px;
-$max-width: 1280px;
+$max-width: 768px;
 
 $glow: '0 0 25px #D7FF2E';
 $hero-height: 500px;
 
 $width-card: calc( 33% - 1.5em );
 
-$font-sans: -apple-system, BlinkMacSystemFont, "Source Sans Pro", sans-serif;
+$font-sans: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 $font-title: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
 
 @keyframes fadeIn {
@@ -75,6 +75,8 @@ $dark-700: #4F4F4F;
 $dark-800: #333333;
 $dark-900: #171717;
 $dark-1000: #080808;
+
+$text: white;
 
 $accent-500: #3B82F6;
 

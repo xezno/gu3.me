@@ -28,6 +28,7 @@
     padding: 0;
     text-transform: uppercase;
     background-color: $dark-1000;
+    padding: 10px 0;
   
     @media (min-width: $screen-md) {
       justify-content: space-around;
@@ -94,13 +95,13 @@
 
     font-weight: 400;
 
-    color: white;
+    color: $text;
     background-color: $dark-900;
   }
 
   a {
     text-decoration: none;
-    color: white;
+    color: $text;
 
     &:hover {
       color: $accent-500;
@@ -109,7 +110,7 @@
 
   h1,h2,h3,h4,h5,h6 {
     margin: 0;
-    font-weight: 700;
+    font-weight: 800;
     font-family: $font-title;
   }
 
@@ -119,16 +120,6 @@
 
   h1 {
     font-size: 38px;
-
-    &::after {
-      content: ' ';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0px;
-      height: 4px;
-      background: $accent-500;
-    }
   }
 
   h2 {
@@ -152,8 +143,9 @@
   }
 
   hr {
-    border: 1px solid $dark-600;
-    margin: 32px 64px;
+    width: 33%;
+    border: 1px solid rgba( $accent-500, 0.25 );
+    margin: 20px 0;
   }
 
   svg {    
