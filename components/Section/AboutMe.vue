@@ -62,10 +62,6 @@ table {
     background-color: $dark-800;
   }
 
-  td:first-of-type {
-    width: 200px;
-  }
-
   td, th {
     padding: 10px;
   }

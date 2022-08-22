@@ -38,7 +38,7 @@ export default {
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   
   margin: 0 auto;
@@ -51,7 +51,11 @@ export default {
 
   padding-bottom: 40px;
 
-  height: 66vh;
+  min-height: 66vh;
+
+  @media (max-width: 768px) {
+    height: calc( 100vh - 25px );
+  }
 }
 
 .hero-wrapper {
@@ -60,12 +64,16 @@ export default {
 
 .hero-image {
   overflow: hidden;
+  width: 256px;
   aspect-ratio: 1;
-  flex-grow: 1;
   background-image: url( '/me.png' );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    width: 128px;
+  }
 }
 
 h1 {
