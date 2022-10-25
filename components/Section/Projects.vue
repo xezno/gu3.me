@@ -2,23 +2,40 @@
   <BaseArea title="My Projects">
     <div class="container">
 
-      <Project title="Alex's Instagib" role="Everything" link="https://github.com/xezno/sbox-instagib"
+      <Project 
+        title="Alex's Instagib" 
+        role="Everything" 
+        link="https://github.com/xezno/sbox-instagib"
+        madeIn="s&box"
         image="/projects/Instagib.png">
         <p>An homage to classic arena shooters.</p>
       </Project>
 
-      <Project title="FortWars" role="Project Lead" link="https://github.com/apetavern/sbox-fortwars"
+      <Project 
+        title="FortWars" 
+        role="Project Lead" 
+        link="https://github.com/apetavern/sbox-fortwars"
+        madeIn="s&box"
         image="/projects/Fortwars.png">
         <p>A spiritual successor to the classic 'SourceForts' Source mod.</p>
       </Project>
 
-      <Project title="Frost Fight" role="Programmer" link="https://github.com/apetavern/sbox-frostfight"
+      <Project 
+        title="Frost Fight" 
+        role="Programmer" 
+        link="https://github.com/apetavern/sbox-frostfight"
+        madeIn="s&box"
         image="/projects/Frost Fight.png">
         <p>A game made in under a week for the Jambox Winter Jam 2021.</p>
       </Project>
 
-      <Project title="Mocha Engine" role="Everything" link="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        image="/projects/Mocha.png" comingSoon>
+      <Project 
+        title="Mocha Engine" 
+        role="Everything" 
+        link="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        madeIn="C# / C++ / DX11"
+        image="/projects/Mocha.png"
+        comingSoon>
         <p>A toy game engine written in C++ with C# interop.</p>
       </Project>
 

@@ -12,8 +12,6 @@
         <p>👋 Hey! I'm Alex.</p>
         <p>I'm a Computer Science student and software engineer from the United Kingdom, <wbr>
           interested in reverse engineering, computer graphics, and game development.</p>
-        <p>I currently work on projects involving s&amp;box, a game engine/framework designed <wbr>
-          around Source 2.</p>
         <hr/>
 
     </article>
@@ -70,6 +68,7 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 100%;
 
   @media (max-width: 768px) {
     width: 128px;

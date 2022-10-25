@@ -17,6 +17,13 @@
         </li>
         <li>
           <h4>
+            <fa :icon="faCog" />
+            Made in
+          </h4>
+          <p>{{ madeIn }}</p>
+        </li>
+        <li>
+          <h4>
             <fa :icon="faLink" />
             Link
           </h4>
@@ -35,7 +42,7 @@
 </template>
 
 <script>
-  import { faUser, faLink, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+  import { faUser, faLink, faUpRightFromSquare, faCog } from "@fortawesome/free-solid-svg-icons";
 
   export default {
     props: {
@@ -44,6 +51,10 @@
         default: "Untitled"
       },
       role: {
+        type: String,
+        default: "Lorem ipsum dolor sit amet"
+      },
+      madeIn: {
         type: String,
         default: "Lorem ipsum dolor sit amet"
       },
@@ -61,7 +72,8 @@
       return {
         faUser,
         faLink,
-        faUpRightFromSquare
+        faUpRightFromSquare,
+        faCog
       }
     }
   }
@@ -102,7 +114,7 @@
       }
 
       h4 {
-        width: 60px;
+        width: 90px;
         color: $accent-500;
 
         > svg {
