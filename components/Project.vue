@@ -41,7 +41,7 @@
                 Blog
               </h4>
               <a :href="blogLink">
-                Blog
+                Latest Post
                 <fa :icon="faUpRightFromSquare" />
               </a>
             </li>
