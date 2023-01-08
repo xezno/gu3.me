@@ -30,13 +30,6 @@
 <style lang="scss" scoped>
 @import "~assets/variables.scss";
 
-.main-container {
-  width: 100%;
-  max-width: $max-width;
-  margin: 0 auto;
-  padding: 32px 1rem;
-}
-
 .item {
   margin: 64px 0;
 }

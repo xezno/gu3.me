@@ -3,15 +3,30 @@
     <div class="inner">
       <ul>
         <li>
-          <a href="#projects">My Projects</a>
+          <nuxt-link to="/">Home</nuxt-link>
         </li>
         <li>
-          <a href="#skills">My Skills</a>
+          <nuxt-link to="/projects">Projects</nuxt-link>
+        </li>
+        <li>
+          <a href="https://blog.gu3.me" target="_blank">Blog <fa :icon="faUpRightFromSquare" /></a>
         </li>
       </ul>
     </div>
   </nav>
 </template>
+
+<script>
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
+export default {
+  data: function () {
+    return {
+      faUpRightFromSquare
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @import "~assets/variables.scss";
@@ -51,5 +66,9 @@ nav {
     justify-content: center;
     padding: 0 1rem;
   }
+}
+
+svg {
+  margin-left: 8px;
 }
 </style>
