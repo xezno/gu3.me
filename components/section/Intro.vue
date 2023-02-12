@@ -2,7 +2,9 @@
     <div class="intro">
         <div class="intro-inner">
             <div class="banner"></div>
-            <h1 class="huge">Alex Guthrie</h1>
+            <h1 class="huge">
+                Alex <span class="a">Guthrie</span><span class="b">GU3 <span class="cursor">_</span></span>
+            </h1>
 
             <BaseSocialLinks></BaseSocialLinks>
 
@@ -57,6 +59,51 @@ export default {
         font-size: 5rem;
         font-weight: 700;
         color: #fff;
+        position: relative;
+        width: 100%;
+        
+        // Disable text selection
+        user-select: none;
+
+        .a, .b {
+            position: absolute;
+            left: 195px;
+            top: 0;
+            transition: all 150ms ease;
+            pointer-events: none;
+        }
+
+        .a {
+            opacity: 1;
+            transform: translateY( 0px );
+        }
+
+        .b {
+            opacity: 0;
+            transform: translateY( -100px );
+            font-family: monospace;
+            background-color: #000111;
+            padding: 0 40px;
+            display: flex;
+
+            .cursor {
+                animation: blink 1s steps( 1, end ) infinite;
+            }
+        }
+
+        &:hover {
+            .a {
+                opacity: 0;
+                transform: translateY( 100px );
+            }
+
+            .b {
+                opacity: 1;
+                transform: translateY( 0px );
+            }
+
+        }
+
     }
 
     .intro-inner {
@@ -80,7 +127,7 @@ export default {
             right: 0;
             height: 100vh;
 
-            background-color: #000111;
+            background-color: $grey-900;
             background-image: url("/img/hero.png");
             background-repeat: no-repeat;
             background-position: right center;
@@ -88,7 +135,7 @@ export default {
 
             // mix-blend-mode: soft-light;
             opacity: 1.0;
-            filter: brightness(50%) saturate(25%);
+            filter: brightness(150%) saturate(50%);
 
             // Noise overlay
             &::after {
@@ -106,8 +153,33 @@ export default {
                 opacity: 0.25;
             }
 
+            // Color overlay
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $grey-500;
+                mix-blend-mode: multiply;
+                opacity: 1.0;
+            }
+
             z-index: -1;
         }
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 </style>

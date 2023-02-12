@@ -120,10 +120,10 @@ hr {
 @mixin glass($a, $b) {
     $color-a: rgba($a, 0.15);
     $color-b: rgba($b, 0.03);
-    background: radial-gradient(at 50% 0%, $color-a, $color-a 33%, $color-b), linear-gradient($color-a, $color-b);
+    //background: radial-gradient(at 50% 0%, $color-a, $color-a 33%, $color-b), linear-gradient($color-a, $color-b);
     
     background-color: rgba($color-a, 0.1);
-    backdrop-filter: blur(10px);
+    //backdrop-filter: blur(10px);
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(#fff, 0.2);
 }
@@ -132,8 +132,9 @@ hr {
     $color-a: rgba($a, 0.33);
     $color-b: rgba($b, 0.1);
 
-    background: linear-gradient($color-a, $color-b);
-    backdrop-filter: blur(10px);
+    background-color: rgba($color-a, 0.1);
+    //background: linear-gradient($color-a, $color-b);
+    //backdrop-filter: blur(10px);
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(#fff, 0.2);
 }
