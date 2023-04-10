@@ -1,5 +1,5 @@
 <template>
-    <div class="glass-panel">
+    <div :class="className">
         <slot></slot>
     </div>
 </template>
@@ -8,28 +8,18 @@
 // Fade other glass panels when hovering over one
 
 export default {
-    mounted: function () {
-        //
-        // Fade out other cards when hovering
-        //
-        const projects = document.querySelectorAll('.glass-panel');
-        projects.forEach(project => {
-            project.addEventListener('mouseenter', () => {
-                projects.forEach(otherProject => {
-                    if (otherProject !== project) {
-                        otherProject.classList.add('fade');
-                    }
-                });
-            });
-            project.addEventListener('mouseleave', () => {
-                projects.forEach(otherProject => {
-                    if (otherProject !== project) {
-                        otherProject.classList.remove('fade');
-                    }
-                });
-            });
-        });
-    }
+    props: {
+        shine: {
+            type: Boolean,
+            default: true
+        }
+    },
+    computed: {
+        className() {
+            let shine = (this.shine) ? 'shine' : 'no-shine';
+            return `glass-panel ${shine}`;
+        }
+    },
 }
 </script>
 
@@ -44,5 +34,9 @@ export default {
     font-weight: 700;
     transition: all 150ms ease;
     transition-delay: 50ms; // Prevent flickering when hovering over multiple cards
+
+    &.shine {
+        @include shine;
+    }
 }
 </style>

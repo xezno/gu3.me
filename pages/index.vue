@@ -19,7 +19,7 @@
                     <Project class="project" v-for="(project) in projects" :key="project.name" :project="project"></Project>
 
                     <a href="#" class="view-more" v-on:click="toggleViewMore">
-                        <BaseGlassPanel>
+                        <BaseGlassPanel :shine="false">
                             <p v-if="!viewMore">View more...</p>
                             <p v-if="viewMore">View less</p>
                         </BaseGlassPanel>

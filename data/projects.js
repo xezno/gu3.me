@@ -2,6 +2,7 @@ export const projects = [
     {
         title: "Mocha",
         role: "Everything",
+        type: "Game Engine",
         link: "https://github.com/xezno/mocha",
         blogLink: "https://blog.gu3.me/mocha",
         madeIn: "C# / C++ / Vulkan",
@@ -11,6 +12,7 @@ export const projects = [
     {
         title: "Alex's Instagib",
         role: "Everything",
+        type: "s&box Game",
         link: "https://github.com/xezno/sbox-instagib",
         madeIn: "C# / s&box",
         image: "/img/projects/Instagib.png",
@@ -19,6 +21,7 @@ export const projects = [
     {
         title: "Tin",
         role: "Programmer: Backend",
+        type: "Compiler",
         link: "https://github.com/The-Tin-Foil-Hat-Society/tin",
         madeIn: "C",
         image: "/img/projects/Tin.png",
@@ -27,6 +30,7 @@ export const projects = [
     {
         title: "OpenTPW",
         role: "Everything",
+        type: "Game",
         link: "https://github.com/ThemeParkWorld/OpenTPW",
         madeIn: "C# / Veldrid",
         image: "/img/projects/OpenTPW.png",
@@ -35,6 +39,7 @@ export const projects = [
     {
         title: "Cold Open",
         role: "Programmer: AI, UI",
+        type: "s&box Game",
         link: "https://github.com/apetavern/horror-jam",
         madeIn: "s&box",
         image: "/img/projects/Cold Open.png",
@@ -43,6 +48,7 @@ export const projects = [
     {
         title: "FortWars",
         role: "Project Lead, Programmer",
+        type: "s&box Game",
         link: "https://github.com/apetavern/sbox-fortwars",
         madeIn: "C# / s&box",
         image: "/img/projects/Fortwars.png",
@@ -51,6 +57,7 @@ export const projects = [
     {
         title: "Frost Fight",
         role: "Programmer: UI",
+        type: "s&box Game",
         link: "https://github.com/apetavern/sbox-frostfight",
         madeIn: "C# / s&box",
         image: "/img/projects/Frost Fight.png",

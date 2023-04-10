@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$font: "Space Grotesk";
 
 $light-50: #050505;
 $light-100: #0D0D0D;
@@ -13,23 +15,23 @@ $light-900: #ffffff;
 $light-1000: #f3f3f3;
 $light-text: black;
 
-$dark-50: #E3E3E3;
-$dark-100: #D9D9D9;
-$dark-200: #C4C4C4;
-$dark-300: #B0B0B0;
-$dark-400: #9C9C9C;
-$dark-500: #878787;
-$dark-600: #6B6B6B;
-$dark-700: #4F4F4F;
-$dark-800: #333333;
-$dark-900: #171717;
-$dark-1000: #080808;
+$dark-50: #C4C4C4;
+$dark-100: #B0B0B0;
+$dark-200: #9C9C9C;
+$dark-300: #878787;
+$dark-400: #6B6B6B;
+$dark-500: #4F4F4F;
+$dark-600: #333333;
+$dark-700: #171717;
+$dark-800: #080808;
+$dark-900: #080808;
+$dark-1000: #000000;
 $dark-text: white;
 
-$primary: #2194ff;
+$primary: #fe71dc;
 
 @function toRGB($color) {
-    @return "rgb(" + red($color) + ", " + green($color) + ", " + blue($color) + ")";
+    @return "rgb("+red($color)+", "+green($color)+", "+blue($color)+")";
 }
 
 :root {
@@ -47,7 +49,7 @@ $primary: #2194ff;
 
     --theme-text: #{$light-text};
     --theme-primary: #{$primary};
-    
+
     --theme-glass: rgba(0, 0, 0, 0.05);
     --theme-glass-hover: rgba(0, 0, 0, 0.1);
     --theme-glass-border: rgba(0, 0, 0, 0.1);
@@ -91,7 +93,7 @@ $mobile: 960px;
 
 body {
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: $font, sans-serif;
 
     line-height: 1.5;
 
@@ -172,30 +174,64 @@ hr {
     width: 50%;
 }
 
-@mixin glass-internal( $distance ) {
+@mixin glass-internal($distance ) {
     background-color: var(--theme-glass);
     border: 1px solid var(--theme-glass-border);
-    
+
     backdrop-filter: blur(10px);
-    
-    transform: translateY( 0px );
-    transition: all 150ms ease;
-    
+
+    transform: translateY(0px);
+    transition: all 500ms ease;
+
     &:hover {
         background-color: var(--theme-glass-hover);
-        box-shadow: 0 $distance 10px rgba( black, 0.1 );
+        box-shadow: 0 $distance 10px rgba(black, 0.1);
 
-        transform: translateY( -$distance );
+        transform: translateY(-$distance );
         backdrop-filter: blur(20px);
     }
 }
 
+@mixin shine() {
+    &::after {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 20px;
+        width: 1px;
+        height: 75px;
+        max-height: 50%;
+
+        pointer-events: none;
+        z-index: 1;
+
+        background: linear-gradient(
+                rgba($primary, 0),
+                rgba($primary, 0.1) 5%,
+                $primary,
+                lighten($primary, 15%),
+                $primary,
+                rgba($primary, 0.1) 95%,
+                rgba($primary, 0),
+            );
+
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 500ms ease;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 @mixin glass() {
-    @include glass-internal( 5px );
+    @include glass-internal(5px);
 }
 
 @mixin glass-small() {
-    @include glass-internal( 2px );
+    @include glass-internal(2px);
 }
 
 ::-webkit-scrollbar {

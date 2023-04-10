@@ -7,6 +7,7 @@
                 </div>
                 <div class="project-content">
                     <h2 class="project-title">{{ project.title }}</h2>
+                    <h5 class="project-title">{{ project.type }}</h5>
                     <p class="project-description">{{ project.description }}</p>
 
                     <span class="project-spacing"></span>
@@ -55,7 +56,7 @@ export default {
         flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 20px;
 
         .project-image {
             width: 100%;
@@ -83,6 +84,7 @@ export default {
             flex-direction: column;
             justify-content: space-around;
             align-items: flex-start;
+            gap: 5px;
 
             .project-spacing {
                 flex-grow: 1;
@@ -103,6 +105,13 @@ export default {
                 }
             }
         }
+    }
+
+    h5 {
+        color: var(--theme-primary);
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
     }
 }
 
