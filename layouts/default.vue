@@ -1,11 +1,8 @@
 <template>
-    <Nav></Nav>
-
     <main>
         <section>
             <slot />
         </section>
-        <Footer></Footer>
     </main>
 </template>
 
@@ -14,9 +11,9 @@
 
 main {
     width: 100%;
-    height: calc(100vh - 20px);
-    max-width: 1280px;
+    // max-width: 1280px;
     margin: auto;
+    overflow: hidden;
 }
 
 section {

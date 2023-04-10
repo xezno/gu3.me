@@ -1,83 +1,117 @@
 <template>
+    <x-flex>
 
-    <article class="intro-wrapper">
+        <x-flex-section>
+            <article class="intro-wrapper">
 
-        <SectionIntro></SectionIntro>
+                <SectionIntro></SectionIntro>
 
-    </article>
+            </article>
+        </x-flex-section>
 
+        <x-flex-section>
+            <section class="content">
 
-        <h1>Projects</h1>
+                <h1>Projects</h1>
 
-        <article class="projects-wrapper">
+                <article class="projects-wrapper">
 
-            <Project class="project" v-for="(project) in projects" :key="project.name" :project="project"></Project>
+                    <Project class="project" v-for="(project) in projects" :key="project.name" :project="project"></Project>
 
-            <nuxt-link to="/projects" class="view-more">
-                <BaseGlassPanel>
-                    <p>View more...</p>
-                </BaseGlassPanel>
-            </nuxt-link>
+                    <a href="#" class="view-more" v-on:click="toggleViewMore">
+                        <BaseGlassPanel>
+                            <p v-if="!viewMore">View more...</p>
+                            <p v-if="viewMore">View less</p>
+                        </BaseGlassPanel>
+                    </a>
 
-        </article>
+                </article>
 
-        <h1>Skills</h1>
+                <h1>Experience</h1>
 
-        <article class="skills-wrapper">
+                <article class="career-wrapper">
 
-            <ul>
-                <li>Unity</li>
-                <li>Unreal</li>
-                <li>C#</li>
-                <li>C++</li>
-                <li>SCSS</li>
-                <li>TypeScript</li>
-                <li>JavaScript</li>
-                <li>Docker</li>
-                <li>Visual Studio</li>
-                <li>Visual Studio Code</li>
-                <li>PostgreSQL</li>
-                <li>Vue</li>
-            </ul>
+                    <Timeline :timeline="career"></Timeline>
 
-            <div class="skills">
-                <BaseGlassPanel>
-                    <h4>2D and 3D game development</h4>
-                    <p>Experienced in writing C# code for use in game engines (such as s&box and Unity) and as desktop
-                        applications</p>
-                </BaseGlassPanel>
-                <BaseGlassPanel>
-                    <h4>Desktop application development using C++ and C#</h4>
-                    <p>Experienced in writing efficient native code for desktop applications</p>
-                </BaseGlassPanel>
-                <BaseGlassPanel>
-                    <h4>Server-side development using Node.js</h4>
-                    <p>Skilled in creating backends for web applications</p>
-                </BaseGlassPanel>
-                <BaseGlassPanel>
-                    <h4>Responsive web design using HTML, CSS, and JavaScript</h4>
-                    <p>Skilled in creating uniquely styled web apps for mobile and desktop platforms</p>
-                </BaseGlassPanel>
-            </div>
+                </article>
 
-        </article>
+                <h1>Skills</h1>
 
+                <article class="skills-wrapper">
 
+                    <ul>
+                        <li>Unity</li>
+                        <li>Unreal</li>
+                        <li>C#</li>
+                        <li>C++</li>
+
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>SCSS</li>
+                        <li>Vue</li>
+                        <li>Docker</li>
+                        <li>PostgreSQL</li>
+                        
+                        <li>Python</li>
+                        <li>Rust</li>
+                    </ul>
+
+                    <div class="skills">
+                        <BaseGlassPanel>
+                            <h4>2D and 3D game development</h4>
+                            <p>Experienced in writing C# code for use in game engines (such as s&box and Unity) and as
+                                desktop
+                                applications</p>
+                        </BaseGlassPanel>
+                        <BaseGlassPanel>
+                            <h4>Desktop application development using C++ and C#</h4>
+                            <p>Experienced in writing efficient native code for desktop applications</p>
+                        </BaseGlassPanel>
+                        <BaseGlassPanel>
+                            <h4>Server-side development using Node.js</h4>
+                            <p>Skilled in creating backends for web applications</p>
+                        </BaseGlassPanel>
+                        <BaseGlassPanel>
+                            <h4>Responsive web design using HTML, CSS, and JavaScript</h4>
+                            <p>Skilled in creating uniquely styled web apps for mobile and desktop platforms</p>
+                        </BaseGlassPanel>
+                    </div>
+
+                </article>
+            </section>
+
+            <Footer></Footer>
+        </x-flex-section>
+    </x-flex>
 </template>
 
 <script>
-import { projects } from '@/projects';
+import { projects } from '~~/data/projects.js';
+import { career } from '~~/data/career.js';
 
 export default {
     data() {
         return {
-            projects
+            projects,
+            career,
+            viewMore: false,
+            scrollIndex: 0,
+            lastScroll: 0
         };
     },
     computed: {
-        // Limit projects
+        // Limit projects if viewMore is false
         projects() {
-            return this.projects.slice(0, 4);
+            if (this.viewMore) {
+                return this.projects;
+            } else {
+                return this.projects.slice(0, 4);
+            }
+        }
+    },
+    methods: {
+        toggleViewMore() {
+            this.viewMore = !this.viewMore;
         }
     }
 };
@@ -85,10 +119,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/core.scss";
-
-article {
-    margin-bottom: 100px;
-}
 
 article {
     display: flex;
@@ -103,11 +133,9 @@ article {
         flex-grow: 1;
         align-items: stretch;
         justify-content: space-between;
-        margin-right: -15px;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 20px;
-        overflow-y: scroll;
 
         .project {
             // Fill the remaining space, but only if there isn't lots of space
@@ -133,6 +161,45 @@ article {
             text-align: center;
         }
     }
+
+    &.projects-wrapper, &.career-wrapper, &.skills-wrapper {
+        margin-bottom: 100px;
+    }
+}
+
+x-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 100vh;
+
+    x-flex-section {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+
+        &:first-of-type {
+            flex-basis: 30%;
+            max-width: 500px;
+        }
+
+        &:last-of-type {
+            padding: 0 50px;
+            padding-top: 50px;
+            margin: 0 auto;
+            max-height: 100%;
+            overflow-y: scroll;
+        }
+    }
+
+    section.content {
+        max-width: 960px;
+        margin: 0 auto;
+    }
 }
 
 ul {
@@ -141,16 +208,18 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 0;
+    margin-bottom: 50px;
 
     li {
+        flex-basis: 12.5%;
+        flex-grow: 1;
         margin: 5px;
         padding: 10px 20px;
-        background-color: $grey-800;
         border-radius: 5px;
-        border: 1px solid rgba($grey-600, 0.2);
         text-align: center;
 
-        @include glass-small($grey-600, $grey-700);
+        @include glass-small;
     }
 }
 
@@ -160,7 +229,6 @@ ul {
     gap: 20px;
     align-items: stretch;
     justify-content: center;
-    margin: 20px 0;
     width: 100%;
     flex-wrap: wrap;
 
@@ -174,5 +242,45 @@ ul {
 h1 {
     text-align: center;
     margin: 20px 0;
+}
+
+@media (max-width: $mobile) {
+    x-flex {
+        flex-direction: column;
+        height: unset;
+
+        x-flex-section {
+            flex-basis: 100% !important;
+            width: 100%;
+            overflow-y: scroll;
+            height: unset;
+            max-height: unset !important;
+            max-width: unset !important;
+
+            &:last-of-type {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .intro-wrapper {
+        width: 100%;
+    }
+
+    .projects-wrapper {
+        .project {
+            flex-basis: 100% !important;
+        }
+    }
+
+    .skills {
+        flex-direction: column;
+        gap: 10px;
+
+        .glass-panel {
+            flex-basis: 100% !important;
+        }
+    }
 }
 </style>

@@ -1,46 +1,29 @@
 <template>
     <div class="intro">
         <div class="intro-inner">
-            <div class="banner"></div>
-            <h1 class="huge">
-                Alex <span class="a">Guthrie</span><span class="b">GU3 <span class="cursor">_</span></span>
-            </h1>
+            <div class="avatar"></div>
+            <h1>Alex Guthrie</h1>
 
             <BaseSocialLinks></BaseSocialLinks>
 
             <p>👋 Hey! I'm Alex.<br>
-                I'm a Computer Science student and software engineer from the United
-                Kingdom, interested in reverse engineering, computer graphics, and game development.</p>
+                I'm a Programmer at Acme Inc.<br>
+                I like reverse engineering, computer graphics, and game development.</p>
         </div>
     </div>
 </template>
 
 <script>
+import { career } from '~~/data/career.js';
+
 export default {
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll);
-    },
-    beforeDestroy() {
-        window.removeEventListener('scroll', this.handleScroll);
-    },
-    methods: {
-        handleScroll() {
-            // Effect: fade and shift the background as the user scrolls down
-            const intro = document.querySelector('.intro');
-            const banner = document.querySelector('.banner');
-
-            const scroll = window.scrollY;
-            const height = intro.clientHeight;
-
-            const opacity = 1 - (scroll / height);
-            const shift = scroll / 2;
-
-            banner.style.opacity = opacity;
-            banner.style.backgroundPosition = `right ${shift}px`;
+    computed: {
+        currentJobCompany() {
+            return career[career.length - 1].company;
+        },
+        currentJobTitle() {
+            return career[career.length - 1].title;
         }
-    },
-    setup() {
-        return {}
     }
 }
 </script>
@@ -49,61 +32,21 @@ export default {
 @import "@/assets/core.scss";
 
 .intro {
-    padding-top: 0px;
-    margin-top: -150px;
     height: 100vh;
+    width: 100%;
 
     overflow: hidden;
+    background-color: var(--theme-1000);
+    padding: 0 50px;
 
-    h1.huge {
-        font-size: 5rem;
-        font-weight: 700;
-        color: #fff;
-        position: relative;
-        width: 100%;
-        
-        // Disable text selection
-        user-select: none;
-
-        .a, .b {
-            position: absolute;
-            left: 195px;
-            top: 0;
-            transition: all 150ms ease;
-            pointer-events: none;
-        }
-
-        .a {
-            opacity: 1;
-            transform: translateY( 0px );
-        }
-
-        .b {
-            opacity: 0;
-            transform: translateY( -100px );
-            font-family: monospace;
-            background-color: #000111;
-            padding: 0 40px;
-            display: flex;
-
-            .cursor {
-                animation: blink 1s steps( 1, end ) infinite;
-            }
-        }
-
-        &:hover {
-            .a {
-                opacity: 0;
-                transform: translateY( 100px );
-            }
-
-            .b {
-                opacity: 1;
-                transform: translateY( 0px );
-            }
-
-        }
-
+    .avatar {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        background-image: url("/img/me.png");
+        background-size: cover;
+        background-position: center;
     }
 
     .intro-inner {
@@ -114,11 +57,8 @@ export default {
 
         height: 100%;
         width: 100%;
-        max-width: 50%;
 
         gap: 20px;
-
-        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 
         .banner {
             position: absolute;
@@ -127,7 +67,7 @@ export default {
             right: 0;
             height: 100vh;
 
-            background-color: $grey-900;
+            background-color: var(--theme-900);
             background-image: url("/img/hero.png");
             background-repeat: no-repeat;
             background-position: right center;
@@ -161,12 +101,28 @@ export default {
                 top: 0;
                 right: 0;
                 bottom: 0;
-                background-color: $grey-500;
+                background-color: var(--theme-500);
                 mix-blend-mode: multiply;
                 opacity: 1.0;
             }
 
             z-index: -1;
+        }
+    }
+
+}
+
+@media (max-width: $mobile) {
+    .intro {
+        padding: 0 20px;
+        overflow: unset;
+
+        height: 75vh;
+
+        .intro-inner {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
     }
 }
@@ -175,11 +131,12 @@ export default {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
-}
-</style>
+}</style>

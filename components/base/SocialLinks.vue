@@ -1,5 +1,5 @@
 <template>
-    <ul>
+    <ul class="social-links">
       <li v-for="socialItem in socialList" v-bind:key="socialItem.link">
         <a :aria-label="socialItem.alt" :href="socialItem.link" :class="socialItem.class">
           <font-awesome-icon :icon="socialItem.icon" />

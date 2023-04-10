@@ -24,8 +24,9 @@ footer {
     font-weight: bold;
     padding: 0;
     text-transform: uppercase;
-    background-color: $grey-900;
+    background-color: var(--theme-900);
     padding: 10px 0;
+    width: 100%;
 
     justify-content: space-around;
 
@@ -59,6 +60,20 @@ footer {
         width: auto;
         margin: 0;
         text-align: right;
+    }
+}
+@media (max-width: $mobile) {
+    footer {
+        .inner {
+            width: 100%;
+            max-width: unset;
+            padding: 0;
+            justify-content: center;
+
+            .social-links {
+                display: none;
+            }
+        }
     }
 }
 </style>

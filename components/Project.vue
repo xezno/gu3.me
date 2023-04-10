@@ -70,7 +70,7 @@ export default {
                 aspect-ratio: 2;
                 object-fit: cover;
                 border-radius: 10px;
-                background-color: $grey-800;
+                background-color: var(--theme-800);
             }
 
             margin-bottom: 10px;
@@ -100,6 +100,31 @@ export default {
                     font-size: 20px;
                     color: $primary;
                     transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .project {
+        .project-inner {
+            flex-direction: column;
+            gap: 20px;
+
+            .project-image {
+                width: 100%;
+                aspect-ratio: 2;
+            }
+
+            .project-content {
+                width: 100%;
+                height: 100%;
+                gap: 10px;
+
+                .project-links {
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }

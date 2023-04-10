@@ -1,8 +1,5 @@
 <template>
     <nav>
-        <div class="logo">
-            <font-awesome-icon icon="robot" />
-        </div>
         <div class="nav-inner">
             <ul>
                 <li v-for="item in items" :key="item.id">
@@ -55,10 +52,8 @@ nav {
     right: 0;
     z-index: 100;
 
-    padding: 50px;
-    margin-bottom: 25px;
-
-    border-bottom: 1px solid rgba(white, 0.1);
+    padding: 20px 0;
+    background-color: var(--theme-1000);
 
     display: flex;
     flex-direction: row;
@@ -72,28 +67,6 @@ nav {
         width: 100%;
         max-width: 1280px;
         margin: auto;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        list-style: none;
-    }
-
-    .logo {
-        position: absolute;
-        left: 0;
-        top: 0;
-
-        font-size: 2rem;
-        font-weight: 700;
-        color: white;
-        margin-right: 1rem;
-
-        height: 100%;
-        aspect-ratio: 1;
-
-        background-color: rgba(white, 0.1);
 
         display: flex;
         flex-direction: row;
@@ -117,6 +90,8 @@ nav {
                 color: white;
                 text-decoration: none;
                 transition: all 0.2s ease-in-out;
+                text-transform: uppercase;
+                font-weight: 700;
 
                 &:hover {
                     color: $text-blog;
