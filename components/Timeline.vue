@@ -66,7 +66,7 @@ section {
         width: $circle-radius;
         height: $circle-radius;
         border-radius: 50%;
-        background-color: $primary;
+        background-color: var(--theme-primary);
         position: absolute;
         top: $circle-top;
         left: $line-width + $line-left;
@@ -79,7 +79,7 @@ section {
         display: block;
         width: 0px;
 
-        border: $line-width solid $primary;
+        border: $line-width solid var(--theme-primary);
 
         position: absolute;
         top: $line-offset;
@@ -93,7 +93,7 @@ section {
             display: block;
             border: 0;
             width: calc($line-width * 2);
-            background: linear-gradient(to bottom, $primary, $primary 50%, transparent 90%);
+            background: linear-gradient(to bottom, var(--theme-primary), var(--theme-primary) 50%, transparent 90%);
 
             position: absolute;
             top: $line-offset;

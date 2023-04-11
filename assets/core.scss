@@ -14,6 +14,7 @@ $light-300: #333333;
 $light-900: #ffffff;
 $light-1000: #f3f3f3;
 $light-text: black;
+$light-primary: #ff00c3;
 
 $dark-50: #C4C4C4;
 $dark-100: #B0B0B0;
@@ -27,8 +28,7 @@ $dark-800: #080808;
 $dark-900: #080808;
 $dark-1000: #000000;
 $dark-text: white;
-
-$primary: #fe71dc;
+$dark-primary: #fe71dc;
 
 @function toRGB($color) {
     @return "rgb("+red($color)+", "+green($color)+", "+blue($color)+")";
@@ -48,7 +48,7 @@ $primary: #fe71dc;
     --theme-1000: #{toRGB($light-1000)};
 
     --theme-text: #{$light-text};
-    --theme-primary: #{$primary};
+    --theme-primary: #{$light-primary};
 
     --theme-glass: rgba(0, 0, 0, 0.05);
     --theme-glass-hover: rgba(0, 0, 0, 0.1);
@@ -71,7 +71,7 @@ $primary: #fe71dc;
         --theme-1000: #{toRGB($dark-1000)};
 
         --theme-text: #{$dark-text};
-        --theme-primary: #{$primary};
+        --theme-primary: #{$dark-primary};
 
         --theme-glass: rgba(255, 255, 255, 0.05);
         --theme-glass-hover: rgba(255, 255, 255, 0.1);
@@ -174,21 +174,22 @@ hr {
     width: 50%;
 }
 
-@mixin glass-internal($distance ) {
+@mixin glass-internal($distance) {
     background-color: var(--theme-glass);
     border: 1px solid var(--theme-glass-border);
 
     backdrop-filter: blur(10px);
-
-    transform: translateY(0px);
     transition: all 500ms ease;
+    transform: scale( 1.00 );
+}
 
+@mixin glass-hover($distance) {
     &:hover {
         background-color: var(--theme-glass-hover);
         box-shadow: 0 $distance 10px rgba(black, 0.1);
 
-        transform: translateY(-$distance );
         backdrop-filter: blur(20px);
+        transform: scale( 1.01 );
     }
 }
 
@@ -206,13 +207,13 @@ hr {
         z-index: 1;
 
         background: linear-gradient(
-                rgba($primary, 0),
-                rgba($primary, 0.1) 5%,
-                $primary,
-                lighten($primary, 15%),
-                $primary,
-                rgba($primary, 0.1) 95%,
-                rgba($primary, 0),
+                rgba($dark-primary, 0),
+                rgba($dark-primary, 0.1) 5%,
+                $dark-primary,
+                lighten($dark-primary, 15%),
+                $dark-primary,
+                rgba($dark-primary, 0.1) 95%,
+                rgba($dark-primary, 0),
             );
 
         opacity: 0;
@@ -224,14 +225,28 @@ hr {
         opacity: 1;
         transform: translateY(0px);
     }
+
+    @media (prefers-color-scheme: light) {
+        &::after {
+            background: linear-gradient(
+                rgba($light-primary, 0),
+                rgba($light-primary, 0.1) 5%,
+                $light-primary,
+                rgba($light-primary, 0.1) 95%,
+                rgba($light-primary, 0),
+            );
+        }
+    }
 }
 
 @mixin glass() {
     @include glass-internal(5px);
+    @include glass-hover(5px);
 }
 
 @mixin glass-small() {
     @include glass-internal(2px);
+    @include glass-hover(2px);
 }
 
 ::-webkit-scrollbar {

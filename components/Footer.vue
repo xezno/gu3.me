@@ -24,7 +24,6 @@ footer {
     font-weight: bold;
     padding: 0;
     text-transform: uppercase;
-    background-color: var(--theme-900);
     padding: 10px 0;
     width: 100%;
 

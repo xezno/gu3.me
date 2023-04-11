@@ -36,8 +36,10 @@ export default {
     width: 100%;
 
     overflow: hidden;
-    background-color: var(--theme-1000);
     padding: 0 50px;
+    position: relative;
+
+    @include glass-internal(0px);
 
     .avatar {
         width: 200px;

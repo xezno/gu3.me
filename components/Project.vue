@@ -100,7 +100,7 @@ export default {
 
                 a {
                     font-size: 20px;
-                    color: $primary;
+                    color: var(--theme-primary);
                     transition: all 0.2s ease-in-out;
                 }
             }
