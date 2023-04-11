@@ -1,47 +1,28 @@
 <template>
     <div class="skills">
         <ul class="skills-list">
-            <li>Unity</li>
-            <li>Unreal</li>
-            <li>C#</li>
-            <li>C++</li>
-
-            <li>TypeScript</li>
-            <li>JavaScript</li>
-            <li>SCSS</li>
-            <li>Vue</li>
-            <li>Docker</li>
-            <li>PostgreSQL</li>
-
-            <li>Python</li>
-            <li>Rust</li>
+            <li v-for="item in list">{{ item }}</li>
         </ul>
 
         <div class="skills-grid">
-            <BaseGlassPanel>
-                <h4>2D and 3D game development</h4>
-                <p>Experienced in writing C# code for use in game engines (such as s&box and Unity) and as
-                    desktop
-                    applications</p>
-            </BaseGlassPanel>
-            <BaseGlassPanel>
-                <h4>Desktop application development using C++ and C#</h4>
-                <p>Experienced in writing efficient native code for desktop applications</p>
-            </BaseGlassPanel>
-            <BaseGlassPanel>
-                <h4>Server-side development using Node.js</h4>
-                <p>Skilled in creating backends for web applications</p>
-            </BaseGlassPanel>
-            <BaseGlassPanel>
-                <h4>Responsive web design using HTML, CSS, and JavaScript</h4>
-                <p>Skilled in creating uniquely styled web apps for mobile and desktop platforms</p>
+            <BaseGlassPanel v-for="item in grid">
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.description }}</p>
             </BaseGlassPanel>
         </div>
     </div>
 </template>
 
 <script>
+import * as skills from '~~/data/skills.json';
+
 export default {
+    data() {
+        return {
+            list: skills.list,
+            grid: skills.grid
+        };
+    },
     setup() {
         return {}
     }

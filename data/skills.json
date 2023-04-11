@@ -1,0 +1,34 @@
+{
+    "list": [
+        "Unity",
+        "Unreal",
+        "C#",
+        "C++",
+        "TypeScript",
+        "JavaScript",
+        "SCSS",
+        "Vue",
+        "Docker",
+        "PostgreSQL",
+        "Python",
+        "Rust"
+    ],
+    "grid": [
+        {
+            "title": "2D and 3D game development",
+            "description": "Experienced in writing C# code for use in game engines (such as s&box and Unity) and as desktop applications"
+        },
+        {
+            "title": "Desktop applications in C++ and C#",
+            "description": "Experienced in writing efficient native code for desktop applications in C++ and C#"
+        },
+        {
+            "title": "Server-side apps using Node.js",
+            "description": "Skilled in creating backends for web applications using Node.js and JS/TS"
+        },
+        {
+            "title": "Responsive web design",
+            "description": "Skilled in creating good-looking web apps for mobile and desktop platforms in HTML, CSS, and JavaScript"
+        }
+    ]
+}
