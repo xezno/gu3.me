@@ -73,8 +73,6 @@ export default {
                 border-radius: 10px;
                 background-color: var(--theme-800);
             }
-
-            margin-bottom: 10px;
         }
 
         .project-content {
@@ -105,13 +103,6 @@ export default {
                 }
             }
         }
-    }
-
-    h5 {
-        color: var(--theme-primary);
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: 600;
     }
 }
 

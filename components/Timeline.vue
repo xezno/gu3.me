@@ -4,7 +4,7 @@
             <section v-for="event in timeline">
                 <span>
                     <h2>{{ event.company }}</h2>
-                    <p>{{ event.start }} to {{ event.end }}</p>
+                    <h5>{{ event.start }} to {{ event.end }}</h5>
                 </span>
 
                 <h3>{{ event.title }}</h3>

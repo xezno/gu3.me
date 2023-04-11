@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $font: "Space Grotesk";
+$primary: #3a72ff;
 
 $light-50: #050505;
 $light-100: #0D0D0D;
@@ -14,7 +15,7 @@ $light-300: #333333;
 $light-900: #ffffff;
 $light-1000: #f3f3f3;
 $light-text: black;
-$light-primary: #ff00c3;
+$light-primary: darken( $primary, 0% );
 
 $dark-50: #C4C4C4;
 $dark-100: #B0B0B0;
@@ -28,7 +29,7 @@ $dark-800: #080808;
 $dark-900: #080808;
 $dark-1000: #000000;
 $dark-text: white;
-$dark-primary: #fe71dc;
+$dark-primary: $primary;
 
 @function toRGB($color) {
     @return "rgb("+red($color)+", "+green($color)+", "+blue($color)+")";
@@ -143,8 +144,10 @@ h4 {
 }
 
 h5 {
-    font-size: 16px;
-    font-weight: 500;
+    color: var(--theme-primary);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 h6 {
