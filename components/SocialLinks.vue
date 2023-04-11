@@ -9,7 +9,7 @@
 </template>
   
 <script>
-import { options } from "~~/data/options.js";
+import * as options from "~~/data/options.json";
 
 export default {
   data: function () {

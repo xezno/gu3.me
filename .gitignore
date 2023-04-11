@@ -7,5 +7,4 @@ node_modules
 .env
 dist
 
-
-*.secret.js
+*.secret.json

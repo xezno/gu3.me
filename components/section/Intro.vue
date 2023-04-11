@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import { career } from '~~/data/career.js';
-import { options } from '~~/data/options.js';
+import * as career from '~~/data/experience.json';
+import * as options from "~~/data/options.json";
 
 export default {
     data() {

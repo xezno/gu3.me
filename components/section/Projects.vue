@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import { projects } from '~~/data/projects.js';
+import * as projects from '~~/data/projects.json';
 
 export default {
     data() {
         return {
-            projectList: projects,
+            projectList: projects.items,
             viewMore: false
         };
     },
@@ -27,7 +27,7 @@ export default {
             if (this.viewMore) {
                 return this.projectList;
             } else {
-                return this.projectList.slice(0, 4);
+                return this.projectList.slice( 0, 4 );
             }
         }
     },

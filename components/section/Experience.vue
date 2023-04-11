@@ -1,17 +1,17 @@
 <template>
     <div class="experience">
-        <Timeline :timeline="career"></Timeline>
+        <Timeline :timeline="experience"></Timeline>
     </div>
 </template>
 
 <script>
 
-import { career } from '~~/data/career.js';
+import * as experience from '~~/data/experience.json';
 
 export default {
     data() {
         return {
-            career
+            experience: experience.items
         };
     }
 };
