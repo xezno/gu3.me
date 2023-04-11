@@ -19,18 +19,16 @@ main {
 
     // Overlay noise image
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('/img/bluenoise.png');
-        opacity: 1;
+        background: url("/img/bluenoise.png");
         mix-blend-mode: multiply;
-        z-index: -1;
-        background-size: 32px;
-        animation: Noise 100ms ease infinite;
+        z-index: -5;
+        opacity: 0.25;
     }
 }
 
@@ -39,18 +37,6 @@ section {
     justify-content: stretch;
     align-items: stretch;
     flex-direction: column;
-}
-
-//
-// Animation
-//
-@keyframes Noise {
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
 }
 
 //
