@@ -34,7 +34,7 @@ export default {
 $line-width: 1px;
 $line-left: 10px;
 $circle-radius: 16px;
-$circle-top: 38px;
+$circle-top: 40px;
 $line-offset: 15px;
 
 .timeline {

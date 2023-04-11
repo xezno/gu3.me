@@ -1,12 +1,6 @@
 <template>
     <div :class="className">
         <div class="follower" :style="style"></div>
-        <div class="crosshair" ref="crosshair">
-            <div class="el 1"></div>
-            <div class="el 2"></div>
-            <div class="el 3"></div>
-            <div class="el 4"></div>
-        </div>
     </div>
 </template>
 
@@ -23,9 +17,6 @@ export default {
             opacity: 1.0,
             lastMoved: 0,
             isHovering: false,
-            isHoveringGlass: false,
-
-            hoveringElement: null
         }
     },
     setup() {
@@ -53,21 +44,18 @@ export default {
             while (element) {
                 if (element.tagName == 'A' || element.tagName == 'BUTTON') {
                     isClickable = true;
-                    this.hoveringElement = element;
                     break;
                 }
 
                 if (element.className.indexOf('glass-panel') > -1) {
                     isGlass = true;
-                    this.hoveringElement = element;
                     break;
                 }
 
                 element = element.parentElement;
             }
 
-            this.isHoveringGlass = isGlass;
-            this.isHovering = isClickable;
+            this.isHovering = isClickable || isGlass;
         });
 
         let frameStart = performance.now();
@@ -93,23 +81,6 @@ export default {
             this.opacity = 1 - (timeSinceLastMoved / 1000);
             this.opacity = Math.max(0.2, this.opacity);
 
-            // Move crosshair to cover the hovering element
-            if (this.isHovering || this.isHoveringGlass) {
-                let crosshair = this.$refs.crosshair;
-                let rect = this.hoveringElement.getBoundingClientRect();
-                let distance = 8;
-
-                crosshair.style.left = rect.left - distance + 'px';
-                crosshair.style.top = rect.top - distance + 'px';
-                crosshair.style.width = rect.width + distance * 2 + 'px';
-                crosshair.style.height = rect.height + distance * 2 + 'px';
-            } else {
-                // Position at cursor
-                let crosshair = this.$refs.crosshair;
-                crosshair.style.left = this.x + 'px';
-                crosshair.style.top = this.y + 'px';
-            }
-
             frameStart = performance.now();
             requestAnimationFrame(onFrame);
         }
@@ -125,8 +96,7 @@ export default {
         },
         className() {
             let hovering = this.isHovering ? 'hovering' : '';
-            let hoveringGlass = this.isHoveringGlass ? 'hovering-glass' : '';
-            return `${hovering} ${hoveringGlass}`;
+            return `${hovering}`;
         }
     },
 }
@@ -142,67 +112,10 @@ export default {
     z-index: 1000;
     border-radius: 50%;
     pointer-events: none;
-    z-index: -5;
+    z-index: -100;
     transition: backdrop-filter 150ms ease, opacity 150ms ease;
     background: radial-gradient(var(--theme-primary) 0%, transparent 100%);
+
     filter: blur(500px);
-}
-
-.hovering,
-.hovering-glass {
-    .crosshair {
-        opacity: 0;
-    }
-}
-
-.crosshair {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 64px;
-    height: 64px;
-    z-index: 1000;
-    font-weight: bold;
-    pointer-events: none;
-    z-index: 5;
-
-    opacity: 0;
-    transition: all 100ms ease;
-
-    // Display 4 corners
-    .el {
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        border: 2px solid var(--theme-primary);
-        opacity: 0.5;
-        border-right: 0;
-        border-bottom: 0;
-        transition: all 150ms ease;
-    }
-
-    .el:nth-of-type(1) {
-        top: 0;
-        left: 0;
-        transform: rotate(0deg);
-    }
-
-    .el:nth-of-type(2) {
-        top: 0;
-        right: 0;
-        transform: rotate(90deg);
-    }
-
-    .el:nth-of-type(3) {
-        bottom: 0;
-        left: 0;
-        transform: rotate(270deg);
-    }
-
-    .el:nth-of-type(4) {
-        bottom: 0;
-        right: 0;
-        transform: rotate(180deg);
-    }
 }
 </style>
