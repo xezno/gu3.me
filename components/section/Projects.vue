@@ -17,7 +17,7 @@ import { projects } from '~~/data/projects.js';
 export default {
     data() {
         return {
-            projects,
+            projectList: projects,
             viewMore: false
         };
     },
@@ -25,9 +25,9 @@ export default {
         // Limit projects if viewMore is false
         projects() {
             if (this.viewMore) {
-                return this.projects;
+                return this.projectList;
             } else {
-                return this.projects.slice(0, 4);
+                return this.projectList.slice(0, 4);
             }
         }
     },

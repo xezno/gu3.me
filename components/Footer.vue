@@ -5,7 +5,7 @@
                 {{ options.copyright }}
             </div>
             <div class="right">
-                <BaseSocialLinks></BaseSocialLinks>
+                <SocialLinks></SocialLinks>
             </div>
         </div>
     </footer>

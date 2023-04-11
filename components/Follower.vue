@@ -1,7 +1,7 @@
 <template>
     <div :class="className">
         <div class="follower" :style="style"></div>
-        <div class="crosshair" ref="crosshair" :style="crosshairStyle">
+        <div class="crosshair" ref="crosshair">
             <div class="el 1"></div>
             <div class="el 2"></div>
             <div class="el 3"></div>

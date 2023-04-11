@@ -4,7 +4,7 @@
             <div class="avatar"></div>
             <h1>{{ options.name }}</h1>
 
-            <BaseSocialLinks></BaseSocialLinks>
+            <SocialLinks></SocialLinks>
 
             <p v-html="intro"></p>
         </div>
