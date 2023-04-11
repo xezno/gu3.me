@@ -3,6 +3,8 @@
         <section>
             <slot />
         </section>
+
+        <Follower />
     </main>
 </template>
 

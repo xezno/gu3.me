@@ -38,8 +38,6 @@
             <Footer></Footer>
         </x-flex-section>
     </x-flex>
-
-    <Follower />
 </template>
 
 <script>
