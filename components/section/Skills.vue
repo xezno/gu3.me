@@ -70,4 +70,18 @@ export default {
         }
     }
 }
+
+//
+// Mobile layouts
+//
+@media screen and (max-width: 768px) {
+    .skills {
+        flex-direction: column;
+        gap: 10px;
+
+        .glass-panel {
+            flex-basis: 100% !important;
+        }
+    }
+}
 </style>

@@ -127,20 +127,5 @@ h1 {
     .intro-wrapper {
         width: 100%;
     }
-
-    .projects-wrapper {
-        .project {
-            flex-basis: 100% !important;
-        }
-    }
-
-    .skills {
-        flex-direction: column;
-        gap: 10px;
-
-        .glass-panel {
-            flex-basis: 100% !important;
-        }
-    }
 }
 </style>

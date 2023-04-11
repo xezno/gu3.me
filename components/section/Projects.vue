@@ -74,4 +74,15 @@ export default {
         text-align: center;
     }
 }
+
+//
+// Mobile layouts
+//
+@media screen and (max-width: 768px) {
+    .projects {
+        .project {
+            flex-basis: 100% !important;
+        }
+    }
+}
 </style>
