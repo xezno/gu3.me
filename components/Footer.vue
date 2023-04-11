@@ -2,7 +2,7 @@
     <footer>
         <div class="inner">
             <div class="left">
-                &copy; Alex Guthrie 2022
+                {{ options.copyright }}
             </div>
             <div class="right">
                 <BaseSocialLinks></BaseSocialLinks>
@@ -12,7 +12,13 @@
 </template>
 
 <script>
+import { options } from '~~/data/options.js';
 export default {
+    data() {
+        return {
+            options
+        };
+    }
 }
 </script>
 

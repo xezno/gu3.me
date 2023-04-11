@@ -3,7 +3,7 @@
         <BaseGlassPanel class="project">
             <div class="project-inner">
                 <div class="project-image">
-                    <img :src="project.image" :alt="project.title" />
+                    <img :src="project.image" :alt="project.title" :style="imageStyle" />
                 </div>
                 <div class="project-content">
                     <h2 class="project-title">{{ project.title }}</h2>
@@ -34,7 +34,14 @@ export default {
             type: Object,
             required: true
         }
-    }
+    },
+    computed: {
+        imageStyle() {
+            return {
+                objectFit: this.project.iconStyle || 'cover',
+            }
+        }
+    },
 }
 </script>
 
@@ -69,9 +76,7 @@ export default {
                 width: 100%;
                 height: 100%;
                 aspect-ratio: 2;
-                object-fit: cover;
                 border-radius: 10px;
-                background-color: var(--theme-800);
             }
         }
 

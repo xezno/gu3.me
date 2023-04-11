@@ -1,13 +1,14 @@
 export const projects = [
     {
         title: "Mocha",
-        role: "Everything",
+        role: "Programmer",
         type: "Game Engine",
         link: "https://github.com/xezno/mocha",
         blogLink: "https://blog.gu3.me/mocha",
         madeIn: "C# / C++ / Vulkan",
         image: "/img/projects/Mocha.png",
-        description: "A game engine written in C++ with C# interop."
+        description: "A game engine written in C++ with C# interop.",
+        iconStyle: "cover"
     },
     {
         title: "Alex's Instagib",
@@ -16,7 +17,8 @@ export const projects = [
         link: "https://github.com/xezno/sbox-instagib",
         madeIn: "C# / s&box",
         image: "/img/projects/Instagib.png",
-        description: "A classic arena first-person-shooter."
+        description: "A classic arena first-person-shooter.",
+        iconStyle: "cover"
     },
     {
         title: "Tin",
@@ -25,7 +27,8 @@ export const projects = [
         link: "https://github.com/The-Tin-Foil-Hat-Society/tin",
         madeIn: "C",
         image: "/img/projects/Tin.png",
-        description: "A programming language written in C with support for RISC-V."
+        description: "A programming language written in C with support for RISC-V.",
+        iconStyle: "contain"
     },
     {
         title: "OpenTPW",
@@ -34,7 +37,8 @@ export const projects = [
         link: "https://github.com/ThemeParkWorld/OpenTPW",
         madeIn: "C# / Veldrid",
         image: "/img/projects/OpenTPW.png",
-        description: "A re-implementation of Bullfrog's 1999 game 'Theme Park World'."
+        description: "A re-implementation of Bullfrog's 1999 game 'Theme Park World'.",
+        iconStyle: "contain"
     },
     {
         title: "Cold Open",
@@ -43,7 +47,8 @@ export const projects = [
         link: "https://github.com/apetavern/horror-jam",
         madeIn: "s&box",
         image: "/img/projects/Cold Open.png",
-        description: "A game made in ~2 weeks for the Gvarados Halloween Jam 2022, winning 1st place."
+        description: "A game made in ~2 weeks for the Gvarados Halloween Jam 2022, winning 1st place.",
+        iconStyle: "cover"
     },
     {
         title: "FortWars",
@@ -52,7 +57,8 @@ export const projects = [
         link: "https://github.com/apetavern/sbox-fortwars",
         madeIn: "C# / s&box",
         image: "/img/projects/Fortwars.png",
-        description: "A spiritual successor to the classic 'SourceForts' Source mod."
+        description: "A spiritual successor to the classic 'SourceForts' Source mod.",
+        iconStyle: "cover"
     },
     {
         title: "Frost Fight",
@@ -61,6 +67,7 @@ export const projects = [
         link: "https://github.com/apetavern/sbox-frostfight",
         madeIn: "C# / s&box",
         image: "/img/projects/Frost Fight.png",
-        description: "A game made in ~1 week for the Jambox Winter Jam 2021, winning 2nd place."
+        description: "A game made in ~1 week for the Jambox Winter Jam 2021, winning 2nd place.",
+        iconStyle: "cover"
     },
 ];

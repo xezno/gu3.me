@@ -2,27 +2,35 @@
     <div class="intro">
         <div class="intro-inner">
             <div class="avatar"></div>
-            <h1>Alex Guthrie</h1>
+            <h1>{{ options.name }}</h1>
 
             <BaseSocialLinks></BaseSocialLinks>
 
-            <p>👋 Hey! I'm Alex.<br>
-                I'm a Programmer at Acme Inc.<br>
-                I like reverse engineering, computer graphics, and game development.</p>
+            <p v-html="intro"></p>
         </div>
     </div>
 </template>
 
 <script>
 import { career } from '~~/data/career.js';
+import { options } from '~~/data/options.js';
 
 export default {
+    data() {
+        return {
+            career,
+            options
+        };
+    },
     computed: {
         currentJobCompany() {
             return career[career.length - 1].company;
         },
         currentJobTitle() {
             return career[career.length - 1].title;
+        },
+        intro() {
+            return options.intro.replaceAll("\n", "<br>")
         }
     }
 }
