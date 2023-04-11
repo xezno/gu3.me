@@ -10,27 +10,33 @@
 
         <x-flex-section>
             <section class="content">
-                <h1>Projects</h1>
+                <div v-if="options.sections.projects">
+                    <h1>Projects</h1>
 
-                <article class="projects-wrapper">
-                    <SectionProjects></SectionProjects>
-                </article>
-
-                <!-------------------------------------------------------------------------------------------->
-
-                <h1>Experience</h1>
-
-                <article class="career-wrapper">
-                    <SectionExperience></SectionExperience>
-                </article>
+                    <article class="projects-wrapper">
+                        <SectionProjects></SectionProjects>
+                    </article>
+                </div>
 
                 <!-------------------------------------------------------------------------------------------->
 
-                <h1>Skills</h1>
+                <div v-if="options.sections.experience">
+                    <h1>Experience</h1>
 
-                <article class="skills-wrapper">
-                    <SectionSkills></SectionSkills>
-                </article>
+                    <article class="career-wrapper">
+                        <SectionExperience></SectionExperience>
+                    </article>
+                </div>
+
+                <!-------------------------------------------------------------------------------------------->
+
+                <div v-if="options.sections.skills">
+                    <h1>Skills</h1>
+
+                    <article class="skills-wrapper">
+                        <SectionSkills></SectionSkills>
+                    </article>
+                </div>
             </section>
 
             <!------------------------------------------------------------------------------------------------>
@@ -41,7 +47,14 @@
 </template>
 
 <script>
-export default {}
+import * as options from "~~/data/options.json";
+export default {
+    data() {
+        return {
+            options
+        };
+    }
+}
 </script>
 
 <style lang="scss" scoped>

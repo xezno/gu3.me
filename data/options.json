@@ -4,6 +4,11 @@
     "copyright": "© Alex Guthrie 2023",
     "email": "mailto:alex@gu3.me",
     "avatar": "/img/me.png",
+    "sections": {
+        "projects": true,
+        "experience": false,
+        "skills": true
+    },
     "socials": [
         {
             "link": "https://github.com/xezno",
