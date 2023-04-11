@@ -2,6 +2,10 @@
 
 This repository contains the code for [my personal website](https://alex.gu3.me/), hosted on [Netlify](https://www.netlify.com/), and written in [JavaScript](https://www.javascript.com/) using the [Nuxt.js](https://nuxtjs.org/) framework.
 
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/xezno/gu3.me">
+    <img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify">
+</a>
+
 ## Modifying
 
 This website is pretty data-oriented. You can find all the data in the `data` directory. The `data` directory contains the following files:
