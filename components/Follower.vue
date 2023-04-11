@@ -115,4 +115,13 @@ export default {
     background: radial-gradient(var(--theme-primary) 0%, transparent 50%);
     filter: blur(500px);
 }
+
+//
+// Light mode
+//
+@media (prefers-color-scheme: light) {
+    .follower {
+        filter: opacity(25%);
+    }
+}
 </style>
