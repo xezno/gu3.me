@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# gu3.me
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This repository contains the code for [my personal website](https://alex.gu3.me/), hosted on [Netlify](https://www.netlify.com/), and written in [JavaScript](https://www.javascript.com/) using the [Nuxt.js](https://nuxtjs.org/) framework.
 
 ## Setup
 
@@ -31,5 +31,3 @@ Locally preview production build:
 ```bash
 yarn preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
