@@ -6,6 +6,7 @@ export const options = {
     intro: "Hey! I'm Alex. 👋\nI'm a programmer and game developer.\nI like reverse engineering, computer graphics, and game development.",
     copyright: "© Alex Guthrie 2023",
     email: "mailto:alex@gu3.me",
+    avatar: "/img/me.png",
 
     socials: [
         {

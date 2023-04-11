@@ -1,7 +1,7 @@
 <template>
     <div class="intro">
         <div class="intro-inner">
-            <div class="avatar"></div>
+            <div class="avatar" :style="`background-image: url('${options.avatar}')`"></div>
             <h1>{{ options.name }}</h1>
 
             <SocialLinks></SocialLinks>
@@ -56,7 +56,6 @@ export default {
         height: 200px;
         border-radius: 50%;
         margin-bottom: 20px;
-        background-image: url("/img/me.png");
         background-size: cover;
         background-position: center;
     }
