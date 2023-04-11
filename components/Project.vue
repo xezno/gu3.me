@@ -97,7 +97,7 @@ export default {
                 justify-content: center;
                 align-items: flex-start;
                 flex-shrink: 1;
-                
+
                 gap: 10px;
 
                 a {

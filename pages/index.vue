@@ -38,6 +38,8 @@
             <Footer></Footer>
         </x-flex-section>
     </x-flex>
+
+    <Follower />
 </template>
 
 <script>
@@ -54,7 +56,9 @@ article {
     justify-content: center;
     flex-shrink: 1;
 
-    &.projects-wrapper, &.career-wrapper, &.skills-wrapper {
+    &.projects-wrapper,
+    &.career-wrapper,
+    &.skills-wrapper {
         margin-bottom: 100px;
     }
 }

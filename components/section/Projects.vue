@@ -49,7 +49,7 @@ export default {
     flex-wrap: wrap;
     gap: 20px;
     display: flex;
-    
+
     .project {
         // Fill the remaining space, but only if there isn't lots of space
         flex-grow: 1;

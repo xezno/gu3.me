@@ -14,7 +14,7 @@ import { options } from "~~/data/options.js";
 export default {
   data: function () {
     return {
-      socialList: options.socials 
+      socialList: options.socials
     }
   }
 }

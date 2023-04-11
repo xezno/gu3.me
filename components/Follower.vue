@@ -1,5 +1,5 @@
 <template>
-    <div :class="className" >
+    <div :class="className">
         <div class="follower" :style="style"></div>
         <div class="crosshair" ref="crosshair" :style="crosshairStyle">
             <div class="el 1"></div>
@@ -8,12 +8,11 @@
             <div class="el 4"></div>
         </div>
     </div>
-
 </template>
 
 <script>
 export default {
-    data: function() {
+    data: function () {
         return {
             x: 0,
             y: 0,
@@ -29,7 +28,7 @@ export default {
             hoveringElement: null
         }
     },
-    setup () {
+    setup() {
         return {}
     },
     // Follow mouse
@@ -39,7 +38,7 @@ export default {
         window.addEventListener('mousemove', (e) => {
             let x = e.clientX - 1024;
             let y = e.clientY - 1024;
-            
+
             this.targetX = x;
             this.targetY = y;
 
@@ -47,7 +46,7 @@ export default {
 
             // If the mouse is hovering over something clickable, don't show the follower
             let element = document.elementFromPoint(e.clientX, e.clientY);
-            
+
             // Recursively check parents for clickable elements
             let isClickable = false;
             let isGlass = false;
@@ -88,7 +87,7 @@ export default {
             this.targetSize = Math.min(1.5, this.targetSize);
 
             this.size = lerp(this.size, this.targetSize, deltaTime * 5);
-            
+
             // Opacity based on time since last moved
             let timeSinceLastMoved = performance.now() - this.lastMoved;
             this.opacity = 1 - (timeSinceLastMoved / 1000);
@@ -102,8 +101,8 @@ export default {
 
                 crosshair.style.left = rect.left - distance + 'px';
                 crosshair.style.top = rect.top - distance + 'px';
-                crosshair.style.width = rect.width + distance*2 + 'px';
-                crosshair.style.height = rect.height + distance*2 + 'px';
+                crosshair.style.width = rect.width + distance * 2 + 'px';
+                crosshair.style.height = rect.height + distance * 2 + 'px';
             } else {
                 // Position at cursor
                 let crosshair = this.$refs.crosshair;
@@ -146,10 +145,11 @@ export default {
     z-index: -5;
     transition: backdrop-filter 150ms ease, opacity 150ms ease;
     background: radial-gradient(var(--theme-primary) 0%, transparent 100%);
-    filter: blur( 500px );
+    filter: blur(500px);
 }
 
-.hovering, .hovering-glass {
+.hovering,
+.hovering-glass {
     .crosshair {
         opacity: 0;
     }
@@ -186,7 +186,7 @@ export default {
         left: 0;
         transform: rotate(0deg);
     }
-    
+
     .el:nth-of-type(2) {
         top: 0;
         right: 0;
@@ -203,6 +203,6 @@ export default {
         bottom: 0;
         right: 0;
         transform: rotate(180deg);
-    } 
+    }
 }
 </style>
