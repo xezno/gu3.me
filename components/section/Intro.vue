@@ -47,6 +47,8 @@ export default {
     padding: 0 50px;
     position: relative;
 
+    // We want to use glass with no distance and no hover, so we need to
+    // use the internal function here..
     @include glass-internal(0px);
 
     .avatar {
@@ -69,59 +71,12 @@ export default {
         width: 100%;
 
         gap: 20px;
-
-        .banner {
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            height: 100vh;
-
-            background-color: var(--theme-900);
-            background-image: url("/img/hero.png");
-            background-repeat: no-repeat;
-            background-position: right center;
-            background-size: cover;
-
-            // mix-blend-mode: soft-light;
-            opacity: 1.0;
-            filter: brightness(150%) saturate(50%);
-
-            // Noise overlay
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                background-image: url("/img/bluenoise.png");
-                background-size: auto;
-                image-rendering: pixelated;
-                background-repeat: repeat;
-                mix-blend-mode: overlay;
-                opacity: 0.25;
-            }
-
-            // Color overlay
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                background-color: var(--theme-500);
-                mix-blend-mode: multiply;
-                opacity: 1.0;
-            }
-
-            z-index: -1;
-        }
     }
-
 }
 
+//
+// Mobile layouts
+//
 @media (max-width: $mobile) {
     .intro {
         padding: 0 20px;
@@ -137,6 +92,9 @@ export default {
     }
 }
 
+//
+// Anims
+//
 @keyframes blink {
     0% {
         opacity: 1;

@@ -67,6 +67,10 @@ footer {
         text-align: right;
     }
 }
+
+//
+// Mobile layouts
+//
 @media (max-width: $mobile) {
     footer {
         .inner {

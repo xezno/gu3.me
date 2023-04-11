@@ -30,6 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/core.scss";
+
 $line-width: 1px;
 $line-left: 10px;
 $circle-radius: 16px;
@@ -103,6 +104,9 @@ section {
     }
 }
 
+//
+// Mobile layouts
+//
 @media (max-width: $mobile) {
     .timeline {
         section {

@@ -5,8 +5,6 @@
 </template>
 
 <script>
-// Fade other glass panels when hovering over one
-
 export default {
     props: {
         shine: {

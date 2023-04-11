@@ -1,8 +1,19 @@
+// ----------------------------------------------------------------------------------------------------
+//
+// Main font
+//
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+//
+// Main properties
+//
 $font: "Space Grotesk";
 $primary: #3a72ff;
 
+// ----------------------------------------------------------------------------------------------------
+//
+// Theme
+//
 $light-50: #050505;
 $light-100: #0D0D0D;
 $light-200: #1A1A1A;
@@ -15,7 +26,7 @@ $light-300: #333333;
 $light-900: #ffffff;
 $light-1000: #f3f3f3;
 $light-text: black;
-$light-primary: darken( $primary, 0% );
+$light-primary: darken($primary, 0%);
 
 $dark-50: #C4C4C4;
 $dark-100: #B0B0B0;
@@ -31,6 +42,10 @@ $dark-1000: #000000;
 $dark-text: white;
 $dark-primary: $primary;
 
+// ----------------------------------------------------------------------------------------------------
+//
+// Generated CSS variables
+//
 @function toRGB($color) {
     @return "rgb("+red($color)+", "+green($color)+", "+blue($color)+")";
 }
@@ -80,6 +95,10 @@ $dark-primary: $primary;
     }
 }
 
+// ----------------------------------------------------------------------------------------------------
+//
+// Social link colors
+//
 $text-github: #a0a0a0;
 $text-keybase: #FF6F21;
 $text-email: #d43434;
@@ -90,8 +109,16 @@ $text-discord: #7289DA;
 $text-uwutube: #fe71dc;
 $text-black: #202020;
 
+// ----------------------------------------------------------------------------------------------------
+//
+// Measurement definitions
+//
 $mobile: 960px;
 
+// ----------------------------------------------------------------------------------------------------
+//
+// Core styles, normalizations, and resets
+//
 body {
     font-size: 16px;
     font-family: $font, sans-serif;
@@ -177,13 +204,29 @@ hr {
     width: 50%;
 }
 
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: rgba(black, 0.2);
+    border: 4px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background-clip: padding-box;
+}
+
+// ----------------------------------------------------------------------------------------------------
+//
+// Mixins
+//
 @mixin glass-internal($distance) {
     background-color: var(--theme-glass);
     border: 1px solid var(--theme-glass-border);
 
     backdrop-filter: blur(10px);
     transition: all 500ms ease;
-    transform: scale( 1.00 );
+    transform: scale(1.00);
 }
 
 @mixin glass-hover($distance) {
@@ -192,7 +235,7 @@ hr {
         box-shadow: 0 $distance 10px rgba(black, 0.1);
 
         backdrop-filter: blur(20px);
-        transform: scale( 1.01 );
+        transform: scale(1.01);
     }
 }
 
@@ -209,8 +252,7 @@ hr {
         pointer-events: none;
         z-index: 1;
 
-        background: linear-gradient(
-                rgba($dark-primary, 0),
+        background: linear-gradient(rgba($dark-primary, 0),
                 rgba($dark-primary, 0.1) 5%,
                 $dark-primary,
                 lighten($dark-primary, 15%),
@@ -231,13 +273,12 @@ hr {
 
     @media (prefers-color-scheme: light) {
         &::after {
-            background: linear-gradient(
-                rgba($light-primary, 0),
-                rgba($light-primary, 0.1) 5%,
-                $light-primary,
-                rgba($light-primary, 0.1) 95%,
-                rgba($light-primary, 0),
-            );
+            background: linear-gradient(rgba($light-primary, 0),
+                    rgba($light-primary, 0.1) 5%,
+                    $light-primary,
+                    rgba($light-primary, 0.1) 95%,
+                    rgba($light-primary, 0),
+                );
         }
     }
 }
@@ -250,16 +291,4 @@ hr {
 @mixin glass-small() {
     @include glass-internal(2px);
     @include glass-hover(2px);
-}
-
-::-webkit-scrollbar {
-    width: 16px;
-}
-
-::-webkit-scrollbar-thumb {
-    height: 50px;
-    background-color: rgba(black, 0.2);
-    border: 4px solid rgba(0, 0, 0, 0);
-    border-radius: 10px;
-    background-clip: padding-box;
 }

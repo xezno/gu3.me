@@ -1,29 +1,28 @@
 <template>
-    <div>
-        <BaseGlassPanel class="project">
-            <div class="project-inner">
-                <div class="project-image">
-                    <img :src="project.image" :alt="project.title" :style="imageStyle" />
-                </div>
-                <div class="project-content">
-                    <h2 class="project-title">{{ project.title }}</h2>
-                    <h5 class="project-title">{{ project.type }}</h5>
-                    <p class="project-description">{{ project.description }}</p>
+    <BaseGlassPanel class="project">
+        <div class="project-inner">
+            <div class="project-image">
+                <img :src="project.image" :alt="project.title" :style="imageStyle" />
+            </div>
 
-                    <span class="project-spacing"></span>
+            <div class="project-content">
+                <h2 class="project-title">{{ project.title }}</h2>
+                <h5 class="project-title">{{ project.type }}</h5>
+                <p class="project-description">{{ project.description }}</p>
 
-                    <div class="project-links">
-                        <a v-if="project.link" :href="project.link" target="_blank" rel="noopener noreferrer">
-                            <font-awesome-icon :icon="['fab', 'github']" />
-                        </a>
-                        <a v-if="project.blogLink" :href="project.blogLink" target="_blank" rel="noopener noreferrer">
-                            <font-awesome-icon icon="blog" />
-                        </a>
-                    </div>
+                <span class="project-spacing"></span>
+
+                <div class="project-links">
+                    <a v-if="project.link" :href="project.link" target="_blank" rel="noopener noreferrer">
+                        <font-awesome-icon :icon="['fab', 'github']" />
+                    </a>
+                    <a v-if="project.blogLink" :href="project.blogLink" target="_blank" rel="noopener noreferrer">
+                        <font-awesome-icon icon="blog" />
+                    </a>
                 </div>
             </div>
-        </BaseGlassPanel>
-    </div>
+        </div>
+    </BaseGlassPanel>
 </template>
 
 <script>
@@ -111,6 +110,9 @@ export default {
     }
 }
 
+//
+// Mobile layouts
+//
 @media screen and (max-width: $mobile) {
     .project {
         .project-inner {

@@ -1,9 +1,10 @@
 <template>
     <main>
         <section>
-            <Follower />
             <slot />
         </section>
+        
+        <Follower />
     </main>
 </template>
 
@@ -38,11 +39,13 @@ section {
     flex-direction: column;
 }
 
+//
 // Light mode
+//
 @media (prefers-color-scheme: light) {
     main {
-    // Overlay noise image
         &::before {
+            // Tone down noise overlay
             opacity: 0.01;
         }
     }
