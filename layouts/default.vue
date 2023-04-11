@@ -25,10 +25,12 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url('/img/bluenoise.png'); 
-        opacity: 0.5;
+        background: url('/img/bluenoise.png');
+        opacity: 1;
         mix-blend-mode: multiply;
         z-index: -1;
+        background-size: 32px;
+        animation: Noise 100ms ease infinite;
     }
 }
 
@@ -37,6 +39,18 @@ section {
     justify-content: stretch;
     align-items: stretch;
     flex-direction: column;
+}
+
+//
+// Animation
+//
+@keyframes Noise {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 //

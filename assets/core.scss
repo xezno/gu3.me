@@ -224,7 +224,6 @@ hr {
     background-color: var(--theme-glass);
     border: 1px solid var(--theme-glass-border);
 
-    backdrop-filter: blur(10px);
     transition: all 500ms ease;
     transform: scale(1.00);
 }
@@ -233,8 +232,6 @@ hr {
     &:hover {
         background-color: var(--theme-glass-hover);
         box-shadow: 0 $distance 10px rgba(black, 0.1);
-
-        backdrop-filter: blur(20px);
     }
 }
 

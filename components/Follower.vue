@@ -91,12 +91,12 @@ export default {
         style() {
             return {
                 transform: `translate(${this.x}px, ${this.y}px) scale(${this.size})`,
-                opacity: 0.2
+                opacity: 0.5
             }
         },
         className() {
             let hovering = this.isHovering ? 'hovering' : '';
-            return `${hovering}`;
+            return `wrapper ${hovering}`;
         }
     },
 }
@@ -109,13 +109,10 @@ export default {
     left: 0;
     width: 2048px;
     height: 2048px;
-    z-index: 1000;
-    border-radius: 50%;
+    z-index: -10;
     pointer-events: none;
-    z-index: -100;
     transition: backdrop-filter 150ms ease, opacity 150ms ease;
-    background: radial-gradient(var(--theme-primary) 0%, transparent 100%);
-
+    background: radial-gradient(var(--theme-primary) 0%, transparent 50%);
     filter: blur(500px);
 }
 </style>
