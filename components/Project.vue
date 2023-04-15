@@ -14,7 +14,7 @@
 
                 <div class="project-links">
                     <a v-if="project.link" :href="project.link" target="_blank" rel="noopener noreferrer">
-                        <font-awesome-icon :icon="['fab', 'github']" />
+                        <font-awesome-icon :icon="linkIcon" />
                     </a>
                     <a v-if="project.blogLink" :href="project.blogLink" target="_blank" rel="noopener noreferrer">
                         <font-awesome-icon icon="blog" />
@@ -39,6 +39,13 @@ export default {
             return {
                 objectFit: this.project.iconStyle || 'cover',
             }
+        },
+        linkIcon() {
+            if (this.project.link.includes('github')) {
+                return [ 'fab', 'github' ];
+            }
+
+            return [ 'fas', 'link' ];
         }
     },
 }

@@ -32,9 +32,9 @@ export default {
 @import "@/assets/core.scss";
 
 $line-width: 1px;
-$line-left: 10px;
+$line-left: 20px;
 $circle-radius: 16px;
-$circle-top: 40px;
+$circle-top: 38px;
 $line-offset: 15px;
 
 .timeline {
@@ -55,6 +55,7 @@ section {
     position: relative;
 
     padding: 20px 40px !important;
+    padding-left: 60px !important;
 
     span {
         display: flex;

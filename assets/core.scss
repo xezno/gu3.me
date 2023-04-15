@@ -224,14 +224,15 @@ hr {
     background-color: var(--theme-glass);
     border: 1px solid var(--theme-glass-border);
 
-    transition: all 500ms ease;
-    transform: scale(1.00);
+    transition: all 150ms ease;
+    transform: none;
 }
 
 @mixin glass-hover($distance) {
     &:hover {
         background-color: var(--theme-glass-hover);
         box-shadow: 0 $distance 10px rgba(black, 0.1);
+        transform: translateY(-$distance);
     }
 }
 
@@ -259,7 +260,7 @@ hr {
 
         opacity: 0;
         transform: translateY(100%);
-        transition: all 500ms ease;
+        transition: all 300ms ease;
     }
 
     &:hover::after {

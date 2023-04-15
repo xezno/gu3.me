@@ -17,4 +17,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.experience {
+    width: 100%;
+}
+</style>
