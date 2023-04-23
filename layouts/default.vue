@@ -1,5 +1,6 @@
 <template>
     <main>
+        <!-- <div class="background"></div>-->
         <section>
             <slot />
         </section>
@@ -14,6 +15,29 @@ main {
     // max-width: 1280px;
     margin: auto;
     overflow: hidden;
+
+    > .background {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url("/img/bg/dark.png");
+        pointer-events: none;
+        z-index: -999;
+
+        @media (prefers-color-scheme: light) {
+            background-image: url("/img/bg/light.png");
+        }
+    }
+
+    > section {
+        backdrop-filter: brightness( 0.5 );
+
+        @media (prefers-color-scheme: light) {
+            backdrop-filter: saturate( 0.5 );
+        }
+    }
 }
 
 section {

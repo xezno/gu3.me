@@ -108,12 +108,88 @@ $text-youtube: #FF0000;
 $text-discord: #7289DA;
 $text-uwutube: #fe71dc;
 $text-black: #202020;
+$text-twitter: #1DA1F2;
 
 // ----------------------------------------------------------------------------------------------------
 //
 // Measurement definitions
 //
 $mobile: 960px;
+
+// ----------------------------------------------------------------------------------------------------
+//
+// Mixins
+//
+@mixin glass-internal($distance) {
+    background-color: var(--theme-glass);
+    border: 1px solid var(--theme-glass-border);
+
+    transition: all 150ms ease;
+    transform: none;
+}
+
+@mixin glass-hover($distance) {
+    will-change: transform;
+
+    &:hover {
+        transform: translateY(-$distance);
+        box-shadow: 0 $distance $distance rgba( black, 0.05 );
+    }
+}
+
+@mixin shine() {
+    &::after {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 20px;
+        width: 1px;
+        height: 75px;
+        max-height: 50%;
+
+        pointer-events: none;
+        z-index: 1;
+
+        background: linear-gradient(rgba($dark-primary, 0),
+                rgba($dark-primary, 0.1) 5%,
+                $dark-primary,
+                lighten($dark-primary, 15%),
+                $dark-primary,
+                rgba($dark-primary, 0.1) 95%,
+                rgba($dark-primary, 0),
+            );
+
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 300ms ease;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    @media (prefers-color-scheme: light) {
+        &::after {
+            background: linear-gradient(rgba($light-primary, 0),
+                    rgba($light-primary, 0.1) 5%,
+                    $light-primary,
+                    rgba($light-primary, 0.1) 95%,
+                    rgba($light-primary, 0),
+                );
+        }
+    }
+}
+
+@mixin glass() {
+    @include glass-internal(5px);
+    @include glass-hover(5px);
+}
+
+@mixin glass-small() {
+    @include glass-internal(2px);
+    @include glass-hover(2px);
+}
 
 // ----------------------------------------------------------------------------------------------------
 //
@@ -199,9 +275,10 @@ a {
 
 hr {
     border: 0;
-    border-top: 1px solid rgba(var(--theme-text), 0.2);
-    margin: 1rem 0;
-    width: 50%;
+    border-top: 1px solid var(--theme-text);
+    opacity: 0.1;
+    margin: 10px 0;
+    width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -216,76 +293,68 @@ hr {
     background-clip: padding-box;
 }
 
-// ----------------------------------------------------------------------------------------------------
-//
-// Mixins
-//
-@mixin glass-internal($distance) {
-    background-color: var(--theme-glass);
-    border: 1px solid var(--theme-glass-border);
-
-    transition: all 150ms ease;
-    transform: none;
+[data-mark] {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 0 10px;
+    border-radius: 10px;
 }
 
-@mixin glass-hover($distance) {
-    &:hover {
-        background-color: var(--theme-glass-hover);
-        box-shadow: 0 $distance 10px rgba(black, 0.1);
-        transform: translateY(-$distance);
-    }
-}
+[data-tip] {
+    position: relative;
+    $top: 5px;
+    $left: 0px;
 
-@mixin shine() {
     &::after {
-        content: "";
+        content: attr(data-tip);
         position: absolute;
-        left: -1px;
-        top: 20px;
-        width: 1px;
-        height: 75px;
-        max-height: 50%;
+        top: calc(100% + $top);
+        left: calc(50% + $left);
+        width: max-content;
+        text-align: center;
+        transform: translateX(-50%);
+        text-transform: initial;
 
-        pointer-events: none;
-        z-index: 1;
+        padding: 5px 10px;
+        border-radius: 10px;
 
-        background: linear-gradient(rgba($dark-primary, 0),
-                rgba($dark-primary, 0.1) 5%,
-                $dark-primary,
-                lighten($dark-primary, 15%),
-                $dark-primary,
-                rgba($dark-primary, 0.1) 95%,
-                rgba($dark-primary, 0),
-            );
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
 
         opacity: 0;
-        transform: translateY(100%);
-        transition: all 300ms ease;
+        pointer-events: none;
+        transition: all 150ms ease;
+
+        background-color: var(--theme-500);
+
+        z-index: 100;
     }
 
-    &:hover::after {
+    &::before {
+        content: "";
+        position: absolute;
+        top: calc(100% - 10px + $top);
+        left: calc(50% + $left);
+        transform: translateX(-50%);
+
+        width: 0;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 150ms ease;
+
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid var(--theme-500);
+
+        z-index: 100;
+    }
+
+    &:hover::after,
+    &:hover::before {
         opacity: 1;
-        transform: translateY(0px);
+        pointer-events: all;
     }
-
-    @media (prefers-color-scheme: light) {
-        &::after {
-            background: linear-gradient(rgba($light-primary, 0),
-                    rgba($light-primary, 0.1) 5%,
-                    $light-primary,
-                    rgba($light-primary, 0.1) 95%,
-                    rgba($light-primary, 0),
-                );
-        }
-    }
-}
-
-@mixin glass() {
-    @include glass-internal(5px);
-    @include glass-hover(5px);
-}
-
-@mixin glass-small() {
-    @include glass-internal(2px);
-    @include glass-hover(2px);
 }

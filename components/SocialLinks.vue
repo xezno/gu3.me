@@ -1,7 +1,7 @@
 <template>
   <ul class="social-links">
     <li v-for="socialItem in socialList" v-bind:key="socialItem.link">
-      <a :aria-label="socialItem.alt" :href="socialItem.link" :class="socialItem.class">
+      <a :aria-label="socialItem.alt" :href="socialItem.link" :class="socialItem.class" :data-tip="socialItem.alt">
         <font-awesome-icon :icon="socialItem.icon" />
       </a>
     </li>
@@ -61,5 +61,9 @@ li {
 
 .text-discord:hover {
   color: $text-discord;
+}
+
+.text-twitter:hover {
+  color: $text-twitter;
 }
 </style>

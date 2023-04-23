@@ -5,7 +5,7 @@
             <h1>{{ options.name }}</h1>
 
             <SocialLinks></SocialLinks>
-
+            
             <p v-html="intro"></p>
         </div>
     </div>
@@ -55,7 +55,6 @@ export default {
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        margin-bottom: 20px;
         background-size: cover;
         background-position: center;
     }
@@ -68,7 +67,6 @@ export default {
 
         height: 100%;
         width: 100%;
-
         gap: 20px;
     }
 }
@@ -82,12 +80,27 @@ export default {
         overflow: unset;
 
         height: 75vh;
+        
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
 
         .intro-inner {
             align-items: center;
             justify-content: center;
             text-align: center;
         }
+    }
+}
+
+//
+// Desktop layouts
+//
+@media (min-width: $mobile) {
+    .intro {
+        border-top: 0;
+        border-left: 0;
+        border-bottom: 0;
     }
 }
 

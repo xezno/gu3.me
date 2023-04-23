@@ -63,7 +63,7 @@ export default {
             flex-grow: 1;
             margin: 5px;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 10px;
             text-align: center;
 
             @include glass-small;
