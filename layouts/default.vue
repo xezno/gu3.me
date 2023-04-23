@@ -16,6 +16,9 @@ main {
     margin: auto;
     overflow: hidden;
 
+    animation: fade-in 1s ease-out both;
+    animation-delay: 0.5s;
+
     > .background {
         position: fixed;
         width: 100%;
@@ -45,5 +48,14 @@ section {
     justify-content: stretch;
     align-items: stretch;
     flex-direction: column;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 </style>
