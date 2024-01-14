@@ -28,7 +28,11 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 2rem;
+}
+
+nav span {
+  gap: 1rem;
+  display: flex;
 }
 
 nav p {
