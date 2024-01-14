@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Alex Guthrie" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gu3.me/" />
+  <meta property="og:image" content="http://gu3.me" />
+  <meta property="og:description" content="Programmer from the UK" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Alex Guthrie</title>
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      font-size: 11pt;
+      background-color: #f0f0f0;
+
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+      color: #333;
+
+      line-height: 1.5;
+      padding: min(5%, 20px) min(10%, 100px);
+
+      text-transform: lowercase;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    nav {
+      padding: 1rem 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav p {
+      flex-grow: 0;
+    }
+
+    nav span.fill {
+      margin: 0 1rem;
+      flex-grow: 1;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0 20px;
+    }
+
+    ul li:before {
+      content: '-';
+      position: absolute;
+      margin-left: -20px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px dashed currentColor;
+      margin: 2rem 0;
+      opacity: 0.2;
+    }
+
+    img.avatar {
+      border-radius: 50%;
+      margin-left: 2rem;
+      float: right;
+      filter: sepia(1.0) contrast(1.25) grayscale(100%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111;
+        color: #f0f0f0;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0rem;
+        padding-bottom: 4rem;
+      }
+
+      img.avatar {
+        float: none;
+        height: 128px;
+        width: 128px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <p>Alex Guthrie // Programmer from the UK</p>
+    <span class="fill"></span>
+    <span>
+      <a href="https://blog.gu3.me/">Blog</a>
+      <span class="divider">//</span>
+      <a href="https://github.com/xezno">Github</a>
+      <a href="https://twitter.com/realxezno">X (Twitter)</a>
+      <a href="https://www.twitch.tv/realxezno">Twitch</a>
+    </span>
+  </nav>
+
+  <main>
+
+    <section>
+      <img src="/public/img/avatar.png" class="avatar" />
+
+      <h2>About</h2>
+      <p>Hey! 👋 I'm Alex. I'm a programmer at Facepunch. I like reverse engineering, computer graphics, and game development.</p>
+      
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Skills</h2>
+
+      <b>Languages / Frameworks</b>
+      <p>Unity, Unreal, C#, C++, TypeScript, JavaScript, SCSS, Vue, Docker, PostgreSQL, Python, Rust</p>
+
+      <b>Domains</b>
+      <ul>
+        <li><b>2D and 3D game development</b>: Experienced in writing C# code for use in game engines (such as S&box and Unity) and as desktop applications</li>
+        <li><b>Desktop applications in C++ and C#</b>: Experienced in writing efficient native code for desktop applications in C++ and C#</li>
+        <li><b>Server-side apps using Node.js</b>: Skilled in creating backends for web apps using Node.js and JS/TS </li>
+        <li><b>Responsive web design</b>: Skilled in creating good-looking web apps for mobile and desktop platforms in HTML, CSS, and JavaScript</li>
+      </ul>
+    </section>
+
+    <hr />
+  
+    <section>
+      <h2>Projects</h2>
+
+      <b>Work</b>
+
+      <ul>
+        <li><a href="https://sbox.facepunch.com/">s&box</a> - A game by Facepunch Studios</li>
+      </ul>
+
+      <b>Personal</b>
+
+      <ul>
+        <li><a href="https://github.com/themeparkworld/opentpw">OpenTPW</a> - An open source reimplementation of the game Sim Theme Park / Theme Park World</li>
+        <li><a href="https://github.com/mocha-engine/mocha">Mocha</a> - A game engine written in C++ with C# interop</li>
+        <li><a href="https://github.com/The-Tin-Foil-Hat-Society/tin">Tin</a> - A programming language written in C, targeting RISC-V</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Contact Me</h2>
+
+      <p>You can <a href="mailto:alex@gu3.me">email me</a> or find me on <a href="https://twitter.com/realxezno">X (Twitter)</a>.</p>
+    </section>
+  </main>
+</body>
+
+</html>
