@@ -62,7 +62,6 @@ img.avatar {
   border-radius: 50%;
   margin-left: 2rem;
   float: right;
-  filter: sepia(1.0) contrast(1.25) grayscale(100%);
 }
 
 @media (prefers-color-scheme: dark) {
